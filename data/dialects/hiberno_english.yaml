@@ -174,9 +174,9 @@ avoid_features:
   - "Begorrah"
   - "Faith and begorrah"
   - "To be sure, to be sure"
-  - Excessive "leprechaun speak"
-  - Random apostrophes to suggest accent
-  - "Oirish" spellings
+  - "Excessive leprechaun speak"
+  - "Random apostrophes to suggest accent"
+  - "Oirish spellings"
 
 # Validation thresholds
 validation:
