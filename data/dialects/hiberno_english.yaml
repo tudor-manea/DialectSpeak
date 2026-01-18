@@ -1,0 +1,185 @@
+# Hiberno-English (Irish English) Feature Specification
+# Based on Filppula (1999), Hickey (2007), Kallen (2013)
+
+dialect_name: Hiberno-English
+dialect_code: hiberno_english
+aliases:
+  - Irish English
+  - IrE
+  - HibE
+
+# Core syntactic features with detection patterns
+features:
+  perfective_after:
+    name: "Perfective 'after' construction"
+    description: "Uses 'after' + gerund to express recent past/perfect aspect"
+    examples:
+      - original: "I have just eaten"
+        transformed: "I'm after eating"
+      - original: "She has just left"
+        transformed: "She's after leaving"
+      - original: "They have just finished"
+        transformed: "They're after finishing"
+    patterns:
+      - "(?:I'm|I am|he's|she's|it's|we're|they're|you're)\\s+after\\s+\\w+ing"
+      - "(?:is|am|are|was|were)\\s+after\\s+\\w+ing"
+    priority: high
+
+  habitual_do_be:
+    name: "Habitual 'do be' construction"
+    description: "Uses 'do be' or 'does be' for habitual actions"
+    examples:
+      - original: "He usually works late"
+        transformed: "He does be working late"
+      - original: "They are always complaining"
+        transformed: "They do be complaining"
+      - original: "She often sits there"
+        transformed: "She does be sitting there"
+    patterns:
+      - "\\b(?:do|does)\\s+be\\s+\\w+ing\\b"
+    priority: high
+
+  amnt_contraction:
+    name: "'Amn't' contraction"
+    description: "Negative contraction of 'am not' as 'amn't'"
+    examples:
+      - original: "I'm not sure"
+        transformed: "I amn't sure"
+      - original: "Am I not right?"
+        transformed: "Amn't I right?"
+    patterns:
+      - "\\bamn't\\b"
+    priority: medium
+
+  youse_plural:
+    name: "Second person plural 'youse/ye'"
+    description: "Distinct second person plural pronoun"
+    examples:
+      - original: "Are you all coming?"
+        transformed: "Are youse coming?"
+      - original: "I told you all"
+        transformed: "I told youse"
+      - original: "You people should know"
+        transformed: "Ye should know"
+    patterns:
+      - "\\byouse\\b"
+      - "\\bye\\b(?!\\s+olde)"  # Avoid matching "ye olde"
+    priority: medium
+
+  sure_discourse:
+    name: "'Sure' as discourse marker"
+    description: "Sentence-initial 'sure' as pragmatic marker"
+    examples:
+      - original: "I was just saying that"
+        transformed: "Sure, wasn't I just saying that"
+      - original: "Everyone knows that"
+        transformed: "Sure, everyone knows that"
+      - original: "It's obvious"
+        transformed: "Sure, isn't it obvious"
+    patterns:
+      - "^[Ss]ure,?\\s+"
+      - "\\b[Ss]ure,?\\s+(?:wasn't|isn't|aren't|don't|doesn't)"
+    priority: medium
+
+  cleft_emphasis:
+    name: "Cleft sentences for emphasis"
+    description: "Fronting predicates with 'it's X that/I am' structure"
+    examples:
+      - original: "I am very tired"
+        transformed: "It's tired I am"
+      - original: "He is really clever"
+        transformed: "It's clever he is"
+      - original: "That's what I want"
+        transformed: "It's that I want"
+    patterns:
+      - "\\b[Ii]t's\\s+\\w+\\s+(?:I|he|she|we|they|you)\\s+(?:am|is|are|was|were)\\b"
+    priority: high
+
+  reflexive_reference:
+    name: "Reflexive pronoun for emphasis"
+    description: "Using 'himself/herself' to refer to important person"
+    examples:
+      - original: "Is the boss coming?"
+        transformed: "Is himself coming?"
+      - original: "The wife said so"
+        transformed: "Herself said so"
+    patterns:
+      - "\\b(?:[Hh]imself|[Hh]erself)\\s+(?:said|told|came|went|is|was)"
+      - "\\b[Ii]s\\s+(?:himself|herself)\\b"
+    priority: low
+
+  for_to_infinitive:
+    name: "'For to' infinitive"
+    description: "Using 'for to' instead of simple 'to' in purpose clauses"
+    examples:
+      - original: "I went to buy milk"
+        transformed: "I went for to buy milk"
+      - original: "She came to help"
+        transformed: "She came for to help"
+    patterns:
+      - "\\bfor\\s+to\\s+\\w+\\b"
+    priority: medium
+
+  embedded_inversion:
+    name: "Embedded question inversion"
+    description: "Maintaining inversion in indirect questions"
+    examples:
+      - original: "I wonder if he is coming"
+        transformed: "I wonder is he coming"
+      - original: "I don't know if she has it"
+        transformed: "I don't know has she it"
+    patterns:
+      - "\\b(?:wonder|know|ask|see)\\s+(?:is|are|was|were|has|have|did|does|do|will|would|can|could)\\s+(?:he|she|it|they|we|you|I)\\b"
+    priority: medium
+
+  and_subject_gerund:
+    name: "'And' + subject + gerund narrative"
+    description: "Narrative construction with fronted 'and'"
+    examples:
+      - original: "I was just sitting there"
+        transformed: "And me sitting there"
+      - original: "He was standing at the door"
+        transformed: "And him standing at the door"
+    patterns:
+      - "\\b[Aa]nd\\s+(?:me|him|her|them|us)\\s+\\w+ing\\b"
+    priority: low
+
+  after_noun_plural:
+    name: "Plural after numerals"
+    description: "Using singular form after numerals (Irish substrate)"
+    examples:
+      - original: "three miles"
+        transformed: "three mile"
+      - original: "five pounds"
+        transformed: "five pound"
+    patterns:
+      - "\\b(?:two|three|four|five|six|seven|eight|nine|ten|\\d+)\\s+(?:mile|pound|year|foot|stone)\\b"
+    priority: low
+
+  so_it_is:
+    name: "Tag 'so it is/so I did'"
+    description: "Emphatic tag at end of sentence"
+    examples:
+      - original: "It's cold today"
+        transformed: "It's cold today, so it is"
+      - original: "I saw him yesterday"
+        transformed: "I saw him yesterday, so I did"
+    patterns:
+      - ",?\\s+so\\s+(?:it|I|he|she|we|they)\\s+(?:is|am|are|was|were|did|do|does)$"
+    priority: medium
+
+# Features to AVOID (stereotypes/"stage Irish")
+avoid_features:
+  - "Top o' the morning"
+  - "Begorrah"
+  - "Faith and begorrah"
+  - "To be sure, to be sure"
+  - Excessive "leprechaun speak"
+  - Random apostrophes to suggest accent
+  - "Oirish" spellings
+
+# Validation thresholds
+validation:
+  min_features_required: 1
+  semantic_similarity_threshold: 0.85
+  authenticity_score_threshold: 0.7
