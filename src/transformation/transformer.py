@@ -6,7 +6,7 @@ Supports Ollama (local) and OpenAI backends.
 """
 
 import os
-from typing import List, Optional, Literal, Union
+from typing import List, Optional, Literal, Any
 from dataclasses import dataclass, field
 from enum import Enum
 
@@ -17,10 +17,6 @@ class LLMBackend(Enum):
     """Supported LLM backends."""
     OLLAMA = "ollama"
     OPENAI = "openai"
-
-
-# Type alias for HTTP client (set during initialization)
-HttpClient = object
 
 
 @dataclass
@@ -61,8 +57,8 @@ class DialectTransformer:
             config: Transformation configuration
         """
         self.config = config or TransformationConfig()
-        self._http_client: Optional[HttpClient] = None
-        self._openai_client = None
+        self._http_client: Optional[Any] = None  # httpx.Client when using Ollama
+        self._openai_client: Optional[Any] = None  # OpenAI client when using OpenAI
         self._init_client()
 
     def _init_client(self) -> None:

@@ -96,8 +96,8 @@ class TestSemanticValidation:
     def test_validate_semantic_preservation_valid(self):
         """Test validation with semantically similar texts."""
         result = validate_semantic_preservation(
-            original="He is always working late.",
-            transformed="He does be working late.",
+            original="She has just arrived at the station.",
+            transformed="She's after arriving at the station.",
             threshold=0.8,
         )
         assert result.is_valid

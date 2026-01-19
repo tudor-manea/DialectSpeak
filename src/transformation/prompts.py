@@ -75,10 +75,12 @@ HIBERNO_ENGLISH_SYSTEM_PROMPT = """You are a linguistic expert specializing in H
 
 HIBERNO_ENGLISH_USER_TEMPLATE = """Transform the following Standard English text into authentic Hiberno-English. Apply appropriate dialect features while preserving the exact meaning.
 
+IMPORTANT: Output ONLY the transformed sentence. Do not include explanations, notes, or the original text.
+
 Original text:
 {text}
 
-Transformed text (Hiberno-English):"""
+Transformed text:"""
 
 HIBERNO_ENGLISH_BATCH_TEMPLATE = """Transform each of the following Standard English texts into authentic Hiberno-English. Apply appropriate dialect features while preserving the exact meaning.
 
