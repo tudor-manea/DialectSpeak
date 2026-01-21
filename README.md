@@ -1,4 +1,4 @@
-# Dialectal Fairness Auditing in LLMs
+# DialectalSpeak
 
 A pipeline for auditing Large Language Models for dialectal bias in reasoning and safety mechanisms.
 
