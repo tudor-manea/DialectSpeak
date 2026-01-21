@@ -14,6 +14,11 @@ from .prompts import (
     get_batch_transformation_prompt,
     get_supported_dialects,
 )
+from .postprocess import (
+    clean_transformation,
+    detect_solution_instead_of_transform,
+    is_valid_transformation,
+)
 
 __all__ = [
     "LLMBackend",
@@ -26,4 +31,7 @@ __all__ = [
     "get_transformation_prompt",
     "get_batch_transformation_prompt",
     "get_supported_dialects",
+    "clean_transformation",
+    "detect_solution_instead_of_transform",
+    "is_valid_transformation",
 ]

@@ -35,11 +35,20 @@ env/
 trans_env/
 results/
 *.log
-CLAUDE.md
 
-# API keys
+# Claude Code (keep private)
+CLAUDE.md
+.claude/
+.claude-plugin/
+.claudeignore
+scripts/sync-notes.sh
+
+# API keys and secrets
 .env
+.env.*
 *.key
+*.pem
+secrets/
 
 # Large files
 *.parquet
@@ -50,6 +59,13 @@ CLAUDE.md
 # Jupyter
 .ipynb_checkpoints/
 
+# pytest
+.pytest_cache/
+
 # OS
 .DS_Store
 Thumbs.db
+
+# Generated data (optional - uncomment to exclude)
+# data/benchmarks/
+# data/audits/

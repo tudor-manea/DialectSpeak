@@ -23,59 +23,71 @@ class DialectPromptConfig:
 
 HIBERNO_ENGLISH_SYSTEM_PROMPT = """You are a linguistic expert specializing in Hiberno-English (Irish English). Your task is to transform Standard English text into authentic Hiberno-English while preserving the exact meaning.
 
-## Key Hiberno-English Features to Apply
+CRITICAL: You MUST apply at least one SYNTACTIC feature from the list below. Do NOT rely on phonetic spellings or accent markers.
 
-### High-Priority Syntactic Features (use when appropriate):
+## Syntactic Features to Apply (use at least ONE per transformation):
 
-1. **Perfective "after" construction**: Express recent past/perfect aspect
+1. **Perfective "after" construction** - for recent completion:
    - "I have just eaten" → "I'm after eating"
-   - "She has just left" → "She's after leaving"
+   - "She finished the work" → "She's after finishing the work"
 
-2. **Habitual "do be" construction**: Express habitual actions
+2. **Habitual "do be" construction** - for habitual/ongoing actions:
    - "He usually works late" → "He does be working late"
    - "They are always complaining" → "They do be complaining"
 
-3. **Cleft sentences for emphasis**: Front predicates for emphasis
-   - "I am very tired" → "It's tired I am"
-   - "He is really clever" → "It's clever he is"
+3. **Emphatic tags "so it is/so I did/so they do"** - for emphasis:
+   - "It's cold" → "It's cold, so it is"
+   - "He left early" → "He left early, so he did"
 
-### Medium-Priority Features:
-
-4. **"Amn't" contraction**: Use instead of "aren't I"
-   - "I'm not sure" → "I amn't sure"
-   - "Am I not right?" → "Amn't I right?"
-
-5. **Plural "youse"**: Second person plural
-   - "Are you all coming?" → "Are youse coming?"
-
-6. **"Sure" as discourse marker**: Sentence-initial pragmatic marker
+4. **"Sure" as discourse marker** - sentence-initial:
    - "Everyone knows that" → "Sure, everyone knows that"
 
-7. **Emphatic tags "so it is/so I did"**:
-   - "It's cold today" → "It's cold today, so it is"
-
-8. **Embedded question inversion**:
+5. **Embedded question inversion** - in indirect questions:
    - "I wonder if he is coming" → "I wonder is he coming"
+   - "I asked if she was ready" → "I asked was she ready"
 
-### Features to AVOID (stereotypes):
-- "Top o' the morning"
-- "Begorrah" / "Faith and begorrah"
-- "To be sure, to be sure"
-- Excessive apostrophes to suggest accent
-- "Oirish" spellings
-- Leprechaun-style speech
+6. **"'Tis" contraction**:
+   - "It is a fine day" → "'Tis a fine day"
+
+7. **Cleft for emphasis**:
+   - "I am tired" → "It's tired I am"
+
+## Features to AVOID (stereotypes and phonetic changes):
+- "Top o' the morning" - stage Irish
+- "Begorrah" / "Faith and begorrah" - stereotype
+- Dropping 'g' from -ing (e.g., "goin'", "doin'") - NOT Hiberno-English
+- Adding apostrophes to suggest accent
+- "o'" for "of" - NOT authentic
+- Any "Oirish" or leprechaun-style speech
 
 ## Guidelines:
-1. Apply 1-3 features naturally per sentence - don't overload
-2. Preserve the EXACT meaning and information content
-3. Maintain mathematical/logical precision in reasoning tasks
-4. Keep proper nouns, numbers, and technical terms unchanged
-5. The transformation should sound natural to an Irish English speaker
-6. When in doubt, prefer subtle transformation over heavy-handed changes"""
+1. MUST apply at least one syntactic feature from the list above
+2. Preserve the EXACT meaning - especially numbers, names, and technical content
+3. Keep the same sentence structure when possible
+4. Do NOT add or remove information
+5. Mathematical precision is essential for reasoning tasks"""
 
-HIBERNO_ENGLISH_USER_TEMPLATE = """Transform the following Standard English text into authentic Hiberno-English. Apply appropriate dialect features while preserving the exact meaning.
+HIBERNO_ENGLISH_USER_TEMPLATE = """Transform the following Standard English text into authentic Hiberno-English.
 
-IMPORTANT: Output ONLY the transformed sentence. Do not include explanations, notes, or the original text.
+EXAMPLES:
+Input: "She has just arrived at the station."
+Output: "She's after arriving at the station."
+
+Input: "He usually works until 6pm."
+Output: "He does be working until 6pm."
+
+Input: "The car costs $5000. How much would two cars cost?"
+Output: "The car costs $5000, so it does. How much would two cars cost?"
+
+Input: "I wonder if she is coming to the party."
+Output: "I wonder is she coming to the party."
+
+RULES:
+1. Output ONLY the transformed text
+2. Use at least ONE syntactic feature: "after + verb", "do/does be + verb", "so it is/does/did", or embedded question inversion
+3. Keep numbers, names, and technical terms EXACTLY as they appear
+4. If input is a question, output must also be a question
+5. Do NOT add commentary or explanations
 
 Original text:
 {text}

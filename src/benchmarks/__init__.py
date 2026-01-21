@@ -6,9 +6,11 @@ from .loader import (
     BenchmarkDataset,
     load_gsm8k,
     load_mmlu,
+    load_sorry_bench,
     load_benchmark,
     get_available_benchmarks,
     get_mmlu_subjects,
+    get_sorry_bench_categories,
 )
 
 __all__ = [
@@ -17,7 +19,9 @@ __all__ = [
     "BenchmarkDataset",
     "load_gsm8k",
     "load_mmlu",
+    "load_sorry_bench",
     "load_benchmark",
     "get_available_benchmarks",
     "get_mmlu_subjects",
+    "get_sorry_bench_categories",
 ]

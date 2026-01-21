@@ -21,8 +21,9 @@ features:
       - original: "They have just finished"
         transformed: "They're after finishing"
     patterns:
-      - "(?:I'm|I am|he's|she's|it's|we're|they're|you're)\\s+after\\s+\\w+ing"
-      - "(?:is|am|are|was|were)\\s+after\\s+\\w+ing"
+      - "\\b\\w+'s\\s+after\\s+\\w+ing\\b"
+      - "\\b(?:I'm|I am|he's|she's|it's|we're|they're|you're)\\s+after\\s+\\w+ing\\b"
+      - "\\b(?:is|am|are|was|were)\\s+after\\s+\\w+ing\\b"
     priority: high
 
   habitual_do_be:
@@ -165,8 +166,45 @@ features:
       - original: "I saw him yesterday"
         transformed: "I saw him yesterday, so I did"
     patterns:
-      - ",?\\s+so\\s+(?:it|I|he|she|we|they)\\s+(?:is|am|are|was|were|did|do|does)$"
+      - ",?\\s+so\\s+(?:it|I|he|she|we|they)\\s+(?:is|am|are|was|were|did|do|does)(?:\\.|,|$)"
     priority: medium
+
+  tis_contraction:
+    name: "'Tis contraction"
+    description: "Contraction of 'it is' as ''tis'"
+    examples:
+      - original: "It is a fine day"
+        transformed: "'Tis a fine day"
+      - original: "It's not easy"
+        transformed: "'Tisn't easy"
+    patterns:
+      - "\\b[''']?[Tt]is(?:n't)?\\b"
+    priority: medium
+
+  grand_colloquial:
+    name: "'Grand' as positive/fine"
+    description: "Using 'grand' to mean fine, good, or as a thousand (euro/pound)"
+    examples:
+      - original: "That's fine"
+        transformed: "That's grand"
+      - original: "eighty thousand"
+        transformed: "eighty grand"
+    patterns:
+      - "\\b(?:that's|it's|you're|I'm|he's|she's)\\s+grand\\b"
+      - "\\b\\d+\\s+grand\\b"
+    priority: low
+
+  fierce_intensifier:
+    name: "'Fierce' as intensifier"
+    description: "Using 'fierce' as an intensifier meaning 'very'"
+    examples:
+      - original: "very busy"
+        transformed: "fierce busy"
+      - original: "really cold"
+        transformed: "fierce cold"
+    patterns:
+      - "\\bfierce\\s+\\w+"
+    priority: low
 
 # Features to AVOID (stereotypes/"stage Irish")
 avoid_features:

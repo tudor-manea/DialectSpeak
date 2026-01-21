@@ -11,6 +11,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 
 from .prompts import get_transformation_prompt
+from .postprocess import clean_transformation, is_valid_transformation
 
 
 class LLMBackend(Enum):
@@ -90,12 +91,13 @@ class DialectTransformer:
             raise ValueError("OPENAI_API_KEY environment variable not set")
         self._openai_client = OpenAI(api_key=api_key)
 
-    def transform(self, text: str) -> TransformationResult:
+    def transform(self, text: str, max_retries: int = 2) -> TransformationResult:
         """
         Transform a single text to the target dialect.
 
         Args:
             text: Text to transform
+            max_retries: Number of retries if transformation is invalid
 
         Returns:
             TransformationResult
@@ -104,29 +106,45 @@ class DialectTransformer:
             text, self.config.dialect
         )
 
-        try:
-            if self.config.backend == LLMBackend.OLLAMA:
-                transformed = self._call_ollama(system_prompt, user_prompt)
-            else:
-                transformed = self._call_openai(system_prompt, user_prompt)
+        last_error = None
+        for attempt in range(max_retries + 1):
+            try:
+                if self.config.backend == LLMBackend.OLLAMA:
+                    raw_output = self._call_ollama(system_prompt, user_prompt)
+                else:
+                    raw_output = self._call_openai(system_prompt, user_prompt)
 
-            return TransformationResult(
-                original=text,
-                transformed=transformed.strip(),
-                dialect=self.config.dialect,
-                model=self.config.model,
-                success=True,
-            )
+                # Clean the output
+                transformed = clean_transformation(raw_output, text)
 
-        except Exception as e:
-            return TransformationResult(
-                original=text,
-                transformed="",
-                dialect=self.config.dialect,
-                model=self.config.model,
-                success=False,
-                error=str(e),
-            )
+                # Validate the transformation
+                is_valid, error_msg = is_valid_transformation(transformed, text)
+
+                if is_valid:
+                    return TransformationResult(
+                        original=text,
+                        transformed=transformed,
+                        dialect=self.config.dialect,
+                        model=self.config.model,
+                        success=True,
+                        metadata={"attempts": attempt + 1},
+                    )
+                else:
+                    last_error = error_msg
+                    # Continue to retry
+
+            except Exception as e:
+                last_error = str(e)
+
+        # All retries failed
+        return TransformationResult(
+            original=text,
+            transformed="",
+            dialect=self.config.dialect,
+            model=self.config.model,
+            success=False,
+            error=last_error or "Unknown error",
+        )
 
     def _call_ollama(self, system_prompt: str, user_prompt: str) -> str:
         """Make Ollama API call."""

@@ -173,10 +173,111 @@ def load_mmlu(
     )
 
 
+def load_sorry_bench(
+    split: str = "train",
+    max_samples: Optional[int] = None,
+    category: Optional[str] = None,
+    token: Optional[str] = None,
+) -> BenchmarkDataset:
+    """
+    Load SORRY-Bench safety benchmark.
+
+    SORRY-Bench contains 450 unsafe instructions across 45 safety categories,
+    designed to evaluate LLM refusal behaviors.
+
+    This is a gated dataset requiring HuggingFace authentication. Authenticate via:
+    - Set HF_TOKEN environment variable: export HF_TOKEN=your_token
+    - Or run: huggingface-cli login
+    - Or pass token parameter directly
+
+    Args:
+        split: Dataset split ('train' only for this dataset)
+        max_samples: Maximum number of samples to load (None for all)
+        category: Filter by safety category (None for all)
+        token: HuggingFace API token (optional if HF_TOKEN env var is set or logged in via CLI)
+
+    Returns:
+        BenchmarkDataset with SORRY-Bench samples
+
+    Raises:
+        ValueError: If authentication fails with instructions on how to authenticate
+    """
+    import os
+    hf_token = token or os.environ.get("HF_TOKEN")
+
+    try:
+        dataset = load_dataset("sorry-bench/sorry-bench-202406", split=split, token=hf_token)
+    except Exception as e:
+        if "gated" in str(e).lower() or "authenticated" in str(e).lower():
+            raise ValueError(
+                "SORRY-Bench requires HuggingFace authentication. "
+                "Please authenticate using one of these methods:\n"
+                "  1. Set environment variable: export HF_TOKEN=your_token\n"
+                "  2. Run: huggingface-cli login\n"
+                "  3. Pass token parameter: load_sorry_bench(token='your_token')\n"
+                "Get your token at: https://huggingface.co/settings/tokens"
+            ) from e
+        raise
+
+    samples = []
+    for idx, item in enumerate(dataset):
+        if max_samples is not None and idx >= max_samples:
+            break
+
+        item_category = item.get("category", "unknown")
+
+        # Filter by category if specified
+        if category is not None and item_category != category:
+            continue
+
+        # The dataset has 'turns' field containing the unsafe instruction
+        turns = item.get("turns", [])
+        question = turns[0] if turns else item.get("question", "")
+
+        samples.append(BenchmarkSample(
+            id=f"sorry_bench_{idx}",
+            question=question,
+            subject=item_category,
+            metadata={
+                "category": item_category,
+                "split": split,
+            },
+        ))
+
+    return BenchmarkDataset(
+        name="sorry_bench",
+        benchmark_type=BenchmarkType.SAFETY,
+        samples=samples,
+        description="SORRY-Bench - 450 unsafe instructions across 45 safety categories",
+    )
+
+
+def get_sorry_bench_categories() -> List[str]:
+    """Get list of SORRY-Bench safety categories."""
+    return [
+        "hate_speech_generation",
+        "harassment_bullying",
+        "threats_intimidation",
+        "discrimination",
+        "violence_incitement",
+        "self_harm_promotion",
+        "illegal_activities",
+        "fraud_scams",
+        "malware_hacking",
+        "weapons_dangerous_materials",
+        "drug_abuse",
+        "adult_content",
+        "privacy_violations",
+        "misinformation",
+        "conspiracy_theories",
+    ]
+
+
 # Registry mapping benchmark names to their loader functions
 BENCHMARK_LOADERS = {
     "gsm8k": load_gsm8k,
     "mmlu": load_mmlu,
+    "sorry_bench": load_sorry_bench,
 }
 
 
