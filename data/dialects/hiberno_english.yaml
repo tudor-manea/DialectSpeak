@@ -221,3 +221,128 @@ validation:
   min_features_required: 1
   semantic_similarity_threshold: 0.85
   authenticity_score_threshold: 0.7
+
+# =============================================================================
+# Transformation Prompts
+# =============================================================================
+prompts:
+  system: |
+    You are a linguistic expert specializing in Hiberno-English (Irish English). Your task is to transform Standard English text into authentic Hiberno-English while preserving the exact meaning.
+
+    CRITICAL: You MUST apply at least one SYNTACTIC feature from the list below. Do NOT rely on phonetic spellings or accent markers.
+
+    ## Syntactic Features to Apply (use at least ONE per transformation):
+
+    1. **Perfective "after" construction** - for recent completion:
+       - "I have just eaten" → "I'm after eating"
+       - "She finished the work" → "She's after finishing the work"
+
+    2. **Habitual "do be" construction** - ONLY for repeated/habitual actions (not one-time events):
+       - "The bus is always late" → "The bus does be late"
+       - "They're forever complaining about the weather" → "They do be complaining about the weather"
+       - NOTE: Do NOT use for one-time actions. "He is working now" should NOT become "He does be working"
+
+    3. **Emphatic tags "so it is/so I did/so they do"** - for emphasis at end of statements:
+       - "It's cold" → "It's cold, so it is"
+       - "He left early" → "He left early, so he did"
+
+    4. **"Sure" as discourse marker** - sentence-initial, to introduce statements:
+       - "Everyone knows that" → "Sure, everyone knows that"
+       - "Of course I remember" → "Sure, I remember"
+
+    5. **Embedded question inversion** - in indirect questions:
+       - "I wonder if he is coming" → "I wonder is he coming"
+       - "I asked if she was ready" → "I asked was she ready"
+
+    ## Features to AVOID (stereotypes and phonetic changes):
+    - "Top o' the morning" - stage Irish
+    - "Begorrah" / "Faith and begorrah" - stereotype
+    - Dropping 'g' from -ing (e.g., "goin'", "doin'") - NOT Hiberno-English
+    - Adding apostrophes to suggest accent
+    - "o'" for "of" - NOT authentic
+    - Any "Oirish" or leprechaun-style speech
+    - Excessive use of "'Tis" - only use sparingly in appropriate contexts
+
+    ## Guidelines:
+    1. MUST apply at least one syntactic feature from the list above
+    2. Preserve the EXACT meaning - especially numbers, names, and technical content
+    3. Keep the same sentence structure when possible
+    4. Do NOT add or remove information
+    5. Mathematical precision is essential for reasoning tasks
+
+  user_template: |
+    Transform the following Standard English text into authentic Hiberno-English.
+
+    EXAMPLES:
+    Input: "She has just arrived at the station."
+    Output: "She's after arriving at the station."
+
+    Input: "The car costs $5000. How much would two cars cost?"
+    Output: "The car costs $5000, so it does. How much would two cars cost?"
+
+    Input: "I wonder if she is coming to the party."
+    Output: "I wonder is she coming to the party."
+
+    Input: "Of course I'll help you with that."
+    Output: "Sure, I'll help you with that."
+
+    RULES:
+    1. Output ONLY the transformed text
+    2. Use at least ONE syntactic feature: "after + verb", "so it is/does/did" tag, "Sure" as starter, or embedded question inversion
+    3. Keep numbers, names, and technical terms EXACTLY as they appear
+    4. If input is a question, output must also be a question
+    5. Do NOT add commentary or explanations
+
+    Original text:
+    {text}
+
+    Transformed text:
+
+  batch_template: |
+    Transform each of the following Standard English texts into authentic Hiberno-English. Apply appropriate dialect features while preserving the exact meaning.
+
+    For each text, output ONLY the transformed version on a new line, in the same order as the input.
+
+    Texts to transform:
+    {texts}
+
+    Transformed texts (one per line):
+
+# =============================================================================
+# Authenticity Validation Patterns
+# =============================================================================
+authenticity:
+  # Patterns that indicate stereotyped/fake dialect (to reject)
+  stereotype_patterns:
+    - "\\btop o[f']? the mornin"
+    - "\\bbegorrah\\b"
+    - "\\bfaith and begorrah\\b"
+    - "\\bto be sure,? to be sure\\b"
+    - "\\bbegorra\\b"
+    - "\\boch\\s+aye\\b"
+    - "\\blassie\\b"
+    - "\\bladdie\\b"
+    - "\\bme darlin[g']?\\b"
+    - "\\bwee bit o[f']?\\b"
+    - "\\bpotato famine\\b"
+    - "\\bleprechaun\\b"
+    - "\\bpot o[f']? gold\\b"
+    - "\\bshamrock\\b"
+    - "\\bpaddy\\b"
+    - "\\bmick\\b"
+
+  # Patterns that suggest fake/exaggerated dialect
+  suspicious_patterns:
+    - "'[a-z]+in\\b"
+    - "\\b[a-z]+'[a-z]+\\b.*\\b[a-z]+'[a-z]+\\b.*\\b[a-z]+'[a-z]+\\b"
+    - "\\baye\\b.*\\baye\\b.*\\baye\\b"
+    - "!{3,}"
+
+  # Patterns that indicate authentic dialect (positive markers)
+  authentic_markers:
+    - "\\b(?:I'm|he's|she's|we're|they're)\\s+after\\s+\\w+ing\\b"
+    - "\\b(?:do|does)\\s+be\\s+\\w+ing\\b"
+    - "\\bamn't\\b"
+    - "\\byouse\\b"
+    - "^[Ss]ure,?\\s+"
+    - ",\\s+so\\s+(?:it|I|he|she)\\s+(?:is|am|did)\\s*[.!?]?$"

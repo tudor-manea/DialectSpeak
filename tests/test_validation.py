@@ -46,7 +46,7 @@ def feature_validator():
 @pytest.fixture
 def authenticity_validator():
     """Create an AuthenticityValidator for stereotype tests."""
-    return AuthenticityValidator()
+    return AuthenticityValidator(DIALECTS_DIR)
 
 
 @pytest.fixture
@@ -264,42 +264,48 @@ class TestAuthenticityValidation:
     def test_detect_stereotypes(self, authenticity_validator):
         """Test detection of stereotype patterns."""
         stereotypes = authenticity_validator.detect_stereotypes(
-            "Top o' the mornin' to ye, begorrah!"
+            "Top o' the mornin' to ye, begorrah!",
+            dialect="hiberno_english"
         )
         assert len(stereotypes) > 0
 
     def test_no_stereotypes(self, authenticity_validator):
         """Test that authentic text has no stereotypes."""
         stereotypes = authenticity_validator.detect_stereotypes(
-            "I'm after finishing the work, so I am."
+            "I'm after finishing the work, so I am.",
+            dialect="hiberno_english"
         )
         assert len(stereotypes) == 0
 
     def test_detect_suspicious_patterns(self, authenticity_validator):
         """Test detection of suspicious fake-dialect patterns."""
         suspicious = authenticity_validator.detect_suspicious_patterns(
-            "I'm 'talkin about the 'walkin and 'runnin!!!"
+            "I'm 'talkin about the 'walkin and 'runnin!!!",
+            dialect="hiberno_english"
         )
         assert len(suspicious) > 0
 
     def test_count_authentic_markers(self, authenticity_validator):
         """Test counting authentic dialect markers."""
         count = authenticity_validator.count_authentic_markers(
-            "I'm after eating, and he does be working late."
+            "I'm after eating, and he does be working late.",
+            dialect="hiberno_english"
         )
         assert count >= 2
 
     def test_compute_authenticity_score_authentic(self, authenticity_validator):
         """Test authenticity score for authentic text."""
         score = authenticity_validator.compute_authenticity_score(
-            "I'm after finishing the work."
+            "I'm after finishing the work.",
+            dialect="hiberno_english"
         )
         assert score >= 0.7
 
     def test_compute_authenticity_score_stereotyped(self, authenticity_validator):
         """Test authenticity score for stereotyped text."""
         score = authenticity_validator.compute_authenticity_score(
-            "Top o' the mornin', begorrah! Faith and begorrah!"
+            "Top o' the mornin', begorrah! Faith and begorrah!",
+            dialect="hiberno_english"
         )
         assert score < 0.5
 

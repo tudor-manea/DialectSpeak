@@ -2,11 +2,13 @@
 Authenticity Validation Module
 
 Filters outputs that look like stereotyped dialect rather than authentic speech.
-Uses n-gram analysis and stereotype detection.
+Loads patterns from YAML configuration files.
 """
 
 import re
-from typing import List
+import yaml
+from pathlib import Path
+from typing import List, Optional
 from dataclasses import dataclass
 
 
@@ -22,79 +24,119 @@ class AuthenticityResult:
     threshold: float
 
 
-# Hiberno-English stereotype patterns to flag
-HIBERNO_STEREOTYPES = [
-    r"\btop o[f']? the mornin",
-    r"\bbegorrah\b",
-    r"\bfaith and begorrah\b",
-    r"\bto be sure,? to be sure\b",
-    r"\bbegorra\b",
-    r"\boch\s+aye\b",
-    r"\blassie\b",
-    r"\bladdie\b",
-    r"\bme darlin[g']?\b",
-    r"\bwee bit o[f']?\b",
-    r"\bpotato famine\b",
-    r"\bleprechaun\b",
-    r"\bpot o[f']? gold\b",
-    r"\bshamrock\b",
-    r"\bpaddy\b",
-    r"\bmick\b",
-]
+@dataclass
+class AuthenticityPatterns:
+    """Patterns for authenticity validation."""
+    stereotype_patterns: List[re.Pattern]
+    suspicious_patterns: List[re.Pattern]
+    authentic_markers: List[re.Pattern]
 
-# Suspicious patterns that suggest fake dialect
-SUSPICIOUS_PATTERNS = [
-    r"'[a-z]+in\b",  # Excessive apostrophe usage like 'talkin
-    r"\b[a-z]+'[a-z]+\b.*\b[a-z]+'[a-z]+\b.*\b[a-z]+'[a-z]+\b",  # Multiple apostrophe words in sequence
-    r"\baye\b.*\baye\b.*\baye\b",  # Repetitive "aye"
-    r"!{3,}",  # Excessive exclamation marks
-]
 
-# Authentic Hiberno-English markers (positive indicators)
-AUTHENTIC_MARKERS = [
-    r"\b(?:I'm|he's|she's|we're|they're)\s+after\s+\w+ing\b",  # Perfective after
-    r"\b(?:do|does)\s+be\s+\w+ing\b",  # Habitual do be
-    r"\bamn't\b",  # Authentic contraction
-    r"\byouse\b",  # Plural you
-    r"^[Ss]ure,?\s+",  # Discourse marker
-    r"\b[Ii]t's\s+\w+\s+(?:I|he|she|we|they)\s+(?:am|is|are)\b",  # Cleft
-    r",\s+so\s+(?:it|I|he|she)\s+(?:is|am|did)\s*[.!?]?$",  # Tag
-]
+class AuthenticityPatternLoader:
+    """Loads and caches authenticity patterns from YAML files."""
+
+    def __init__(self, dialects_dir: str = "data/dialects"):
+        self.dialects_dir = Path(dialects_dir)
+        self._cache: dict[str, AuthenticityPatterns] = {}
+
+    def _load_dialect(self, dialect: str) -> AuthenticityPatterns:
+        """Load authenticity patterns from YAML file."""
+        yaml_path = self.dialects_dir / f"{dialect}.yaml"
+
+        if not yaml_path.exists():
+            raise ValueError(
+                f"No configuration found for dialect: {dialect}. "
+                f"Expected file: {yaml_path}"
+            )
+
+        with open(yaml_path, "r") as f:
+            spec = yaml.safe_load(f)
+
+        if "authenticity" not in spec:
+            raise ValueError(
+                f"Dialect config {yaml_path} missing 'authenticity' section"
+            )
+
+        auth = spec["authenticity"]
+
+        def compile_patterns(patterns: List[str]) -> List[re.Pattern]:
+            return [re.compile(p, re.IGNORECASE) for p in patterns]
+
+        return AuthenticityPatterns(
+            stereotype_patterns=compile_patterns(
+                auth.get("stereotype_patterns", [])
+            ),
+            suspicious_patterns=compile_patterns(
+                auth.get("suspicious_patterns", [])
+            ),
+            authentic_markers=compile_patterns(
+                auth.get("authentic_markers", [])
+            ),
+        )
+
+    def get(self, dialect: str) -> AuthenticityPatterns:
+        """Get patterns for a dialect, with caching."""
+        if dialect not in self._cache:
+            self._cache[dialect] = self._load_dialect(dialect)
+        return self._cache[dialect]
+
+
+# Global loader instance
+_loader: Optional[AuthenticityPatternLoader] = None
+
+
+def _get_loader() -> AuthenticityPatternLoader:
+    """Get or create the global loader instance."""
+    global _loader
+    if _loader is None:
+        _loader = AuthenticityPatternLoader()
+    return _loader
+
+
+def set_dialects_dir(dialects_dir: str) -> None:
+    """Set a custom dialects directory (useful for testing)."""
+    global _loader
+    _loader = AuthenticityPatternLoader(dialects_dir)
 
 
 class AuthenticityValidator:
     """Validates dialect authenticity and filters stereotyped outputs."""
 
-    def __init__(self):
-        self.stereotype_patterns = [re.compile(p, re.IGNORECASE) for p in HIBERNO_STEREOTYPES]
-        self.suspicious_patterns = [re.compile(p, re.IGNORECASE) for p in SUSPICIOUS_PATTERNS]
-        self.authentic_patterns = [re.compile(p, re.IGNORECASE) for p in AUTHENTIC_MARKERS]
+    def __init__(self, dialects_dir: str = "data/dialects"):
+        self.loader = AuthenticityPatternLoader(dialects_dir)
 
-    def detect_stereotypes(self, text: str) -> List[str]:
+    def _get_patterns(self, dialect: str) -> AuthenticityPatterns:
+        """Get patterns for a dialect."""
+        return self.loader.get(dialect)
+
+    def detect_stereotypes(self, text: str, dialect: str) -> List[str]:
         """Find stereotype patterns in text."""
+        patterns = self._get_patterns(dialect)
         found = []
-        for pattern in self.stereotype_patterns:
+        for pattern in patterns.stereotype_patterns:
             matches = pattern.findall(text)
             found.extend(matches)
         return found
 
-    def detect_suspicious_patterns(self, text: str) -> List[str]:
+    def detect_suspicious_patterns(self, text: str, dialect: str) -> List[str]:
         """Find suspicious fake-dialect patterns."""
+        patterns = self._get_patterns(dialect)
         found = []
-        for pattern in self.suspicious_patterns:
+        for pattern in patterns.suspicious_patterns:
             matches = pattern.findall(text)
             found.extend(matches)
         return found
 
-    def count_authentic_markers(self, text: str) -> int:
+    def count_authentic_markers(self, text: str, dialect: str) -> int:
         """Count authentic dialect markers present."""
+        patterns = self._get_patterns(dialect)
         count = 0
-        for pattern in self.authentic_patterns:
+        for pattern in patterns.authentic_markers:
             if pattern.search(text):
                 count += 1
         return count
 
-    def compute_authenticity_score(self, text: str) -> float:
+    def compute_authenticity_score(self, text: str, dialect: str) -> float:
         """
         Compute authenticity score for dialect text.
 
@@ -106,9 +148,9 @@ class AuthenticityValidator:
         Returns:
             Score between 0.0 (likely fake) and 1.0 (likely authentic)
         """
-        stereotype_count = len(self.detect_stereotypes(text))
-        suspicious_count = len(self.detect_suspicious_patterns(text))
-        authentic_count = self.count_authentic_markers(text)
+        stereotype_count = len(self.detect_stereotypes(text, dialect))
+        suspicious_count = len(self.detect_suspicious_patterns(text, dialect))
+        authentic_count = self.count_authentic_markers(text, dialect)
 
         # Base score starts at 0.7
         score = 0.7
@@ -135,7 +177,7 @@ class AuthenticityValidator:
 
         Args:
             text: Text to validate
-            dialect: Target dialect (currently only hiberno_english supported)
+            dialect: Target dialect
             threshold: Minimum authenticity score to pass (default 0.5)
 
         Returns:
@@ -144,9 +186,9 @@ class AuthenticityValidator:
         if not 0.0 <= threshold <= 1.0:
             raise ValueError(f"Threshold must be between 0 and 1, got {threshold}")
 
-        stereotypes = self.detect_stereotypes(text)
-        suspicious = self.detect_suspicious_patterns(text)
-        score = self.compute_authenticity_score(text)
+        stereotypes = self.detect_stereotypes(text, dialect)
+        suspicious = self.detect_suspicious_patterns(text, dialect)
+        score = self.compute_authenticity_score(text, dialect)
 
         return AuthenticityResult(
             text=text,

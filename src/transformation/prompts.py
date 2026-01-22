@@ -1,11 +1,13 @@
 """
 Transformation Prompts Module
 
-Linguistically-informed prompts for dialect transformation.
-Based on Filppula (1999), Hickey (2007), Kallen (2013).
+Loads dialect transformation prompts from YAML configuration files.
+Supports multiple dialects with configurable prompts.
 """
 
-from typing import Tuple
+import yaml
+from pathlib import Path
+from typing import Tuple, Optional
 from dataclasses import dataclass
 
 
@@ -17,104 +19,86 @@ class DialectPromptConfig:
     batch_template: str
 
 
-# =============================================================================
-# Hiberno-English Prompts
-# =============================================================================
+class DialectPromptLoader:
+    """Loads and caches dialect prompts from YAML files."""
 
-HIBERNO_ENGLISH_SYSTEM_PROMPT = """You are a linguistic expert specializing in Hiberno-English (Irish English). Your task is to transform Standard English text into authentic Hiberno-English while preserving the exact meaning.
+    def __init__(self, dialects_dir: str = "data/dialects"):
+        self.dialects_dir = Path(dialects_dir)
+        self._cache: dict[str, DialectPromptConfig] = {}
 
-CRITICAL: You MUST apply at least one SYNTACTIC feature from the list below. Do NOT rely on phonetic spellings or accent markers.
+    def _load_dialect(self, dialect: str) -> DialectPromptConfig:
+        """Load dialect prompts from YAML file."""
+        yaml_path = self.dialects_dir / f"{dialect}.yaml"
 
-## Syntactic Features to Apply (use at least ONE per transformation):
+        if not yaml_path.exists():
+            raise ValueError(
+                f"No configuration found for dialect: {dialect}. "
+                f"Expected file: {yaml_path}"
+            )
 
-1. **Perfective "after" construction** - for recent completion:
-   - "I have just eaten" → "I'm after eating"
-   - "She finished the work" → "She's after finishing the work"
+        with open(yaml_path, "r") as f:
+            spec = yaml.safe_load(f)
 
-2. **Habitual "do be" construction** - for habitual/ongoing actions:
-   - "He usually works late" → "He does be working late"
-   - "They are always complaining" → "They do be complaining"
+        if "prompts" not in spec:
+            raise ValueError(
+                f"Dialect config {yaml_path} missing 'prompts' section"
+            )
 
-3. **Emphatic tags "so it is/so I did/so they do"** - for emphasis:
-   - "It's cold" → "It's cold, so it is"
-   - "He left early" → "He left early, so he did"
+        prompts = spec["prompts"]
+        required_keys = ["system", "user_template", "batch_template"]
+        for key in required_keys:
+            if key not in prompts:
+                raise ValueError(
+                    f"Dialect config {yaml_path} missing 'prompts.{key}'"
+                )
 
-4. **"Sure" as discourse marker** - sentence-initial:
-   - "Everyone knows that" → "Sure, everyone knows that"
+        return DialectPromptConfig(
+            system_prompt=prompts["system"].strip(),
+            user_template=prompts["user_template"].strip(),
+            batch_template=prompts["batch_template"].strip(),
+        )
 
-5. **Embedded question inversion** - in indirect questions:
-   - "I wonder if he is coming" → "I wonder is he coming"
-   - "I asked if she was ready" → "I asked was she ready"
+    def get(self, dialect: str) -> DialectPromptConfig:
+        """Get prompt configuration for a dialect, with caching."""
+        if dialect not in self._cache:
+            self._cache[dialect] = self._load_dialect(dialect)
+        return self._cache[dialect]
 
-6. **"'Tis" contraction**:
-   - "It is a fine day" → "'Tis a fine day"
+    def get_supported_dialects(self) -> list[str]:
+        """Return list of available dialect identifiers."""
+        if not self.dialects_dir.exists():
+            return []
+        return [
+            p.stem for p in self.dialects_dir.glob("*.yaml")
+            if self._has_prompts(p)
+        ]
 
-7. **Cleft for emphasis**:
-   - "I am tired" → "It's tired I am"
-
-## Features to AVOID (stereotypes and phonetic changes):
-- "Top o' the morning" - stage Irish
-- "Begorrah" / "Faith and begorrah" - stereotype
-- Dropping 'g' from -ing (e.g., "goin'", "doin'") - NOT Hiberno-English
-- Adding apostrophes to suggest accent
-- "o'" for "of" - NOT authentic
-- Any "Oirish" or leprechaun-style speech
-
-## Guidelines:
-1. MUST apply at least one syntactic feature from the list above
-2. Preserve the EXACT meaning - especially numbers, names, and technical content
-3. Keep the same sentence structure when possible
-4. Do NOT add or remove information
-5. Mathematical precision is essential for reasoning tasks"""
-
-HIBERNO_ENGLISH_USER_TEMPLATE = """Transform the following Standard English text into authentic Hiberno-English.
-
-EXAMPLES:
-Input: "She has just arrived at the station."
-Output: "She's after arriving at the station."
-
-Input: "He usually works until 6pm."
-Output: "He does be working until 6pm."
-
-Input: "The car costs $5000. How much would two cars cost?"
-Output: "The car costs $5000, so it does. How much would two cars cost?"
-
-Input: "I wonder if she is coming to the party."
-Output: "I wonder is she coming to the party."
-
-RULES:
-1. Output ONLY the transformed text
-2. Use at least ONE syntactic feature: "after + verb", "do/does be + verb", "so it is/does/did", or embedded question inversion
-3. Keep numbers, names, and technical terms EXACTLY as they appear
-4. If input is a question, output must also be a question
-5. Do NOT add commentary or explanations
-
-Original text:
-{text}
-
-Transformed text:"""
-
-HIBERNO_ENGLISH_BATCH_TEMPLATE = """Transform each of the following Standard English texts into authentic Hiberno-English. Apply appropriate dialect features while preserving the exact meaning.
-
-For each text, output ONLY the transformed version on a new line, in the same order as the input.
-
-Texts to transform:
-{texts}
-
-Transformed texts (one per line):"""
+    def _has_prompts(self, yaml_path: Path) -> bool:
+        """Check if a YAML file contains prompts section."""
+        try:
+            with open(yaml_path, "r") as f:
+                spec = yaml.safe_load(f)
+            return "prompts" in spec
+        except Exception:
+            return False
 
 
-# =============================================================================
-# Dialect Registry
-# =============================================================================
+# Global loader instance
+_loader: Optional[DialectPromptLoader] = None
 
-DIALECT_REGISTRY: dict[str, DialectPromptConfig] = {
-    "hiberno_english": DialectPromptConfig(
-        system_prompt=HIBERNO_ENGLISH_SYSTEM_PROMPT,
-        user_template=HIBERNO_ENGLISH_USER_TEMPLATE,
-        batch_template=HIBERNO_ENGLISH_BATCH_TEMPLATE,
-    ),
-}
+
+def _get_loader() -> DialectPromptLoader:
+    """Get or create the global loader instance."""
+    global _loader
+    if _loader is None:
+        _loader = DialectPromptLoader()
+    return _loader
+
+
+def set_dialects_dir(dialects_dir: str) -> None:
+    """Set a custom dialects directory (useful for testing)."""
+    global _loader
+    _loader = DialectPromptLoader(dialects_dir)
 
 
 # =============================================================================
@@ -123,15 +107,7 @@ DIALECT_REGISTRY: dict[str, DialectPromptConfig] = {
 
 def get_supported_dialects() -> list[str]:
     """Return list of supported dialect identifiers."""
-    return list(DIALECT_REGISTRY.keys())
-
-
-def _get_dialect_config(dialect: str) -> DialectPromptConfig:
-    """Get prompt configuration for a dialect, raising if unsupported."""
-    if dialect not in DIALECT_REGISTRY:
-        supported = ", ".join(get_supported_dialects())
-        raise ValueError(f"Unsupported dialect: {dialect}. Supported: {supported}")
-    return DIALECT_REGISTRY[dialect]
+    return _get_loader().get_supported_dialects()
 
 
 def get_transformation_prompt(
@@ -148,7 +124,7 @@ def get_transformation_prompt(
     Returns:
         Tuple of (system_prompt, user_prompt)
     """
-    config = _get_dialect_config(dialect)
+    config = _get_loader().get(dialect)
     user_prompt = config.user_template.format(text=text)
     return config.system_prompt, user_prompt
 
@@ -167,7 +143,7 @@ def get_batch_transformation_prompt(
     Returns:
         Tuple of (system_prompt, user_prompt)
     """
-    config = _get_dialect_config(dialect)
+    config = _get_loader().get(dialect)
     numbered_texts = "\n".join(f"{i+1}. {text}" for i, text in enumerate(texts))
     user_prompt = config.batch_template.format(texts=numbered_texts)
     return config.system_prompt, user_prompt
