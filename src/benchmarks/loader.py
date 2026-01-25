@@ -15,6 +15,7 @@ class BenchmarkType(Enum):
     """Type of benchmark dataset."""
     REASONING = "reasoning"
     SAFETY = "safety"
+    TOXICITY = "toxicity"
 
 
 @dataclass
@@ -377,6 +378,79 @@ def load_hellaswag(
     )
 
 
+def load_realtoxicityprompts(
+    split: str = "train",
+    max_samples: Optional[int] = None,
+    min_toxicity: Optional[float] = None,
+    max_toxicity: Optional[float] = None,
+) -> BenchmarkDataset:
+    """
+    Load RealToxicityPrompts benchmark for toxicity evaluation.
+
+    RealToxicityPrompts contains ~100k sentence prompts with toxicity scores,
+    designed to evaluate toxic degeneration in language models.
+
+    Args:
+        split: Dataset split (only 'train' available, others ignored)
+        max_samples: Maximum number of samples to load (None for all)
+        min_toxicity: Minimum prompt toxicity score to include (0-1, None for no filter)
+        max_toxicity: Maximum prompt toxicity score to include (0-1, None for no filter)
+
+    Returns:
+        BenchmarkDataset with RealToxicityPrompts samples
+    """
+    # RealToxicityPrompts only has 'train' split
+    dataset = load_dataset("allenai/real-toxicity-prompts", split="train")
+
+    samples = []
+    for idx, item in enumerate(dataset):
+        if max_samples is not None and len(samples) >= max_samples:
+            break
+
+        # Extract prompt text and toxicity (nested dict structure)
+        prompt_data = item.get("prompt", {})
+        prompt_text = prompt_data.get("text", "")
+        prompt_toxicity = prompt_data.get("toxicity")
+
+        # Skip empty prompts
+        if not prompt_text or not prompt_text.strip():
+            continue
+
+        # Filter by toxicity range if specified
+        if prompt_toxicity is not None:
+            if min_toxicity is not None and prompt_toxicity < min_toxicity:
+                continue
+            if max_toxicity is not None and prompt_toxicity > max_toxicity:
+                continue
+
+        # Extract continuation data for metadata
+        continuation_data = item.get("continuation", {})
+
+        samples.append(BenchmarkSample(
+            id=f"realtoxicityprompts_{idx}",
+            question=prompt_text,
+            metadata={
+                "prompt_toxicity": prompt_toxicity,
+                "prompt_severe_toxicity": prompt_data.get("severe_toxicity"),
+                "prompt_identity_attack": prompt_data.get("identity_attack"),
+                "prompt_insult": prompt_data.get("insult"),
+                "prompt_profanity": prompt_data.get("profanity"),
+                "prompt_threat": prompt_data.get("threat"),
+                "continuation_text": continuation_data.get("text"),
+                "continuation_toxicity": continuation_data.get("toxicity"),
+                "challenging": item.get("challenging", False),
+                "split": split,
+            },
+        ))
+
+    return BenchmarkDataset(
+        name="realtoxicityprompts",
+        benchmark_type=BenchmarkType.TOXICITY,
+        samples=samples,
+        description="RealToxicityPrompts - prompts for evaluating toxic degeneration",
+    )
+
+
 def get_sorry_bench_categories() -> List[str]:
     """Get list of SORRY-Bench safety categories."""
     return [
@@ -405,6 +479,7 @@ BENCHMARK_LOADERS = {
     "sorry_bench": load_sorry_bench,
     "arc": load_arc,
     "hellaswag": load_hellaswag,
+    "realtoxicityprompts": load_realtoxicityprompts,
 }
 
 
