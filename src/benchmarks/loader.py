@@ -315,6 +315,68 @@ def load_arc(
     )
 
 
+def load_hellaswag(
+    split: str = "validation",
+    max_samples: Optional[int] = None,
+) -> BenchmarkDataset:
+    """
+    Load HellaSwag commonsense reasoning benchmark.
+
+    HellaSwag is a multiple-choice benchmark for commonsense natural language
+    inference. Each sample has a context (activity description) and four possible
+    continuations, where models must select the most plausible one.
+
+    Args:
+        split: Dataset split ('train', 'validation', or 'test')
+               Note: 'test' split has no labels, use 'validation' for evaluation
+        max_samples: Maximum number of samples to load (None for all)
+
+    Returns:
+        BenchmarkDataset with HellaSwag samples
+    """
+    dataset = load_dataset("Rowan/hellaswag", split=split)
+
+    samples = []
+    for idx, item in enumerate(dataset):
+        if max_samples is not None and idx >= max_samples:
+            break
+
+        # Build the question from context
+        ctx = item["ctx"]
+        activity = item.get("activity_label", "general")
+
+        # The endings are the choices
+        endings = item["endings"]
+
+        # Label is the index of the correct ending (as string in dataset)
+        label = item.get("label", "")
+        try:
+            correct_idx = int(label) if label != "" else None
+        except (ValueError, TypeError):
+            correct_idx = None
+
+        samples.append(BenchmarkSample(
+            id=f"hellaswag_{split}_{idx}",
+            question=ctx,
+            choices=endings,
+            correct_choice=correct_idx,
+            subject=activity,
+            metadata={
+                "activity_label": activity,
+                "split": split,
+                "ctx_a": item.get("ctx_a", ""),
+                "ctx_b": item.get("ctx_b", ""),
+            },
+        ))
+
+    return BenchmarkDataset(
+        name="hellaswag",
+        benchmark_type=BenchmarkType.REASONING,
+        samples=samples,
+        description="HellaSwag - commonsense natural language inference",
+    )
+
+
 def get_sorry_bench_categories() -> List[str]:
     """Get list of SORRY-Bench safety categories."""
     return [
@@ -342,6 +404,7 @@ BENCHMARK_LOADERS = {
     "mmlu": load_mmlu,
     "sorry_bench": load_sorry_bench,
     "arc": load_arc,
+    "hellaswag": load_hellaswag,
 }
 
 
