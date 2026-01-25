@@ -41,7 +41,7 @@ CLAUDE.md
 .claude/
 .claude-plugin/
 .claudeignore
-scripts/sync-notes.sh
+scripts/
 
 # API keys and secrets
 .env
