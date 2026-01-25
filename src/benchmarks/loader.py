@@ -252,6 +252,69 @@ def load_sorry_bench(
     )
 
 
+def load_arc(
+    split: str = "test",
+    difficulty: str = "challenge",
+    max_samples: Optional[int] = None,
+) -> BenchmarkDataset:
+    """
+    Load ARC (AI2 Reasoning Challenge) benchmark.
+
+    ARC is a multiple-choice science question dataset with two difficulty levels:
+    - ARC-Easy: easier questions
+    - ARC-Challenge: harder questions requiring reasoning
+
+    Args:
+        split: Dataset split ('train', 'validation', or 'test')
+        difficulty: 'easy' or 'challenge' (default: 'challenge')
+        max_samples: Maximum number of samples to load (None for all)
+
+    Returns:
+        BenchmarkDataset with ARC samples
+    """
+    config = "ARC-Challenge" if difficulty.lower() == "challenge" else "ARC-Easy"
+    dataset = load_dataset("allenai/ai2_arc", config, split=split)
+
+    samples = []
+    for idx, item in enumerate(dataset):
+        if max_samples is not None and idx >= max_samples:
+            break
+
+        # ARC has choices as a dict with 'text' and 'label' keys
+        choices_data = item["choices"]
+        choices = choices_data["text"]
+        labels = choices_data["label"]
+
+        # Find the correct choice index (labels are A, B, C, D or 1, 2, 3, 4)
+        answer_key = item["answerKey"]
+        try:
+            correct_idx = labels.index(answer_key)
+        except ValueError:
+            # Some items use numeric labels
+            label_map = {"1": 0, "2": 1, "3": 2, "4": 3}
+            correct_idx = label_map.get(answer_key, 0)
+
+        samples.append(BenchmarkSample(
+            id=f"arc_{difficulty}_{split}_{idx}",
+            question=item["question"],
+            choices=choices,
+            correct_choice=correct_idx,
+            subject="science",
+            metadata={
+                "difficulty": difficulty,
+                "split": split,
+                "answer_key": answer_key,
+            },
+        ))
+
+    return BenchmarkDataset(
+        name=f"arc_{difficulty}",
+        benchmark_type=BenchmarkType.REASONING,
+        samples=samples,
+        description=f"AI2 Reasoning Challenge ({config}) - science questions",
+    )
+
+
 def get_sorry_bench_categories() -> List[str]:
     """Get list of SORRY-Bench safety categories."""
     return [
@@ -278,6 +341,7 @@ BENCHMARK_LOADERS = {
     "gsm8k": load_gsm8k,
     "mmlu": load_mmlu,
     "sorry_bench": load_sorry_bench,
+    "arc": load_arc,
 }
 
 
