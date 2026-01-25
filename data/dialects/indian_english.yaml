@@ -1,0 +1,321 @@
+# Indian English Feature Specification
+# Based on Sailaja (2009), Bhatt (2008), Kachru (1983), Lange (2012)
+
+dialect_name: Indian English
+dialect_code: indian_english
+aliases:
+  - IndE
+  - South Asian English
+  - Hinglish (when mixed with Hindi)
+
+# Core syntactic features with detection patterns
+features:
+  progressive_stative:
+    name: "Progressive aspect with stative verbs"
+    description: "Uses progressive (-ing) with stative verbs that don't take progressive in Standard English"
+    examples:
+      - original: "I know the answer"
+        transformed: "I am knowing the answer"
+      - original: "She understands the problem"
+        transformed: "She is understanding the problem"
+      - original: "I have two brothers"
+        transformed: "I am having two brothers"
+      - original: "He thinks it's correct"
+        transformed: "He is thinking it's correct"
+    patterns:
+      - "\\b(?:am|is|are|was|were)\\s+(?:knowing|understanding|having|thinking|believing|wanting|needing|liking|loving|belonging|owning|possessing)\\b"
+    priority: high
+
+  invariant_tag:
+    name: "Invariant tag questions ('isn't it', 'no', 'na')"
+    description: "Uses invariant tags regardless of main clause verb"
+    examples:
+      - original: "You are coming tomorrow, aren't you?"
+        transformed: "You are coming tomorrow, isn't it?"
+      - original: "She finished the work, didn't she?"
+        transformed: "She finished the work, no?"
+      - original: "They will help us, won't they?"
+        transformed: "They will help us, isn't it?"
+    patterns:
+      - ",\\s*isn't\\s+it\\s*[?]?$"
+      - ",\\s*no\\s*[?]?$"
+      - ",\\s*na\\s*[?]?$"
+    priority: high
+
+  only_emphasis:
+    name: "'Only' for emphasis/focus"
+    description: "Uses 'only' as a focus particle after nouns/pronouns"
+    examples:
+      - original: "I myself told him"
+        transformed: "I only told him"
+      - original: "This very reason is why I came"
+        transformed: "This only is the reason I came"
+      - original: "At that exact moment, he arrived"
+        transformed: "That time only he arrived"
+    patterns:
+      - "\\b(?:I|he|she|they|we|you|this|that|here|there|now|today|yesterday)\\s+only\\b"
+      - "\\b\\w+\\s+only\\s+(?:is|are|was|were|told|said|came|went|did)\\b"
+    priority: high
+
+  itself_emphasis:
+    name: "'Itself/himself/herself' for emphasis"
+    description: "Uses reflexive pronouns for temporal or emphatic focus"
+    examples:
+      - original: "I will do it right now"
+        transformed: "I will do it now itself"
+      - original: "She finished it the same day"
+        transformed: "She finished it that day itself"
+      - original: "Do it immediately"
+        transformed: "Do it today itself"
+    patterns:
+      - "\\b(?:now|today|tomorrow|yesterday|here|there|this|that)\\s+itself\\b"
+      - "\\b(?:same|very)\\s+\\w+\\s+itself\\b"
+    priority: high
+
+  reduplication:
+    name: "Reduplication for emphasis/intensity"
+    description: "Repeats words for emphasis or to indicate intensity"
+    examples:
+      - original: "I want very hot coffee"
+        transformed: "I want hot hot coffee"
+      - original: "Come quickly"
+        transformed: "Come fast fast"
+      - original: "They are exactly the same"
+        transformed: "They are same same"
+      - original: "I will come immediately"
+        transformed: "I will come now now"
+    patterns:
+      - "\\b(hot|cold|big|small|fast|slow|good|bad|same|now|quick)\\s+\\1\\b"
+    priority: medium
+
+  article_variation:
+    name: "Article usage variation"
+    description: "Different article usage patterns, often omitting or adding articles"
+    examples:
+      - original: "He is a teacher"
+        transformed: "He is teacher"
+      - original: "She went to school"
+        transformed: "She went to the school"
+      - original: "I need an advice"
+        transformed: "I need advice"
+    patterns:
+      - "\\b(?:is|are|am|was|were|become|became)\\s+(?:teacher|doctor|engineer|student|professor|manager|scientist)\\b(?!\\s+(?:of|at|in|who|that))"
+    priority: medium
+
+  prepositional_variation:
+    name: "Non-standard preposition usage"
+    description: "Different preposition choices from Standard English"
+    examples:
+      - original: "We discussed the matter"
+        transformed: "We discussed about the matter"
+      - original: "She explained the problem"
+        transformed: "She explained about the problem"
+      - original: "He ordered food"
+        transformed: "He ordered for food"
+      - original: "I requested him to come"
+        transformed: "I requested to him to come"
+    patterns:
+      - "\\b(?:discuss|explain|describe|emphasize|stress)\\s+about\\b"
+      - "\\b(?:order|request|demand)\\s+(?:for|to)\\s+\\w+\\b"
+    priority: medium
+
+  present_perfect_variation:
+    name: "Present perfect for recent past"
+    description: "Uses present perfect where Standard English uses simple past"
+    examples:
+      - original: "I ate lunch already"
+        transformed: "I have taken lunch already"
+      - original: "Did you finish?"
+        transformed: "Have you finished?"
+      - original: "She left just now"
+        transformed: "She has left just now"
+    patterns:
+      - "\\b(?:have|has)\\s+(?:taken|finished|completed|done|reached|come|gone)\\s+(?:just|already|now)\\b"
+    priority: medium
+
+  would_politeness:
+    name: "'Would' for politeness/formality"
+    description: "Uses 'would' in formal contexts where Standard English uses present tense"
+    examples:
+      - original: "I want to inform you"
+        transformed: "I would like to inform you"
+      - original: "Please note that"
+        transformed: "I would request you to note that"
+    patterns:
+      - "\\bwould\\s+(?:like|request|suggest|advise|recommend)\\s+(?:to|you|that)\\b"
+    priority: low
+
+  continuous_for_simple:
+    name: "Continuous tense for simple aspect"
+    description: "Uses continuous where simple aspect is standard"
+    examples:
+      - original: "I think so"
+        transformed: "I am thinking so"
+      - original: "What do you want?"
+        transformed: "What are you wanting?"
+    patterns:
+      - "\\b(?:am|is|are)\\s+(?:thinking|wanting|needing|meaning|hoping)\\s+(?:so|that|about)\\b"
+    priority: medium
+
+  verb_agreement_variation:
+    name: "Subject-verb agreement variation"
+    description: "Variation in subject-verb agreement with collective nouns"
+    examples:
+      - original: "The team is playing well"
+        transformed: "The team are playing well"
+      - original: "The committee has decided"
+        transformed: "The committee have decided"
+    patterns:
+      - "\\b(?:team|committee|government|staff|family|management)\\s+(?:are|have|were)\\b"
+    priority: low
+
+  one_determiner:
+    name: "'One' as determiner/intensifier"
+    description: "Uses 'one' as an intensifying determiner"
+    examples:
+      - original: "I have such a headache"
+        transformed: "I am having one headache"
+      - original: "What a mess this is"
+        transformed: "What one mess this is"
+    patterns:
+      - "\\b(?:one|what\\s+one)\\s+(?:headache|problem|mess|confusion|tension)\\b"
+    priority: low
+
+# Features to AVOID (stereotypes)
+avoid_features:
+  - "Excessive 'Sir' or 'Madam' in every sentence"
+  - "'Please do the needful' (though used, has become a stereotype)"
+  - "Apu-style accent markers or phonetic spellings"
+  - "Excessive 'kindly' usage"
+  - "Head wobble or cultural stereotype references"
+  - "Random Hindi/Urdu words mixed in"
+  - "'Very very' as the only form of emphasis"
+  - "Overly formal colonial-era phrasing"
+  - "'Good name' for 'name'"
+
+# Validation thresholds
+validation:
+  min_features_required: 1
+  semantic_similarity_threshold: 0.85
+  authenticity_score_threshold: 0.7
+
+# =============================================================================
+# Transformation Prompts
+# =============================================================================
+prompts:
+  system: |
+    You are a linguistic expert specializing in Indian English. Your task is to transform Standard American/British English text into authentic Indian English while preserving the exact meaning.
+
+    CRITICAL: You MUST apply at least one SYNTACTIC feature from the list below. Do NOT rely on accent markers, phonetic spellings, or cultural stereotypes.
+
+    ## Syntactic Features to Apply (use at least ONE per transformation):
+
+    1. **Progressive with stative verbs** - for states and mental processes:
+       - "I know the answer" → "I am knowing the answer"
+       - "She understands the problem" → "She is understanding the problem"
+       - "I have a car" → "I am having a car"
+
+    2. **Invariant tag questions** - use "isn't it?" or "no?" regardless of main verb:
+       - "You are coming, aren't you?" → "You are coming, isn't it?"
+       - "She finished the work, didn't she?" → "She finished the work, no?"
+       - "They will help, won't they?" → "They will help, isn't it?"
+
+    3. **'Only' for emphasis** - place "only" after the focused element:
+       - "I myself told him" → "I only told him"
+       - "At that exact moment" → "That time only"
+       - "This is the very reason" → "This only is the reason"
+
+    4. **'Itself' for temporal/emphatic focus**:
+       - "Do it right now" → "Do it now itself"
+       - "She finished it the same day" → "She finished it that day itself"
+
+    5. **Reduplication for intensity**:
+       - "very hot coffee" → "hot hot coffee"
+       - "come quickly" → "come fast fast"
+       - "exactly the same" → "same same"
+
+    ## Features to AVOID (stereotypes):
+    - Excessive "Sir/Madam" or "kindly"
+    - "Do the needful" (has become a stereotype)
+    - Phonetic accent markers
+    - Randomly inserting Hindi words
+    - Colonial-era overly formal phrasing
+
+    ## Guidelines:
+    1. MUST apply at least one syntactic feature from the list above
+    2. Preserve the EXACT meaning - especially numbers, names, and technical content
+    3. Keep the same sentence structure when possible
+    4. Do NOT add or remove information
+    5. Mathematical precision is essential for reasoning tasks
+
+  user_template: |
+    Transform the following Standard English text into authentic Indian English.
+
+    EXAMPLES:
+    Input: "She knows the answer to that question."
+    Output: "She is knowing the answer to that question."
+
+    Input: "You will help me with this, won't you?"
+    Output: "You will help me with this, isn't it?"
+
+    Input: "I told him myself about the meeting."
+    Output: "I only told him about the meeting."
+
+    Input: "Please finish this task immediately."
+    Output: "Please finish this task now itself."
+
+    Input: "The coffee is very hot."
+    Output: "The coffee is hot hot."
+
+    RULES:
+    1. Output ONLY the transformed text
+    2. Use at least ONE syntactic feature: progressive stative, invariant tag, "only" emphasis, "itself" emphasis, or reduplication
+    3. Keep numbers, names, and technical terms EXACTLY as they appear
+    4. If input is a question, output must also be a question
+    5. Do NOT add commentary or explanations
+
+    Original text:
+    {text}
+
+    Transformed text:
+
+  batch_template: |
+    Transform each of the following Standard English texts into authentic Indian English. Apply appropriate dialect features while preserving the exact meaning.
+
+    For each text, output ONLY the transformed version on a new line, in the same order as the input.
+
+    Texts to transform:
+    {texts}
+
+    Transformed texts (one per line):
+
+# =============================================================================
+# Authenticity Validation Patterns
+# =============================================================================
+authenticity:
+  # Patterns that indicate stereotyped/fake dialect (to reject)
+  stereotype_patterns:
+    - "\\bdo\\s+the\\s+needful\\b"
+    - "\\bkindly\\s+revert\\b"
+    - "\\bgood\\s+name\\b"
+    - "\\bsir\\s+ji\\b"
+    - "\\bvery\\s+very\\s+very\\b"
+    - "\\bplease\\s+to\\s+be\\b"
+    - "\\bmy\\s+friend\\s+is\\s+telling\\s+me\\b"
+
+  # Patterns that suggest fake/exaggerated dialect
+  suspicious_patterns:
+    - "\\bji\\b.*\\bji\\b.*\\bji\\b"
+    - "\\bsir\\b.*\\bsir\\b.*\\bsir\\b"
+    - "\\bmadam\\b.*\\bmadam\\b"
+    - "\\bkindly\\b.*\\bkindly\\b"
+
+  # Patterns that indicate authentic dialect (positive markers)
+  authentic_markers:
+    - "\\b(?:am|is|are)\\s+(?:knowing|understanding|having|thinking|believing)\\b"
+    - ",\\s*isn't\\s+it\\s*[?]?$"
+    - ",\\s*no\\s*[?]?$"
+    - "\\b(?:I|he|she|they|this|that|now|today)\\s+only\\b"
+    - "\\b(?:now|today|here|there)\\s+itself\\b"
+    - "\\b(hot|cold|fast|slow|same|good)\\s+\\1\\b"
+    - "\\b(?:discuss|explain)\\s+about\\b"
