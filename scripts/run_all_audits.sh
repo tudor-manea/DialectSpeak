@@ -1,5 +1,5 @@
 #!/bin/bash
-# Run fairness audits on all 13 dialect pair datasets
+# Run fairness audits on all 15 dialect pair datasets
 # Requires: venv activated, Ollama running with llama3.1:8b
 
 set -e
@@ -23,7 +23,9 @@ DATASETS=(
     "data/benchmarks/realtoxicityprompts_hiberno_english_0-1000_20260125_185421.json"
     "data/benchmarks/realtoxicityprompts_aave_0-1000_20260125_191103.json"
     "data/benchmarks/realtoxicityprompts_indian_english_0-1000_20260125_193222.json"
-    "data/benchmarks/gsm8k_hiberno_english_20260121_002828.json"
+    "data/benchmarks/gsm8k_hiberno_english_20260125_224854.json"
+    "data/benchmarks/gsm8k_aave_20260125_230652.json"
+    "data/benchmarks/gsm8k_indian_english_20260125_232850.json"
 )
 
 TOTAL=${#DATASETS[@]}
