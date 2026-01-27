@@ -9,6 +9,7 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 
 cd "$PROJECT_DIR"
 source venv/bin/activate
+export PYTHONPATH="$PROJECT_DIR:$PYTHONPATH"
 
 DATASETS=(
     "data/benchmarks/arc_hiberno_english_20260125_145323.json"
