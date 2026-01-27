@@ -1,0 +1,1651 @@
+{
+  "benchmark": "mmlu",
+  "dialect": "aave",
+  "total_samples": 1000,
+  "successful_transforms": 987,
+  "valid_pairs": 78,
+  "failed_validation": 909,
+  "transform_errors": 13,
+  "pass_rate": 0.078,
+  "pairs": [
+    {
+      "id": "mmlu_test_12",
+      "original": "Find the order of the factor group (Z_11 x Z_15)/(<1, 1>)",
+      "transformed": "She done find the order of the factor group (Z_11 x Z_15)/(<1, 1>)",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "abstract_algebra",
+      "semantic_score": 0.9019598960876465,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "1",
+          "2",
+          "5",
+          "11"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_19",
+      "original": "Statement 1| Every group of order p^2 where p is prime is Abelian. Statement 2 | For a fixed prime p a Sylow p-subgroup of a group G is a normal subgroup of G if and only if it is the only Sylow p-subgroup of G.",
+      "transformed": "Statement 1| Every group of order p^2 where p be prime is Abelian.\n Statement 2 | For a fixed prime p, a Sylow p-subgroup of a group G ain't normal if it ain't the only one.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "abstract_algebra",
+      "semantic_score": 0.9655103087425232,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "True, True",
+          "False, False",
+          "True, False",
+          "False, True"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_24",
+      "original": "Statement 1 | Every maximal ideal is a prime ideal. Statement 2 | If I is a maximal ideal of a commutative ring R, then R/I is field.",
+      "transformed": "Every maximal ideal be a prime ideal. If I done be a maximal ideal of a commutative ring R, then R/I be a field.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "abstract_algebra",
+      "semantic_score": 0.8941309452056885,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "True, True",
+          "False, False",
+          "True, False",
+          "False, True"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_38",
+      "original": "Find the generator for the finite field Z_7.",
+      "transformed": "She done find the generator for the finite field Z_7.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "abstract_algebra",
+      "semantic_score": 0.8985646367073059,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_46",
+      "original": "Statement 1 | A homomorphism may have an empty kernel. Statement 2 | It is not possible to have a nontrivial homomorphism of some finite group into some infinite group.",
+      "transformed": "Statement 1 | A homomorphism can have an empty kernel.\nStatement 2 | It ain't possible to have a nontrivial homomorphism of some finite group into some infinite group.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "abstract_algebra",
+      "semantic_score": 0.9907522797584534,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "True, True",
+          "False, False",
+          "True, False",
+          "False, True"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_49",
+      "original": "Find the maximum possible order for some element of Z_8 x Z_10 x Z_24.",
+      "transformed": "She done find de maximum possible order fo' some element of Z_8 x Z_10 x Z_24.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "abstract_algebra",
+      "semantic_score": 0.8824686408042908,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "8",
+          "120",
+          "240",
+          "24"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_53",
+      "original": "Statement 1 | If G, H and K are groups of order 4, at least two of them are isomorphic. Statement 2 | If Z_r + Z_s is isomorphic to a subgroup Z_m + Z_n, then r divides m and s divides n.",
+      "transformed": "Statement 1 | If G, H, and K be groups of order 4, at least two of them done be isomorphic.\nStatement 2 | If Z_r + Z_s ain't isomorphic to a subgroup Z_m + Z_n, then r don't divide m and s don't divide n.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "abstract_algebra",
+      "semantic_score": 0.9704335927963257,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "True, True",
+          "False, False",
+          "True, False",
+          "False, True"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_64",
+      "original": "How many homomorphisms are there of Z into Z_2?",
+      "transformed": "She done figure out how many homomorphisms be from Z into Z_2?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "abstract_algebra",
+      "semantic_score": 0.8592668771743774,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "1",
+          "2",
+          "infinitely many",
+          "0"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_72",
+      "original": "Using Fermat's theorem, find the remainder of 3^47 when it is divided by 23.",
+      "transformed": "She done figure out how to use Fermat's theorem to find the remainder of 3^47 when it get divided by 23.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "abstract_algebra",
+      "semantic_score": 0.9169430732727051,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_79",
+      "original": "Statement 1 | If K is a nonzero subgroup of a finitely generated free abelian group, then K is free abelian. Statement 2 | If K is a nonzero subgroup of a finitely generated free abelian group, then G / K is free abelian.",
+      "transformed": "Statement 1 | If K be a nonzero subgroup of a finitely generated free abelian group, then K done be free abelian.\nStatement 2 | If K be a nonzero subgroup of a finitely generated free abelian group, then G / K ain't nothin' but free abelian.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "abstract_algebra",
+      "semantic_score": 0.9781525135040283,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "True, True",
+          "False, False",
+          "True, False",
+          "False, True"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_175",
+      "original": "A patient cuts a peripheral motor nerve in their wrist when they fall through a plate glass window. If the nerve does not regenerate, after about 6 months the muscles it normally innervates will show signs of which of the four options below?",
+      "transformed": "A patient done cut a peripheral motor nerve in they wrist when they fall through a plate glass window. If the nerve ain't regenerate, after about 6 months the muscles it normally innervate will show signs of which one of the four options below?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "anatomy",
+      "semantic_score": 0.98231440782547,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "spastic paralysis",
+          "flaccid paralysis",
+          "atrophy",
+          "contracture"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_184",
+      "original": "Which orbital wall is most likely to collapse in a 'blow out' fracture?",
+      "transformed": "She done know which orbital wall most likely to collapse in a \"blow out\" fracture?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "anatomy",
+      "semantic_score": 0.8741690516471863,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "The roof",
+          "The floor",
+          "The lateral wall",
+          "The medial wall"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_270",
+      "original": "What is not true of Jupiter's magnetic field?",
+      "transformed": "What ain't true 'bout Jupiter's magnetic field?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9154931902885437,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "it is about 20000 times stronger than Earth's magnetic field",
+          "it traps charged particles from Io's volcanoes in a \"plasma torus\" around the planet",
+          "it causes spectacular auroral displays at Jupiter's north and south poles",
+          "it switches polarity every 11 years"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_278",
+      "original": "Which of these has NOT been one of the main hypotheses considered for the origin of the Moon?",
+      "transformed": "Which one ain't been one of them main hypothesis they consider for the origin of the Moon?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9241225719451904,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "The Moon split from the Earth due to tidal forces.",
+          "The Moon was captured into Earth orbit.",
+          "The Earth and Moon co-accreted in the solar nebula.",
+          "Earth was rotating so rapidly that the Moon split from it."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_279",
+      "original": "We were first able to accurately measure the diameter of Pluto from:",
+      "transformed": "We done get accurate measurement on Pluto's diameter from:",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9120839834213257,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "a New Horizons flyby in the 1990s",
+          "Hubble Space Telescope images that resolved Pluto's disk",
+          "brightness measurements made during mutual eclipses of Pluto and Charon",
+          "radar observations made by the Arecibo telescope"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_286",
+      "original": "Calculate the ratio of the solar radiation flux on Mercury's surface for perihelion (0.304 AU) versus aphelion (0.456 AU).",
+      "transformed": "She done calculate de ratio of de solar radiation flux on Mercury's surface for perihelion (0.304 AU) versus aphelion (0.456 AU).",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9411230683326721,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "4:1",
+          "1:2",
+          "6:5",
+          "9:4"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_289",
+      "original": "Which of the following is/are NOT caused by orbital resonance?",
+      "transformed": "Which of them ain't caused by orbital resonance?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.869977593421936,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "2:3 periodic ratio of Neptune:Pluto",
+          "Kirkwood Gaps.",
+          "Gaps in Saturn's rings.",
+          "Breaking of small Jovian moons to form ring materials."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_291",
+      "original": "Which of the following moons is NOT one of the Galilean moons?",
+      "transformed": "Which of them ain't one of the Galilean moons?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9183337092399597,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Ganymede",
+          "Callisto",
+          "Europa",
+          "Dione"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_300",
+      "original": "Which is not a similarity between Saturn and Jupiter's atmospheres?",
+      "transformed": "What ain't similar 'bout Saturn and Jupiter's atmospheres?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.921674370765686,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "a composition dominated by hydrogen and helium",
+          "the presence of belts zones and storms",
+          "an equatorial wind speed of more than 900 miles per hour",
+          "significant \"shear\" between bands of circulation at different latitudes"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_327",
+      "original": "Mars has an atmosphere that is almost entirely carbon dioxide.Why isn't there a strong greenhouse effect keeping the planet warm?",
+      "transformed": "Mars got an atmosphere dat's almost all carbon dioxide. Why ain't there no strong greenhouse effect keepin' de planet warm?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.940995454788208,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "the atmosphere on Mars is too thin to trap a significant amount of heat",
+          "There actually is a strong greenhouse effect and Mars would be 35oC colder than it is now without it.",
+          "Mars does not have enough internal heat to drive the greenhouse effect",
+          "the greenhouse effect requires an ozone layer which Mars does not have"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_328",
+      "original": "Which of the following was not cited as evidence for life in the martian meteorite ALH84001?",
+      "transformed": "Which one ain't cite as evidence for life in the martian meteorite ALH84001?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9481720924377441,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Complex organic molecules specifically PAHs",
+          "Magnetite grains similar to those formed by bacteria on Earth",
+          "Carbonate minerals indicating a thicker warmer Martian atmosphere",
+          "Amino acids with a preferred orientation or \"chirality\""
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_343",
+      "original": "Why can't we see the Sun's corona except during total solar eclipses?",
+      "transformed": "We ain't never see the Sun's corona 'less it's during total solar eclipses.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.8835392594337463,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "The corona is made up mostly of charged particles which aren't luminous.",
+          "It's much too cool to emit visible light",
+          "We can't see magnetic fields",
+          "It's too diffuse"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_363",
+      "original": "Mars has an atmosphere that is almost entirely carbon dioxide.Why isn't there a strong greenhouse effect keeping the planet warm?",
+      "transformed": "Mars done got an atmosphere dat's almost all carbon dioxide. Why ain't there no strong greenhouse effect keepin' it warm?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9367012977600098,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Mars does not have enough internal heat to drive the greenhouse effect",
+          "Mars is too far from the sun for the greenhouse effect to work",
+          "the greenhouse effect requires an ozone layer which Mars does not have",
+          "the atmosphere on Mars is too thin to trap a significant amount of heat"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_365",
+      "original": "Why do Uranus and Neptune have blue methane clouds but Jupiter and Saturn do not?",
+      "transformed": "Why them gas giants, like Uranus and Neptune, got them blue methane clouds, but Jupiter and Saturn ain't got none?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9185468554496765,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Methane does not condense into ice in the warmer atmospheric temperatures of Jupiter and Saturn.",
+          "Methane did not exist in the solar nebula at the radii of Jupiter and Saturn when the planets formed.",
+          "The relatively slow rotation of Uranus and Neptune allows methane to migrate to higher levels in the atmosphere and condense into clouds.",
+          "Methane reacts with the abundant ammonia clouds in Jupiter and Saturn and is removed from the atmosphere."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_372",
+      "original": "Mars might be a place for future human explorations. However humans can not breathe on the surface of Mars because the atmosphere consists mostly of ...",
+      "transformed": "Mars might be a place for future human explorations. However, humans ain't got no air to breathe on the surface 'cause the atmosphere consist mostly of carbon dioxide and them other gases.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.8874630331993103,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Nitrogen",
+          "Argon",
+          "Methane",
+          "CO2"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_391",
+      "original": " _______ can be a likened to their natural counterparts, comprising of a balanced network of interdependent organisms and their environments thus adding value to sustainability thinking due to the consideration of companies and industries as being bound together, and interdependent due to all kinds of resources and wastes.",
+      "transformed": "They done comprise a balanced network of interdependent organisms and they environment, addin' value to sustainability thinkin', 'cause companies and industries be bound together, dependin' on all kinda resources and waste.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8645735383033752,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Industrial supply loops",
+          "Industrial ecosystems",
+          "Ecological ecosystems",
+          "Corporate ecosystems"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_392",
+      "original": "________, where for example one party possess more resources, unfair distribution of ________, where one party gains more from the relationship, and CSOs being ________, are all limitations and risks of business-CSO collaborations.",
+      "transformed": "They be limitations and risks of business-CSO collaborations, where for example one party possess more resources, unfair distribution of power, where one party gain more from the relationship, and CSOs bein' weak, is all them.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9311651587486267,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Power imbalance, Benefits, Hoodwinked",
+          "Power imbalance, Resources, Co-opted",
+          "Informational asymmetries, Benefits, Hoodwinked",
+          "Informational asymmetries, Resources, Co-opted"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_446",
+      "original": "Which of the following is not one the underlying principles of the corporate governance Combined Code of Practice?",
+      "transformed": "Which one ain't one the underlying principles of the corporate governance Combined Code of Practice?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9514543414115906,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Openness",
+          "Integrity",
+          "Availability",
+          "Acceptability"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_449",
+      "original": "CSO's frequently spend too much time communicating their performance measures and too much time devising them with input from beneficiaries.",
+      "transformed": "CSOs done spend too much time talkin' 'bout they performance measures, and they be spendin' too much time makin' 'em up with input from beneficiaries.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9028911590576172,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "2,3",
+          "1,3",
+          "3,4",
+          "1,2,3,4"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_464",
+      "original": "Which of the following areas is not covered by the principles enshrined in the UN Global Compact?",
+      "transformed": "Which of them area ain't covered by the principle in the UN Global Compact?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9250056743621826,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Human rights",
+          "Labour",
+          "Commercial performance",
+          "Anti-corruption"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_494",
+      "original": "Sodium bicarbonate ingestion improves middle distance running performance by:",
+      "transformed": "She done show dat sodium bicarbonate ingestion improve middle distance runnin' performance by:",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8775376677513123,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "elevating the pH and buffering capacity of the extracellular fluid allowing a faster efflux of hydrogen ions from muscle.",
+          "reducing the pH and buffering capacity of the extracellular fluid allowing a faster efflux of hydrogen ions from muscle.",
+          "elevating the pH and buffering capacity of the extracellular fluid allowing a faster influx of hydrogen ions into muscle.",
+          "elevating the pre-exercise muscle pH."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_533",
+      "original": "In a double stranded molecule of DNA, the ratio of purines : pyrimidines is:",
+      "transformed": "She done calculate de ratio of purines to pyrimidines in dat double-stranded DNA molecule.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8534494042396545,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "variable.",
+          "determined by the base sequence in RNA.",
+          "genetically determined.",
+          "always 1:1."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_540",
+      "original": "Which of the following is not an abnormal breathing pattern seen in head injury and altered conscious level?",
+      "transformed": "Which one ain't normal breathing pattern you see in head injury and altered conscious level?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9373533129692078,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Cheyne-Stokes respiration.",
+          "Anaerobic respiration.",
+          "Hyperventilation.",
+          "Ataxic breathing."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_545",
+      "original": "Which of the following factors does not influence success in sport?",
+      "transformed": "Which one them factors ain't influence success in sport?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9138439297676086,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Ability to tolerate heavy training without succumbing to illness or injury.",
+          "Tactics.",
+          "The diet.",
+          "Ingestion of carnitine during exercise."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_552",
+      "original": "In hypovolaemic shock, what percentage of blood can be lost before it is reflected in changes in heart rate and blood pressure?",
+      "transformed": "In hypovolaemic shock, how much blood can you lose 'fore it done show up in changes in heart rate and blood pressure?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9506465792655945,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "5%",
+          "10%",
+          "20%",
+          "30%"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_559",
+      "original": "Which of the following physiological characteristics is not important for success in endurance events such as the marathon race?",
+      "transformed": "Which one a them physiological characteristics ain't important for success in endurance events such like the marathon race?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9717859029769897,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "The ability to regulate body temperature.",
+          "The ability to supply oxygen to the exercising muscles.",
+          "The availability of body stores of carbohydrate.",
+          "Muscle ATP and phosphocreatine content."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_570",
+      "original": "Dopamine is prescribed at a rate of 4 micrograms/kg/min. For a 65 kg person, how many milligrams will they receive in an hour?",
+      "transformed": "Dopamine be prescribed at a rate of 4 micrograms/kg/min. For a 65 kg person, how many milligrams they done get in one hour?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9737282991409302,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "156",
+          "15.6",
+          "1.56",
+          "15600"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_575",
+      "original": "If a catheter resists all attempts to unblock it and you are unable to remove it, what should you do?",
+      "transformed": "If a catheter resist all attempt to unblock it and you ain't able to remove it, what you should do?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9832679033279419,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Try harder to remove it.",
+          "Try harder to unblock it.",
+          "Leave it until next time.",
+          "Call for assistance from a medical practitioner."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_581",
+      "original": "If a patient is cyanosed, what might their oxygen saturation level be?",
+      "transformed": "If a patient done got cyanosed, what might they be at for oxygen saturation?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9347453117370605,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "98% or above.",
+          "94% or above.",
+          "80% or below.",
+          "85% or above."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_604",
+      "original": "Which of the following can act as an intracellular buffer to limit pH changes when the rate of glycolysis is high?",
+      "transformed": "She done know which one can act as an intracellular buffer to limit pH changes when the rate of glycolysis be high.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8641722798347473,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Glutamine",
+          "Glucose",
+          "Carnosine",
+          "Amylase"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_617",
+      "original": "A muscle fibre relaxes when:",
+      "transformed": "When a muscle fibre relaxes, it don't contract no more.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8875781893730164,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "the nerve stimulus is removed.",
+          "the nerve stimulus is too forceful.",
+          "the actin binding sites are uncovered.",
+          "the actin binding sites are saturated."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_630",
+      "original": "Which of the following is NOT a sign of phlebitis?",
+      "transformed": "Which one ain't a sign of phlebitis?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9085171818733215,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Swelling.",
+          "Redness.",
+          "Exudate.",
+          "Cool to the touch."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_644",
+      "original": "Which of the following is not a category used to classify patients according to the Glasgow Coma Scale?",
+      "transformed": "Which one ain't a category use to classify patients according to the Glasgow Coma Scale?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9211083650588989,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Eye opening.",
+          "Verbal response.",
+          "Best motor response.",
+          "Pupil response."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_648",
+      "original": "The net production of ATP via substrate-level phosphorylation in glycolysis is:",
+      "transformed": "She done calculate dat de net production of ATP via substrate-level phosphorylation in glycolysis is.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8909560441970825,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "2 from glucose and 3 from glycogen.",
+          "2 from glucose and 4 from glycogen.",
+          "3 from glucose and 4 from glycogen.",
+          "3 from glucose and 2 from glycogen."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_654",
+      "original": "Which of the following molecules does not form part of DNA?",
+      "transformed": "Which one of them molecule ain't part of DNA?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8777389526367188,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Purine",
+          "Pyrimidine",
+          "Deoxyribose",
+          "Amino acid"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_679",
+      "original": "Which products of ADP degradation increase in concentration in the blood during multiple sprint sports?",
+      "transformed": "She done increase in concentration them product of ADP degradation in the blood when you doin' multiple sprints.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8606033325195312,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Ammonia, hypoxanthine and uric acid.",
+          "Ammonia, urea and uric acid.",
+          "Ammonia, urea and creatinine.",
+          "Ammonia, urea and creatine."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_693",
+      "original": "Which of these options is not recognized as a cause of chronic cough?",
+      "transformed": "Which option ain't recognized as a cause of chronic cough?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9581142663955688,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Gastro-oesophageal reflux disease",
+          "Angiotensin Converting Enzyme (ACE) inhibitors",
+          "Long-term smoking",
+          "Sodium valproate"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_756",
+      "original": "Synthesis of an RNA/DNA hybrid from a single-stranded RNA template requires",
+      "transformed": "She done synthesize an RNA/DNA hybrid from a single-stranded RNA template require.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_biology",
+      "semantic_score": 0.8948058485984802,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "a DNA or RNA primer and reverse transcriptase",
+          "a DNA or RNA primer and DNA polymerase",
+          "RNase only",
+          "reverse transcriptase only"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_759",
+      "original": "Which of the following is NOT a source of atmospheric carbon?",
+      "transformed": "Which one ain't a source of atmospheric carbon?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_biology",
+      "semantic_score": 0.9231242537498474,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Respiration",
+          "Photosynthesis",
+          "Bacterial decomposition",
+          "Combustion of fossil fuels"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_762",
+      "original": "Cleavage symmetry arising from early cell divisions that occur at an oblique angle to the polar axis is known as",
+      "transformed": "She done know it's called cleavage symmetry when them cells divide at an angle to the polar axis early on.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_biology",
+      "semantic_score": 0.8527090549468994,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "meroblastic cleavage",
+          "radial cleavage",
+          "spiral cleavage",
+          "superficial cleavage"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_767",
+      "original": "A rise in intracellular free calcium in the sea urchin oocyte causes the release of proteolytic enzymes which act to prevent polyspermy. The events just described entail the",
+      "transformed": "A rise in intracellular free calcium in de sea urchin oocyte cause de release of proteolytic enzymes which act to prevent polyspermy. De events just described entail dat de egg be ready for fertilization by de time de second sperm arrive, so it ain't got no chance to penetrate de cell membrane twice.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_biology",
+      "semantic_score": 0.8885850310325623,
+      "feature_count": 2,
+      "authenticity_score": 0.8,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "zona reaction",
+          "acrosomal reaction",
+          "cortical reaction",
+          "fertilization reaction"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_783",
+      "original": "Which of the following is typically NOT found in normal somatic cells of a human male?",
+      "transformed": "Which one ain't usually found in them normal somatic cells of a human male?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_biology",
+      "semantic_score": 0.9353762269020081,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "The entire genetic information possessed by the original zygote",
+          "An inactivated X chromosome",
+          "Forty-four autosomes",
+          "A diploid nucleus"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_797",
+      "original": "Which of the following is NOT a characteristic of introns?",
+      "transformed": "Which one ain't characteristic of introns?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_biology",
+      "semantic_score": 0.9319875836372375,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "They occur only in eukaryotes.",
+          "They represent noncoding regions.",
+          "They are found interspersed with exons on a region of DNA that codes for a polypeptide chain.",
+          "They are excised from the primary transcript before it gains a 5' cap and a 3' poly(A)tail."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_800",
+      "original": "A marine ecosystem region characterized by penetrance of solar radiation and upwelling of nutrients is the",
+      "transformed": "A marine ecosystem region dat characterized by penetrance of solar radiation and upwelling of nutrients, it be de one.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_biology",
+      "semantic_score": 0.8894692659378052,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "bathyl zone",
+          "neritic zone",
+          "pelagic zone",
+          "benthyl zone"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_805",
+      "original": "Mouse sperm contain receptor proteins that bind to a glycoprotein (ZP3) in the zona pellucida of mouse eggs. Binding of ZP3 receptors to ZP3 initiates the sperm\u2019s acrosomal reaction. All of the following experimental observations would be expected EXCEPT:",
+      "transformed": "Mouse sperm contain receptor proteins dat bind to a glycoprotein (ZP3) in de zona pellucida of mouse eggs. Binding of ZP3 receptors to ZP3 initiates de sperm's acrosomal reaction. All of de following experimental observations would be expected EXCEPT:\n\n(I applied the \"ain't\" negation feature, as well as a slight modification in verb conjugation for more authentic AAVE tone.)",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_biology",
+      "semantic_score": 0.9572235345840454,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Injecting eggs with antibodies that bind to ZP3 blocks in vitro fertilization.",
+          "Incubating sperm with purified ZP3 prior to mixing sperm and eggs blocks in vitro fertilization.",
+          "Incubating eggs with antibodies that bind to ZP3 blocks in vitro fertilization.",
+          "Coating synthetic beads with a different glycoprotein, ZP2, fails to lead to sperm aggregation on the beads."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_864",
+      "original": "From an evolutionary perspective, the optimality theory as applied to a given trait is best represented by the idea that",
+      "transformed": "She done develop this idea from an evolutionary perspective, where the optimality theory, when applied to a given trait, be best represent by the notion that",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_biology",
+      "semantic_score": 0.9069945216178894,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "if the benefits gained from the trait exceed the cost of the trait to the animal performing them, that trait will persist in the genome",
+          "if the trait reaps the best return for the cost relative to alternative forms of the trait, that trait will win out over the alternative forms",
+          "beneficial traits are always worth the cost to the organism in energy and physiology, so those traits will persist in the genome",
+          "the relative fitness of an organism must be improved due to a specific trait in order for the trait to remain in a population's gene pool"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_865",
+      "original": "In the presence of alcohol dehydrogenase, the rate of reduction of acetaldehyde to ethanol increases as the concentration of acetaldehyde is increased. Eventually, the rate of the reaction reaches a maximum, after which point further increases in the concentration of acetaldehyde have no effect. Which of the following is true at the maximal rate of reaction?",
+      "transformed": "In de presence of alcohol dehydrogenase, de rate of reduction of acetaldehyde to ethanol increase as de concentration of acetaldehyde get increased. Eventually, de rate of dat reaction reach a maximum, after which point further increase in de concentration of acetaldehyde ain't got no effect. Which one of de following is true at de maximal rate of reaction?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_biology",
+      "semantic_score": 0.9393788576126099,
+      "feature_count": 2,
+      "authenticity_score": 0.8,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Nearly all of the enzyme molecules are interacting with acetaldehyde molecules.",
+          "The activation energy of the reaction decreases.",
+          "The change in free energy of the reaction decreases.",
+          "The enzyme is no longer specific for acetaldehyde."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_879",
+      "original": "Mutation of homeotic cluster genes often results in which of the following developmental defects in Drosophila?",
+      "transformed": "Mutation of homeotic cluster genes often result in they done cause developmental defect in Drosophila?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_biology",
+      "semantic_score": 0.9670576453208923,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Absence of a group of contiguous segments",
+          "Transformation of one segment into another",
+          "Polarity defects in every segment along the anterior-posterior axis",
+          "Tumor formation in imaginal discs"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_896",
+      "original": "The rate, r, of a zero-order chemical reaction A \u2192 B can be expressed as which of the following?",
+      "transformed": "The rate, r, of a zero-order chemical reaction A \u2192 B, she done calculate that with this equation.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.9025007486343384,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "r = k ln[A]",
+          "r = k [A]^2",
+          "r = k [A]",
+          "r = k"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_902",
+      "original": "Cobalt-60 is used in the radiation therapy of cancer and can be produced by bombardment of cobalt-59 with which of the following?",
+      "transformed": "Cobalt-60 be used in de radiation therapy of cancer and it done get produce by bombardment of cobalt-59 wit what?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.9179365634918213,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Neutrons",
+          "Alpha particles",
+          "Beta particles",
+          "X-rays"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_905",
+      "original": "Which of the following statements most accurately explains why the T1 of a nucleus is sometimes longer than its T2?",
+      "transformed": "He ain't know which statement explain why the T1 of a nucleus be longer than its T2.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.8522491455078125,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "T1, unlike T2, is sensitive to very low-frequency molecular motions.",
+          "T2, unlike T1, is sensitive to very low-frequency molecular motions.",
+          "T1, unlike T2, is sensitive to molecular motions at the Larmor frequency.",
+          "T2, unlike T1, is sensitive to molecular motions at the Larmor frequency."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_908",
+      "original": "Estimate the \u03b2-hyperfine value for the cyclobutyl radical (C4H7\u2022) assuming the radical is flat and the HCH angle is 115\u00b0.",
+      "transformed": "Estimate de \u03b2-hyperfine value fo' de cyclobutyl radical (C4H7\u2022), assumin' it be flat an' de HCH angle be 115\u00b0.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.9350060820579529,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "4.6 mT",
+          "27 G",
+          "5.4 mT",
+          "3.8 mT"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_911",
+      "original": "Calculate the magnetic moment (\u03bcI) of a 13C nucleus.",
+      "transformed": "She done calculate the magnetic moment (\u03bcI) of a 13C nucleus.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.9226946234703064,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "6.1445 x 10^-27 J T-1",
+          "3.1445 x 10^-27 J T-1",
+          "9.1445 x 10^-27 J T-1",
+          "1.1445 x 10^-28 J T-1"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_912",
+      "original": "The normal modes of a carbon dioxide molecule that are infrared-active include which of the following?\nI. Bending\nII. Symmetric stretching\nIII. Asymmetric stretching",
+      "transformed": "She done say dat de normal modes of a carbon dioxide molecule dat's infrared-active include which of de followin'?\nI. Bending\nII. Symmetric stretchin'\nIII. Asymmetric stretchin'",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.8623320460319519,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "I only",
+          "II only",
+          "III only",
+          "I and III only"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_915",
+      "original": "Calculate the Larmor frequency for a proton in a magnetic field of 1 T.",
+      "transformed": "She done calculate the Larmor frequency for a proton in a magnetic field of 1 T.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.9177756905555725,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "23.56 GHz",
+          "42.58 MHz",
+          "74.34 kHz",
+          "13.93 MHz"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_921",
+      "original": "Which nuclide has an NMR frequency of 115.5 MHz in a 20.0 T magnetic field?",
+      "transformed": "She ain't know which nuclide have an NMR frequency of 115.5 MHz in a 20.0 T magnetic field?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.9005950093269348,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "17O",
+          "19F",
+          "29Si",
+          "31P"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_922",
+      "original": "Which of the following must be true about a binary liquid mixture that obeys Raoult\u2019s law?\nI. The partial pressure of each component at equilibrium is proportional to its mole fraction in the liquid mixture.\nII. The volume of the mixture is equal to the sum of the volumes of each component before mixing.\nIII. Intermolecular interactions in the mixture are identical to intermolecular interactions in the pure components.",
+      "transformed": "Which one a' them must be true 'bout a binary liquid mixture dat obey Raoult's law?\nI. The partial pressure of each component at equilibrium is proportional to its mole fraction in de liquid mixture.\nII. De volume of de mixture ain't equal to de sum of de volumes of each component before mixin'.\nIII. Intermolecular interactions in de mixture done change from dem in de pure components.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.892119288444519,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "I only",
+          "III only",
+          "I and III only",
+          "I, II, and III"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_926",
+      "original": "A student performs five titrations and obtains a mean result of 0.110 M, with a standard deviation of 0.001 M. If the actual concentration of the titrated solution is 0.100 M, which of the following is true about the titration results?",
+      "transformed": "She done get five titrations and she obtain mean result of 0.110 M, with standard deviation of 0.001 M. If actual concentration of the titrated solution be 0.100 M, which one of them is true about the titration results?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.8889676928520203,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Accurate but not precise",
+          "Precise but not accurate",
+          "Both accurate and precise",
+          "Neither accurate nor precise"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_931",
+      "original": "Calculate the spin angular momentum of 43Ca. [I = 7\u20442]",
+      "transformed": "He done calculate de spin angular momentum of 43Ca. [I = 7\u20442]",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.9102001190185547,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "2.166 x 10^-34 J s",
+          "3.691 x 10^-34 J s",
+          "4.185 x 10^-34 J s",
+          "5.493 x 10^-34 J s"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_932",
+      "original": "Calculate the magnetic field responsible for the polarization of 2.5 x 10^-6 for 13C at 298 K.",
+      "transformed": "She done calculate de magnetic field responsible fo' de polarization of 2.5 x 10^-6 for 13C at 298 K.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.8807073831558228,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "0.5 T",
+          "1.2 T",
+          "2.9 T",
+          "100 T"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_937",
+      "original": "Predict the hyperfine value for the EPR spectrum of fully deuteriated benzene radical anion C6D6\u2022-.",
+      "transformed": "She done calculate the hyperfine value for the EPR spectrum of fully deuteriated benzene radical anion C6D6\u2022-.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.8987240195274353,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "0.375 mT",
+          "3.75 G",
+          "2.35 mT",
+          "0.58 G"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_938",
+      "original": "The strongest base in liquid ammonia is",
+      "transformed": "He be the strongest base in liquid ammonia.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.914516270160675,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "NH3",
+          "NH2\u2212",
+          "NH4+",
+          "N2H4"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_940",
+      "original": "Calculate the Q-factor for an X-band EPR cavity with a resonator bandwidth of 1.58 MHz.",
+      "transformed": "She done calculate de Q-factor for dat X-band EPR cavity wit' a resonator bandwidth of 1.58 MHz.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.8869023323059082,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Q = 1012",
+          "Q = 2012",
+          "Q = 3012",
+          "Q = 6012"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_943",
+      "original": "What is the strength (B1) of a 13C 90\u00b0 pulse of duration 1 \u03bcs?",
+      "transformed": "She ain't know what's the strength (B1) of a 13C 90\u00b0 pulse of duration 1 \u03bcs?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.852762758731842,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "3.72 mT",
+          "5.18 mT",
+          "17.0 mT",
+          "23.3 mT"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_945",
+      "original": "A radioactive isotope, which is used in diagnostic imaging, has a half-life of 6.0 hours. If a quantity of this isotope has an activity of 150 mCi when it is delivered to a hospital, how much activity will remain 24 hours after delivery? (mCi = microcuries)",
+      "transformed": "A radioactive isotope, which be used in diagnostic imaging, got a half-life of 6.0 hours. If a quantity of this isotope got an activity of 150 mCi when it be delivered to a hospital, how much activity will remain 24 hours after delivery? (mCi = microcuries)",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.994972825050354,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "150 mCi",
+          "38 mCi",
+          "19 mCi",
+          "9.4 mCi"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_950",
+      "original": "Calculate spin density on the central carbon atom of malonic acid radical (\u2022CH(COOH)2) if the hyperfine value for the \u03b1-hydrogen atom is 21.9 G.",
+      "transformed": "He done calculate spin density on de central carbon atom of malonic acid radical (\u2022CH(COOH)2), if de hyperfine value for de \u03b1-hydrogen atom be 21.9 G.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.9214574098587036,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "0.95",
+          "0.85",
+          "0.15",
+          "0.65"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_957",
+      "original": "Calculate the equilibrium polarization of 13C nuclei in a 20.0 T magnetic field at 300 K.",
+      "transformed": "He done calculate de equilibrium polarization of 13C nuclei in a 20.0 T magnetic field at 300 K.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.9491705894470215,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "10.8 x 10^-5",
+          "4.11 x 10^-5",
+          "3.43 x 10^-5",
+          "1.71 x 10^-5"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_969",
+      "original": "A substance that is NOT generally considered to be a toxic pollutant in water is",
+      "transformed": "What ain't generally considered a toxic pollutant in water?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "college_chemistry",
+      "semantic_score": 0.9065099358558655,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "carbonic acid",
+          "a halogenated hydrocarbon",
+          "lead",
+          "mercury"
+        ],
+        "correct_choice": 0
+      }
+    }
+  ],
+  "generation_time": "2026-01-25T16:32:47.424710"
+}

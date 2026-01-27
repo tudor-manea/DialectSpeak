@@ -1,0 +1,3016 @@
+{
+  "benchmark": "hellaswag",
+  "dialect": "aave",
+  "total_samples": 1000,
+  "successful_transforms": 998,
+  "valid_pairs": 143,
+  "failed_validation": 855,
+  "transform_errors": 2,
+  "pass_rate": 0.143,
+  "pairs": [
+    {
+      "id": "hellaswag_validation_0",
+      "original": "A man is sitting on a roof. he",
+      "transformed": "He be sittin' on the roof.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Roof shingle removal",
+      "semantic_score": 0.8735213279724121,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is using wrap to wrap a pair of skis.",
+          "is ripping level tiles off.",
+          "is holding a rubik's cube.",
+          "starts pulling up roofing on a roof."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_8",
+      "original": "A man is holding a pocket knife while sitting on some rocks in the wilderness. then he",
+      "transformed": "He be sittin' on them rocks with a pocket knife in his hand in the wilderness, den he",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Sharpening knives",
+      "semantic_score": 0.8698529601097107,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "opens a can of oil put oil on the knife, and puts oil on a knife and press it through a can filled with oil then cuts several pieces from the sandwiches.",
+          "takes a small stone from the flowing river and smashes it on another stone.",
+          "uses the knife to shave his leg.",
+          "sand the rocks and tops them by using strong pressure."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_12",
+      "original": "He then takes the knife and sharpens it against the wood piece. He then notices a little black and green poisonous frog sitting next to him. the frog",
+      "transformed": "He done take de knife and sharpen it 'gainst dat wood piece. He done notice a little black and green poisonous frog sittin' right next to him. Dat frog",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Sharpening knives",
+      "semantic_score": 0.9001887440681458,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "eventually gets to get up and marches out of the room waving its body about.",
+          "then starts to get up from the chair and begins walking towards the camera.",
+          "then escapes and jumps away.",
+          "is acting crazy and attacking him while he is cooking."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_13",
+      "original": "He then notices a little black and green poisonous frog sitting next to him. The frog then escapes and jumps away. he",
+      "transformed": "He done notice a little black and green poisonous frog sittin' next to him. Dat frog done escape and jump away, he.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Sharpening knives",
+      "semantic_score": 0.887721836566925,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "sits and hugs another man and also adjusts his camera.",
+          "then sits there staring at his text machine as if he has actually been given a gift from god.",
+          "explains how the frog secretes a poisonous fluid that can be extremely harmful.",
+          "takes the frog on his hand and tickles the back of it."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_30",
+      "original": "She gets them some water to gargle in their mouths. The boy and girl begin playing in the sink. the woman",
+      "transformed": "She get 'em some water to gargle in they mouth. The boy and girl start playin' in the sink. She be standin' there, watchin'.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Gargling mouthwash",
+      "semantic_score": 0.9157930016517639,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "shakes her head in disbelief and waves at her.",
+          "laughs at the children dribbling water.",
+          "comes back and talks to the boys.",
+          "gets some food out of the fridge and they continue playing together."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_31",
+      "original": "A cat is sitting in a cat bed. It is licking its paw. it",
+      "transformed": "It be sittin' in a cat bed. It be lickin' its paw.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Washing face",
+      "semantic_score": 0.8976895809173584,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "then wipes its paw on its ear.",
+          "crawls to the door.",
+          "'s laying down about six inches away from the camera.",
+          "crawls on one foot to get closer to the camera."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_37",
+      "original": "We see a bottle of face wash. we",
+      "transformed": "We see a bottle of face wash. We done got some for my sister.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Washing face",
+      "semantic_score": 0.8672565221786499,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "see a newspaper story.",
+          "see four cookies in a pan.",
+          "see a person holding face wash then putting it on their face.",
+          "see a tool on a table."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_44",
+      "original": "There's a nbc news reporter wearing a red sweater and white shirt talking about dog grooming by scissor wizard a grooming company. the representative from the company",
+      "transformed": "She got a NBC news reporter wearin' a red sweater and white shirt, talkin' 'bout dog groomin' by Scissor Wizard, a groomin' company. The rep from they done make some good points 'bout how they cut dogs' hair.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Grooming dog",
+      "semantic_score": 0.8833271861076355,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is talking about the services they offer and how those dogs participate in dog shows.",
+          "speaks to a woman sitting on a colorful conference room chair next to a brown dog kennel in front of them.",
+          "tells viewers about a dog grooming company, itv with a website.",
+          "in grey sweater and black pants talks about the procedures on grooming dogs in life and techniques."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_52",
+      "original": "A man is seen talking to the camera and presents his knife and sharpener. He then glides the knife down the sharpener and shows how other knives work with different sharpeners. he",
+      "transformed": "He be showin' how to use dat sharpener, talkin' straight to de camera, and holdin' up his knife. Den he glide it through de sharpener, explainin' how different knives fit on different sharpeners.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Sharpening knives",
+      "semantic_score": 0.8787813186645508,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "then repeats his advice and using more wax.",
+          "shows the using the sharpener on a piece of wood.",
+          "presents the knife one last time while still speaking to the camera.",
+          "uses scissors to cut the blade as well as metal and talk to the camera at the end."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_61",
+      "original": "The camera pans to show a man playing a harmonica while sitting on a log beside a river. A woman walks near the train tracks while a train drives by. the woman",
+      "transformed": "The camera pan to show a man playin' a harmonica while sittin' on a log beside a river. A woman walk near the train tracks while a train drive by. She ain't even notice it's there.\n\n(Note: I applied \"ain't\" negation and negative concord features)",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing harmonica",
+      "semantic_score": 0.8576694130897522,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "continues just playing with the tunes she made.",
+          "sees the harmonica playing man in the distance.",
+          "taps a horn intermittently as the camera pans right.",
+          "plays a song on her harmonica while walking away from the train."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_66",
+      "original": "A man dressed in yellow and black winter clothes ice fishes on a a frozen lake. the man",
+      "transformed": "He be ice fishin' on dat frozen lake, wearin' them yellow and black winter clothes.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Ice fishing",
+      "semantic_score": 0.8707905411720276,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is reeling in a fish for a long time.",
+          "spins with his fishing pole in the air.",
+          "does a trick on his dirty ice fishing line.",
+          "does numerous tricks as he goes through these beauty course courses of ice covered lakes."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_83",
+      "original": "As the young lady continues her performance, she twirls the baton between her legs and over her head, catches it and does a gallop. the rest of the young girl's performance",
+      "transformed": "She be doin' all kinda moves with that baton, twirlin' it 'twixt her legs and over her head, catchin' it and doin' a gallop. The rest of she performance be good too.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Baton twirling",
+      "semantic_score": 0.8569286465644836,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is replayed in slow motion.",
+          "is a set of twirls and twist and then she runs off the floor to finish her performance.",
+          "is shown several times and ends by showcasing her back to the both the camera and a final focus of her performance.",
+          "is replayed, ending with the young lady clapping her hands joyfully."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_84",
+      "original": "We see a man in a driveway cleaning snow from his car. the man",
+      "transformed": "We see a man in a driveway cleanin' snow off his car. He be doin' that every winter.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Removing ice from car",
+      "semantic_score": 0.8986206650733948,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "cleans the snow under his windshield wipers.",
+          "wet his car and wipes it down.",
+          "moves the snow out of the front bumper of his car and pours gasoline on it.",
+          "removes the pieces of the line off his windshield."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_85",
+      "original": "We see a man in a driveway cleaning snow from his car. The man cleans the snow under his windshield wipers. we",
+      "transformed": "We see a man in a driveway cleanin' snow off his car. He be cleanin' the snow under his windshield wipers. We done seen him do that before.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Removing ice from car",
+      "semantic_score": 0.9088906049728394,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "see the old man's garage and what looks like a boat in the water.",
+          "see the building behind the car.",
+          "zoom in on the cabin.",
+          "see the mans silver car gliding by in the background."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_88",
+      "original": "A man is seen throwing a dart onto a board and leads into a woman speaking. the man",
+      "transformed": "He be throwin' a dart on the board, and then he lead in to this woman talkin'.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Throwing darts",
+      "semantic_score": 0.8602243065834045,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "tosses darts into the water while people measure the distance and run after them.",
+          "gives her several tips and she continues creating darts.",
+          "throws several more darts while taking the time to speak to the woman.",
+          "holds behind him and the woman continues speaking."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_96",
+      "original": "She picks the knife back up and places it in the appliance and slowly draws it back several times. she",
+      "transformed": "She done pick that knife back up and put it in the appliance, drawin' it back slow like several times.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Sharpening knives",
+      "semantic_score": 0.9007254838943481,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "slices a tomato on a wood block with the knife.",
+          "removes the rubber band off of the knife and gets it across the blade.",
+          "continues using the appliance to put the fancy knife on the box.",
+          "stands up from the chair and walks towards the stairs before finally leaving the room."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_101",
+      "original": "The male athlete is standing by the two poles, raised his arms up, then jumped on the poles with his arms, while under him, a man pull out a red beam. the athlete",
+      "transformed": "He be standin' by them two poles, raise his arms up, den jump on they poles wit' his arms, while underneath he, a man pull out a red beam.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Using parallel bars",
+      "semantic_score": 0.8534671664237976,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "crosses parallel, then stand on all fours above, and on his arms then jump.",
+          "placed his feet on the pole and then hold it, then jumped from the pole on the poles stop and put his hands on his knees, bend down, and begin swinging on the pole.",
+          "perform his exhibition on the poles, he stand on his arms while his feet and legs are extended straight up in the air, he turns around, swirl, jumped and twist around then jumped on the mat, standing straight.",
+          "looked behind him, then and continue walking to the pole."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_102",
+      "original": "A man is in the gym in tight he bends over picks up a weight over his head and drops it back down. he",
+      "transformed": "He be in the gym, bendin' over, pickin' up a weight 'n' droppin' it back down.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Clean and jerk",
+      "semantic_score": 0.8725956082344055,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "lifts his legs and pulls the bar up on his body and lifts the weight above his head.",
+          "lifts it again lifts it over his head and drops it this time and he loosens his way to the top and grabs it again.",
+          "raises the bar over his head followed by another.",
+          "walks back and loosens up before walking back up and doing it again adding more weight."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_109",
+      "original": "We see the underwater sea floor. Two people swim in front of the camera. We see a man holding a camera. we",
+      "transformed": "We done see the underwater sea floor. Two peoples swim in front of de camera. We see a man holdin' a camera.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Scuba diving",
+      "semantic_score": 0.9650115370750427,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "see a person kitesurfing the ocean floor.",
+          "see the man turn off the camera.",
+          "see divers and a man talking.",
+          "see a fin enter the camera."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_117",
+      "original": "The surfer who is in front is happy to riding the wave for so long that he raises his two arms up in the air and then lowers it back down. the surfer in the back",
+      "transformed": "He be ridin' the wave for a minute, raisin' them two arms high up in the air, den lowerin' 'em back down slow. The surfer behind him ain't doin' so good.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Surfing",
+      "semantic_score": 0.8596354126930237,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "kept one arm raised up and the surfer in front of him raise his left arm.",
+          "wave has a big wave almost bigger than he is paddling, and this makes it pretty fun because it causes the surfer riding the wave to put up a lot of resistance so he just does it and crash onto the waves making the wave even bigger then it was.",
+          "does not have to go as far as he needed to to go as he is ready to go.",
+          "begins to lose balance and falls off of his board while the man in the front is still standing up."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_146",
+      "original": "People are standing on a hill of snow. people",
+      "transformed": "They be standin' on a hill of snow.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Skiing",
+      "semantic_score": 0.9303841590881348,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "are working inside a building.",
+          "are sitting in buckets on a blanket on the hill.",
+          "are shoveling snow from the foot of the hill.",
+          "are snowboarding down a hill of snow."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_148",
+      "original": "People are standing on a hill of snow. People are snowboarding down a hill of snow. People are skiing down a hill. the skiiers",
+      "transformed": "They be standin' on a hill of snow. They be snowboardin' down a hill of snow. They be skiin' down a hill. The skiers",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Skiing",
+      "semantic_score": 0.8989311456680298,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "are skiing down a snowy hill.",
+          "stop at the bottom and talk.",
+          "are holding on to ladders.",
+          "comes to a stop on a hill of snow."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_151",
+      "original": "The man in brown shirt is standing next to a pile of tennis ball while he is talking to the camera. he",
+      "transformed": "He be standin' next to a big ol' pile of tennis balls, talkin' to the camera.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Tennis serve with ball bouncing",
+      "semantic_score": 0.8933622241020203,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "walked along a beach, talking with people, trying to court a ball.",
+          "started hitting the ball with his racket on his gloved hand.",
+          "pulled out two tennis rackets and toss one to the man and the other's dropped the racket in the air.",
+          "played tennis ball with another person."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_152",
+      "original": "The man in brown shirt is standing next to a pile of tennis ball while he is talking to the camera. He played tennis ball with another person. the man in purple shirt",
+      "transformed": "He be standin' next to a pile of tennis balls, talkin' to the camera, wearin' that brown shirt. He done play tennis ball with somebody else. The man in purple shirt...",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Tennis serve with ball bouncing",
+      "semantic_score": 0.9211260080337524,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "fell on the ground, the man put the ball down, pull the ball and set it on the ground, he ball fell, but remain upright.",
+          "finally dressed in a black shirt walked over and joined the men talking about the tennis racket.",
+          "is playing racket ball while talking to the camera.",
+          "serve the ball while the black man hit the ball back."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_169",
+      "original": "A man is shown standing in front of a blue background as many harmonicas are shown and he starts playing them. He is then shown speaking into the camera and going into detail with regards to the products features. he",
+      "transformed": "He be playin' them harmonicas, showin' 'em how they work, and then he start talkin' straight to the camera, explainin' all about the product's features.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing harmonica",
+      "semantic_score": 0.8754749298095703,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "continues talking about the machine while smoking a cigarette in front of the camera.",
+          "continues playing the stereo while detail is shown on the side as the scenes continue to pan in focus and ends with a blow by blow image.",
+          "shows off how many he has in his coat and continues talking.",
+          "is 6'6 \" and continues to play with the device throughout the video as well as cutting it back to a man playing polls."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_177",
+      "original": "There's a woman with red colored hair wearing a black tank top and printed black tights skating on roller blades through the streets of a city. The streets don't have any cars but people are riding bikes or skateboarding. the woman",
+      "transformed": "She got them red-colored hair, wearin' a black tank top 'n printed black tights, skatin' on roller blades through they streets in this city. They ain't no cars out here, just folks ridin' bikes 'r skateboards. She",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Rollerblading",
+      "semantic_score": 0.8798543810844421,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "walks past teens riding bmx bikes.",
+          "on the skateboards takes one final turn and then climbs the stairs of a building.",
+          "stops skateboarding and gets out of the skate park and opens a door behind her and takes a cigarette out of her purse.",
+          "swiftly skates through the crowded streets as she passes by several tourists walking leisurely."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_182",
+      "original": "A group of people wearing swim caps move around a pool and toss a ball around with a man on the sides waving a flag. They play a game of water polo and throw the ball around to each other. one",
+      "transformed": "They be movin' 'round the pool, tossin' the ball with they, got a man wavin' a flag on the side. They playin' water polo, throwin' the ball back 'n forth.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing water polo",
+      "semantic_score": 0.8722991347312927,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "throws the ball into the net and causes the people on the side to jump and cheer.",
+          "person wins the game knocking the other one into the water.",
+          "person keeps score and pretends to make a goal.",
+          "jumps through the net and makes it all the way to the other side."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_187",
+      "original": "A boy skateboard on a road jumping and flipping the skateboard in the street. A skateboard leans on a tree. then",
+      "transformed": "He be skateboardin' on that road, jumpin' and flippin' his board in the street. His skateboard lean up against a tree.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Longboarding",
+      "semantic_score": 0.9068845510482788,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          ", the boy slides on the street with his skateboard sticking in the air.",
+          ", gopro jumps, then skateboard on a road.",
+          ", the boy rides on the skateboard with turned legs.",
+          ", the boy skateboard on small ramps and then continues skateboarding in the street."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_189",
+      "original": "A young man is washing clothes inside a bathroom sink as he talks to the camera. initially he",
+      "transformed": "He be washin' clothes inna bathroom sink while he talkin' to da camera, initially he.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Hand washing clothes",
+      "semantic_score": 0.8838930130004883,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "starts to wash the clothes with both hands.",
+          "shows several different ways to clean a sink during a wash and is seen staring into the camera.",
+          "is demonstrating using two hoses to wash the clothes as he will talk to the camera.",
+          "is going to his locker but resumes washing the shirt."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_195",
+      "original": "We see the title introducing us to jesse. Jesse the dog runs and catches frisbee. We see jesse close up in the camera. jesse",
+      "transformed": "We see the title introduce us to Jesse. Jesse, he be runnin' 'round catchin' frisbees. We see Jesse close up on the camera. Jesse.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Disc dog",
+      "semantic_score": 0.9037014842033386,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "gives instructions on how to clean a window in a home.",
+          "is running around catching the frisbee the lady throws.",
+          "throws the frisbee and a dog catches it.",
+          "gives us the dog and we see the ending title screen."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_206",
+      "original": "One person makes a shot with a black puck. The next person makes a shot with a yellow puck. the people",
+      "transformed": "He done make a shot wit' a black puck. Next one make a shot wit' a yellow puck. Them peoples.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Shuffleboard",
+      "semantic_score": 0.8507727384567261,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "continue to alternate shots between a yellow and a black puck.",
+          "are in their capsule marching down the track.",
+          "in the sand are taking pictures of the competition.",
+          "take turns as they volleys the puck around in the air."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_213",
+      "original": "Several men are seen hosting a news segment that leads into clips of people playing a game together and arguing with one another. more shots of people playing",
+      "transformed": "They be showin' several men hostin' a news segment, then cut to folks playin' a game and arguin' with each other. More shots of them playin'.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Cricket",
+      "semantic_score": 0.9185290932655334,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "held up are shown with several shots stopping in the end and showing up in the end a winner.",
+          "in various venues are shown as well as laying around while the owners cheer all the while more footage iii showing them playing were shown as well.",
+          "long jump are shown as well as several presentations give a brief description of the game and leads into people scoring goals and all laughing together.",
+          "are shown as well as people celebrating and walking away."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_214",
+      "original": "Several men are seen hosting a news segment that leads into clips of people playing a game together and arguing with one another. More shots of people playing are shown as well as people celebrating and walking away. more shots",
+      "transformed": "They be showin' several men hostin' a news segment, leadin' into them clips of folks playin' a game together and arguin' with each other. More shots of people playin' is shown too, as well as people celebratin' and walkin' away.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Cricket",
+      "semantic_score": 0.9336587190628052,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "are shown of people dancing with one another and once again the same shots are shown in slow motion.",
+          "of people playing are shown while more paper towels are passed all around.",
+          "are shown of the hosts speaking to one another and people hitting the ball and walking away.",
+          "are shown of people running around the land as well as running onto a field with their hands up."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_215",
+      "original": "A girl is shown washing and scrubbing her face several times while speaking into the camera. she",
+      "transformed": "She be washin' 'n' scrubbin' her face several times while talkin' to the camera.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Washing face",
+      "semantic_score": 0.8807784914970398,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "then rides a bike down the hill and gets her hair dried.",
+          "takes the lip stick out of her mouth while in the bathroom and begins brushing her teeth while still speaking into the camera.",
+          "gets her mascara out and then applies it to her face.",
+          "finishes by turning on the faucet and rinsing water through her face."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_217",
+      "original": "The man pretents to time himself and uses the screwdriver tool to pierce a hole in a full beer can that sprays some of its contents. The man holds up the can with the hole facing upwards. the man",
+      "transformed": "He be tryin' to time hisself, usin' them screwdriver tool to poke a hole in a full beer can, and it's sprayin' out some stuff. He holdin' up the can with the hole facin' up.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Drinking beer",
+      "semantic_score": 0.8619703650474548,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "wipes down the empty beer can.",
+          "then puts the can down, twists the cap off and pours the alcohol into a cup in front of him.",
+          "drinks the contents of the beer can from the hole after opening the top.",
+          "finishes by set the can down and shows off the spray can."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_240",
+      "original": "While he his talking, several videos of him are shown off road motorcycle racing around the course jumping over humps. however",
+      "transformed": "He be talkin', several videos of him show up on screen doin' them off-road motorcycle racin' tricks 'round the course, jumpin' over them humps.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Doing motocross",
+      "semantic_score": 0.9110586047172546,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          ", before he finishes his performance, another video holding about 100% of them show him jumping over deep humps inside a building and talking to the camera.",
+          ", most of them are shown without people watching them.",
+          ", he isn't shown racing only wearing a helmet as he records himself passing very high lights.",
+          ", he comes back during the segments to show how he uses techniques in certain jumps and the correct way to do it."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_244",
+      "original": "A man is shown on a stage, playing drums. he",
+      "transformed": "He be playin' drums on that stage.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing drums",
+      "semantic_score": 0.8830898404121399,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "beats the cymbals and drums very fast.",
+          "is displaying a keyboard and some instrument notes.",
+          "has several accorins, and even cymbals.",
+          "continues playing as bees gather around to watch."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_245",
+      "original": "A man is shown on a stage, playing drums. He beats the cymbals and drums very fast. he",
+      "transformed": "He be playin' them drums on stage, beatin' them cymbals and drums real fast.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing drums",
+      "semantic_score": 0.9156973958015442,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "then finishes setting up with his sticks.",
+          "uses his hands to motion the beats.",
+          "continues, making faces as he goes.",
+          "continues to drum as several smaller screens appear as they show how to play."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_247",
+      "original": "A woman is on her hands and knees cutting grass with some scissors. the camera",
+      "transformed": "She be cuttin' grass wit' them scissors, on her hands 'n knees.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Cutting the grass",
+      "semantic_score": 0.8657847046852112,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "pans out to give a full view of her cutting the grass.",
+          "then cuts to the other side of the lawn as children play in the water.",
+          "pans around to show the others performing sort of for the camera, including one woman standing upright in front of a bush.",
+          "turns back to the girl."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_272",
+      "original": "A person is seen riding around on roller blades and performing a grind on a bar. several more clips",
+      "transformed": "He be ridin' 'round on them roller blades, doin' a grind on a bar, and there's several more clips.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Rollerblading",
+      "semantic_score": 0.9102380871772766,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "are shown of the boy riding around on the equipment as well as sit on the floor and play pool.",
+          "are shown of people driving around on machines with one person riding in front.",
+          "are shown of the athletes performing tricks in various stretches as well as throwing a ball off into the distance.",
+          "are shown of the person performing grinds with roller blades as well as other flips and tricks."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_275",
+      "original": "There's a brown horse tied outside a polo club. there",
+      "transformed": "She done got a brown horse tied outside a polo club.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing polo",
+      "semantic_score": 0.8546854853630066,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is also an adult cowboy walking past the polo club.",
+          "are several jockeys playing polo on the field in an event.",
+          "'s a young man dressed in black who is sitting in a cart talking explaining about croquet.",
+          "'s a young man dressed in a blue polo wo, green shirt and black trousers standing at the polo table rubbing a green coated straw."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_277",
+      "original": "One of the polo players is trotting on the horse across the field. Another game of polo takes place where several spectators are watching. after the event",
+      "transformed": "One of them polo player be runnin' on the horse cross the field. Another game of polo goin' on, and several people watchin'. After dat, they done finish up.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing polo",
+      "semantic_score": 0.9373947381973267,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is over, the judge hands awards to the winners.",
+          "the polo teams gather in the field preparing themselves.",
+          ", the polo game is displayed.",
+          ", a large group of polo players walk along side a blue plate moving their passes around before moving forward with their horses."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_278",
+      "original": "The man jetskis while holding the camera at arm's length. The man is shown waterskiing while pulled by the jetski. the man",
+      "transformed": "He jetskis whil' holdin' de camera at arm's length. He be showin' us he waterskiin', gettin' pulled by dat jetski.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Waterskiing",
+      "semantic_score": 0.8711225390434265,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "falls and is briefly submerged.",
+          "briefly jettisoned himself trying to follow the jetski.",
+          "mows the lawn being pulled by the jetski.",
+          "jetskis back and forth while swimming in the water."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_279",
+      "original": "We see a black opening screen. We see a blue track with people running on it. we",
+      "transformed": "We done see a black opening screen. We see a blue track with people runnin' on it.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "High jump",
+      "semantic_score": 0.9503700733184814,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "then see a man do a high jump at 5'9 \".",
+          "see a crowd of people on aerobics class.",
+          "see people playing a game of polo.",
+          "see people running in a gym."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_295",
+      "original": "A man is seen skiing behind a boat. he",
+      "transformed": "He be skiin' behind a boat.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Waterskiing",
+      "semantic_score": 0.9101302623748779,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "skis all around part of the water road while people distract him.",
+          "pushes himself on the water while the boat speeds up.",
+          "holds on tight as he is pulled through the water.",
+          "is seen giving instructions as well as a dog."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_296",
+      "original": "A man is seen skiing behind a boat. He holds on tight as he is pulled through the water. the man",
+      "transformed": "He be skiing behind dat boat, holdin' on tight 'cause he gettin' pulled through de water.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Waterskiing",
+      "semantic_score": 0.8868180513381958,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "spins himself around the boat several times and continues skiing away.",
+          "is water skiing until the end of the clip.",
+          "gets out of the boat and skis along the water.",
+          "continues skiing and ends by jumping off the boat."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_300",
+      "original": "There's a woman in a yellow tank top and black tights doing jump rope in a gym. she",
+      "transformed": "She be doin' jump rope in the gym, wearin' them yellow tank top and black tights.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Rope skipping",
+      "semantic_score": 0.9494282603263855,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "does a hand stand and then, jumps onto the mat.",
+          "is dancing, doing flips, twists and tricks.",
+          "jumps in a rhythmic manner without stopping on the hardwood floor surface.",
+          "gets on the platform, stands up on it, and does a handstand."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_304",
+      "original": "The same woman is now seen on a stationary bicycle teaching a spin class. several other people in the class",
+      "transformed": "She be teachin' them folks how to ride them bicycles in that spin class, and several other peoples in they too.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Spinning",
+      "semantic_score": 0.8778946995735168,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "then appear and begin to demonstrate how to spin their area.",
+          "continue to move their arms or legs around.",
+          "can be seen on stationary bicycles in the mirror behind the instructor.",
+          "are also shown going on the bike."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_326",
+      "original": "A woman with her hair up in a towel introduces her video showing how she washes her face. She applies a moisturizer to her face while dancing around. she",
+      "transformed": "She introduce her video showin' how she wash she face. She be puttin' on some moisturizer, dancin' 'round like crazy, while she do it.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Washing face",
+      "semantic_score": 0.8570871949195862,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "then applies a contact lens in between her eyes and places it in her left eye.",
+          "brings out shaving cream and scrubs her face with it, then does some more.",
+          "then dances in the living room with the moisturizer on.",
+          "then applies an eye shadow to her eyes, highlighting all the crevices underneath."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_334",
+      "original": "Two people are playing with a frisbee as one person walks on the rope. A girl and boy try the tight rope together. there",
+      "transformed": "They be playin' with that frisbee, and one person is walkin' on the rope. A girl and boy try to do them tight rope tricks together.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Slacklining",
+      "semantic_score": 0.9480615258216858,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "are close ups of them being tight ropes.",
+          "are several animal fighting scene.",
+          "'s a boy on the end of the rope getting attached to a higher rope.",
+          "are people enjoying themselves on a hammock."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_338",
+      "original": "There is another little puppy running around the dog and a little kitten too. The woman takes some liquid soap and scrubs it on the dog. after she",
+      "transformed": "She done got another little puppy runnin' 'round with that big ol' dog, and a little kitten too. The woman take some liquid soap and scrub it on the dog. After she done cleanin' him up, he start actin' right again.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Bathing dog",
+      "semantic_score": 0.8880780339241028,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is done with the dog she puts him down and questions him again.",
+          "'s done, she throws away the soap and the kitten is happy.",
+          "'s done washing, she wipes him dry with a towel.",
+          "has cleaned the bottom of the dog, the woman grabs a piece of paper and puts the shirt back on."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_339",
+      "original": "The woman takes some liquid soap and scrubs it on the dog. After she's done washing, she wipes him dry with a towel. then she",
+      "transformed": "She take some liquid soap and scrub it on da dog. After she done washin', she wipe him dry wit' a towel. Den she",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Bathing dog",
+      "semantic_score": 0.8921452760696411,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "bathes the little puppy the same way with soap and water.",
+          "takes a thoroughly wet dog and wets him with the water and rubs the fur all over.",
+          "hugs gord and kisses him.",
+          "loops and ties the leash around his legs before getting dressed."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_340",
+      "original": "After she's done washing, she wipes him dry with a towel. Then she bathes the little puppy the same way with soap and water. the dog",
+      "transformed": "She done washin', then she wipe him dry wit' a towel. Den she bathe dat little puppy de same way wit' soap and water.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Bathing dog",
+      "semantic_score": 0.8999605178833008,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is redressed and groomed.",
+          "is all dirty when he is done.",
+          "is playing on a rug after the bath is over with wet fur on his body.",
+          "then sits down on the table and it's done."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_342",
+      "original": "A man in black shirt lifted the barbel and started to carry it up and down for few times, while behind him, two men are removing the metal plates on another barbel. the man in black shirt",
+      "transformed": "He be liftin' that barbel, carryin' it up and down a few times, while them other men be removin' the metal plates from another one.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Snatch",
+      "semantic_score": 0.8543353080749512,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "removed the plate and raised the barbel, while people standing next to him held the barbel heads.",
+          "began to lift the barbel feet and lower them while the people that are standing at three barbel also lifted the barbel, and then lowered it.",
+          "lifted the barbel and something inside it flipped off and the other man stopped and get the stuff and hand it to the other man who tried to carry it up and handed it to him.",
+          "added more weight on the barbel by adding yellow plates on both side, then continue weight lifting."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_359",
+      "original": "People are standing in a room playing tennis. a woman",
+      "transformed": "They be standin' in a room playin' tennis, a woman.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing badminton",
+      "semantic_score": 0.9461343288421631,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is laying on a wooden mat.",
+          "taps the ball against the wall.",
+          "is doing the hula hoop in the room.",
+          "picks up a ball that falls onto the ground."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_360",
+      "original": "People are standing in a room playing tennis. A woman picks up a ball that falls onto the ground. the girl",
+      "transformed": "They be standin' in a room playin' tennis. A woman pick up a ball that fall onto the ground. The girl done drop it.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing badminton",
+      "semantic_score": 0.9365273714065552,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "walks over and lifts up the ball.",
+          "climbs onto the back of a man.",
+          "in the green sweater begins to push her girl, swing, hit, and then let her down.",
+          "walks up to the net."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_369",
+      "original": "A guy runs and jumps over a pole without touching it and lands on mats, as some people in the back ground watch and others do there practices. the guy",
+      "transformed": "Some dude runnin' and jumpin' over that pole, ain't touchin' it, landin' on them mats, while folks in the background watchin', and other peoples doin' they practice.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "High jump",
+      "semantic_score": 0.9155656695365906,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "seems to be practicing how high he can jump by jumping over the pole many times, each time a person raises the pole higher and higher to see if the guy can jump over it.",
+          "wearing a flip flops jumps over a pole many times and lands with both feet placed, but recovers and runs and jumps over the pole again.",
+          "is sitting on a mat, he is working out then stands up to run.",
+          "hold up around a pile of discs mixed with sticks."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_376",
+      "original": "Two little kids are eating an ice cream cone at mcdonalds. They are licking and so happy to have ice cream. the little girl",
+      "transformed": "They be eatin' an ice cream cone at McDonald's, lickin', and they happy 'cause they got some ice cream. The little girl done get a big ol' smile on her face.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Having an ice cream",
+      "semantic_score": 0.882445216178894,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "opens her mouth and a drop of eat the ice cream all over her face.",
+          "cut off an ice cream cone to get some cream near the table.",
+          "is playing peek a boo with someone and both of their faces have ice cream on them.",
+          "gives a being an ice cream cone."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_381",
+      "original": "People are dancing and enjoying the event together. There is food being eaten at the event by many. several runners",
+      "transformed": "People be dancing and enjoying theyself together. They done eatin' good, plenty of people got food. Several runners.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Running a marathon",
+      "semantic_score": 0.9020624160766602,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "are being interviewed by groups.",
+          "are shown carrying food and drinks some on a leash.",
+          "are shown running back and fourth.",
+          "are getting ready to start a race."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_389",
+      "original": "A young man is seen playing drums in front of an audience. other people",
+      "transformed": "He be playin' drums in front of them folks. Other peoples be watchin'.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing drums",
+      "semantic_score": 0.8695969581604004,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "are seen speaking to the camera as well as running into the audience.",
+          "are watching as he continues to play.",
+          "are walking by back and fourth.",
+          "are shown playing guitar while the man plays more drums."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_392",
+      "original": "A man is riding on a lawn mower in his yard. He listens to music on his headphones while he mows. he",
+      "transformed": "He be ridin' on dat lawn mower in his yard. He listenin' to music on them headphones while he mowin'.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Cutting the grass",
+      "semantic_score": 0.8576495051383972,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is wearing a beanie hat because it's raining outside.",
+          "goes around the yard, covering all of it before stopping.",
+          "moves around the crushed grass on his lawn mower.",
+          "turns around into a parking lot where there's a lot of cars."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_408",
+      "original": "We see a man kitesurfing . The sail waves a little as the surfer loses control. the surfer",
+      "transformed": "We see a man kitesurfin'. The sail wave a little 'cause he losin' control. He done wipe out now.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Windsurfing",
+      "semantic_score": 0.8830647468566895,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "falls into the water and recovers.",
+          "wakes and pulls the sail back.",
+          "falls out of the water.",
+          "holds on tight as the bow of the boat flips and the human sail is lifted up filled with wind."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_419",
+      "original": "A man is holding a small fish in his hand talking. A fish is swimming under the ice. a man",
+      "transformed": "He be holdin' a little fish in he hand talkin'. A fish done swimmin' under de ice.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Ice fishing",
+      "semantic_score": 0.885776698589325,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is wiping the ice off a car.",
+          "is putting ice in a hole on a boat.",
+          "is pulling a large shark out of its hole in the ice.",
+          "is knelt down on the ice reeling in a fish."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_420",
+      "original": "Another man is talking about the tribes and is seen jogging in the wilderness with a dog. Another lady wearing a pink shirt is talking about her marathon experience. a couple of people",
+      "transformed": "Another man be talkin' 'bout them tribes, and he be joggin' in the wilderness wit' his dog. Another lady wearin' a pink shirt, she be talkin' 'bout her marathon experience. A couple of peoples done finished they runnin', now dey chillin'.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Running a marathon",
+      "semantic_score": 0.9152534604072571,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "are shown riding on the dune horses as they complete their journey and come face to face with their opponent on the dune horses.",
+          "are seen sharing their stories and experience about their jogging expedition in the mountains and their participation in the marathon races.",
+          "run together beside the rink.",
+          "are shown walking through a tunnel while the guide is standing beside them talking."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_437",
+      "original": "A boy is talking to a camera. He goes into a bathroom and drinks a cup of mouthwash. he",
+      "transformed": "He be talkin' to a camera. He go in the bathroom, drink a whole cup a mouthwash.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Gargling mouthwash",
+      "semantic_score": 0.8523598909378052,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "then hands the mouthwash to a young man.",
+          "sits down on the toilet, proud of himself.",
+          "spits it out into the sink in front of him.",
+          "rinses off the mouthwash and bows in the end."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_449",
+      "original": "A man is standing on a stage playing a violin. a man",
+      "transformed": "He be standin' on a stage playin' a violin.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing violin",
+      "semantic_score": 0.8948928713798523,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is standing behind him in a tuxedo.",
+          "comes and stands on the stage next to him.",
+          "in a position of power is walking on stage with the violin.",
+          "is performing a song on a flute."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_454",
+      "original": "Three men walk next to each other. The men begin putting a boat on the back of a truck. the men",
+      "transformed": "Three men walkin' next to each other. They done puttin' a boat on the back of a truck.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Canoeing",
+      "semantic_score": 0.9328369498252869,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "sail the boat over ramps on the river.",
+          "then put the boat back on the road.",
+          "tie the boat down.",
+          "then sail the boat across a river."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_466",
+      "original": "Several people are in a manmade race track. Bmx bikers are going over the hills along the path. they",
+      "transformed": "They be ridin' BMX bikes on that manmade track, goin' over them hills.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Doing motocross",
+      "semantic_score": 0.9031262993812561,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "spin in the air and do stunts as they ride.",
+          "are lined up, racing to break people to get to the finish line.",
+          "race through the streets of a city where the streets are paved.",
+          "race down the hills, making fast jumps into the sand."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_473",
+      "original": "A man is wearing full running gear. He laces up his shoes and joins in a race. the people",
+      "transformed": "He be wearin' full runnin' gear. He lace up his shoes and join in a race. Them people",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Running a marathon",
+      "semantic_score": 0.9081611633300781,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "continue on running around and neon signs flash.",
+          "are really excited about it as they race and jump high over low hills.",
+          "line up, then run, racing each other to the finish line.",
+          "form a giant circle and begin to race each other."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_476",
+      "original": "A man is talking on a basketball court. he",
+      "transformed": "He be talkin' on the basketball court.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Layup drill in basketball",
+      "semantic_score": 0.9015874266624451,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "picks up a bottle of water and takes a drink of the water.",
+          "shows how to play the volleyball.",
+          "then demonstrates how to throw a ball to the goal.",
+          "starts hit by the ball."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_483",
+      "original": "A man is wearing blue scrubs and a fanny pack. he",
+      "transformed": "He be wearin' them blue scrubs and a fanny pack.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Washing hands",
+      "semantic_score": 0.8904467821121216,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is washing his hands in the sink.",
+          "begins to shave his legs with shaving cream.",
+          "unzips the fanny pack and pulls it out onto a stump.",
+          "is attached to a machine that is attached to his leg by a hose."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_490",
+      "original": "He brings out the lawn mowing equipment from his garage and begins mowing the lawn. He walks up and down his entire lawn, pushing his lawn mower as he cuts the grass. he",
+      "transformed": "He be bringin' out the lawn mowin' equipment from his garage and start mowin' the lawn. He walk up and down his whole lawn, pushin' his lawn mower as he cut the grass.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Cutting the grass",
+      "semantic_score": 0.9289507865905762,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "walks back to the door ending with the last cut.",
+          "then leaves it alone, while he continues talking and talking.",
+          "walks throughout his backyard as he makes sure he covers the entire area as the rotating blades of the lawn mower cut the grass.",
+          "continues mowing his areas before dropping the lawn mower."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_491",
+      "original": "He walks throughout his backyard as he makes sure he covers the entire area as the rotating blades of the lawn mower cut the grass. after he",
+      "transformed": "He be walkin' through his backyard, makin' sure he cover the whole area while them blades a' the lawn mower be cuttin' the grass.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Cutting the grass",
+      "semantic_score": 0.9014649391174316,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "finishes, the yard is shown and begins to gargle of the compost in his yard.",
+          "pulls in the last string, he makes sure he has a good bend seated inside the weeds, grabs a rake then slivers the top of the hedge.",
+          "is done, he stands on top of a mound of new green fluff and begins throwing the fluff to the ground as he takes his cigarette out of his smoke holder and lights it.",
+          "'s done mowing, he plays with his two black and white dogs in his backyard."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_507",
+      "original": "An african american male wearing a blue muscle shirt and under armour sweat shorts is standing on an elliptical talking. although he",
+      "transformed": "He be standin' on that elliptical, talkin', wearin' them blue muscles and Under Armour sweats.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Elliptical trainer",
+      "semantic_score": 0.8641253709793091,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is talking he is also being held by being shirtless, and is showing off the number 678 alongside the elliptical opposite him that continues to display the number 779.",
+          "is talking to the camera and showing the body specifications of the machine it's powered down and you can see how it is slower.",
+          "is the only one in the gym, there are two people standing behind him at the reception desk.",
+          "is wearing a tank top underneath he has a racquetball racketball racket and a black background."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_508",
+      "original": "Although he is the only one in the gym, there are two people standing behind him at the reception desk. after some time",
+      "transformed": "He be by his self in the gym, but they got two people standin' behind him at the reception desk.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Elliptical trainer",
+      "semantic_score": 0.8825001120567322,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          ", the conversation from earlier comes back to him that it says to leave his cell number with people eventually, so he removes his phone from his ear.",
+          ", the guy begins to workout on the machine and shows its function, while a man walks back and forth into the room from the side door of the gym.",
+          ", he arrives with two young girls and a in a large gym area where many people are standing.",
+          ", the boy appears and starts swinging a basketball on a stick and gets a perplexed look from him."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_509",
+      "original": "A man is kneeling on a frozen lake. A video is shown of the cold waters below. a fish",
+      "transformed": "He be kneelin' on a froze lake. A video be showin' de cold water below. A fish done swimmin'.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Ice fishing",
+      "semantic_score": 0.872961163520813,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "swims up to the bait and grabs it as the man reels it in.",
+          "is shown on the ice.",
+          "gets caught in the frozen waters.",
+          "is belly tied to a hook."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_517",
+      "original": "There's a man doing a tutorial and explaining how to use a portable shower for dogs. he",
+      "transformed": "He be explainin' how to use one them portable showers for dogs in this here tutorial.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Bathing dog",
+      "semantic_score": 0.861911952495575,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is standing next to a saddle on a back porch with a white hose in hand.",
+          "explains the importance of a still to show a product of the same kind of grooming.",
+          "is showing how to use it to clean each bathroom using various methods including soap, water, shampoo, shampoo, a toothbrush, toothpaste, mouthwash, and soap.",
+          "starts by filling in the receptacle with some tap water and closing the cap back on tight."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_527",
+      "original": "A woman is seen bending forward grabbing onto a set of weights. she",
+      "transformed": "She be bendin' down grabbin' onto them weights.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Clean and jerk",
+      "semantic_score": 0.8855545520782471,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "lifts and then lowers herself over the bar several times.",
+          "lifts them up over her head and at times drops them down.",
+          "then lifts the weights over her head.",
+          "stands back up and continues pushing them around."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_535",
+      "original": "A rabbit is cleaning itself with its tongue. It is underneath a chair. it",
+      "transformed": "A rabbit be cleanin' itself wit' its tongue. It done get under the chair.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Washing face",
+      "semantic_score": 0.9108754396438599,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is shaving the leg of a man.",
+          "gets a towel and cleans its face.",
+          "looks into the camera.",
+          "is feeding a dog something."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_543",
+      "original": "A man runs on his tip toes setting up for the play. The athlete runs down the track holding a javelin. the athlete",
+      "transformed": "He runnin' on his tippy-toes, settin' up for the play. The athlete be runnin' down the track holdin' a javelin. He done set up the stage now.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Javelin throw",
+      "semantic_score": 0.8763529658317566,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "hurls his javelin down the field then watches.",
+          "performs a long jump and receives his second point.",
+          "vaults over a bar at the end.",
+          "falls over and stands up."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_546",
+      "original": "A man is running in pogo stilts. He turns around and then walks back. he",
+      "transformed": "He be runnin' on them pogo stilts. He turn 'round, den walk back.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Powerbocking",
+      "semantic_score": 0.8593673706054688,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "runs up a long flight of stairs.",
+          "jumps into a bucket of water and lays on it.",
+          "runs at the camera at the end.",
+          "runs again and does a front flip and lands on the track."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_589",
+      "original": "The people play volleyball on the beach. the ball",
+      "transformed": "They done playin' volleyball on the beach. The ball.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing beach volleyball",
+      "semantic_score": 0.8909558057785034,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "goes out of bounds.",
+          "goes into the sand and a player gets passed to get it.",
+          "goes all around the court.",
+          "is thrown far and the camera moves right."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_597",
+      "original": "The man is kneeling down in the snow reeling a fishing pole. A fish is seen under the water. Another man in a blue coat is next to him. they",
+      "transformed": "He be kneeling down in the snow reelin' a fishin' pole. A fish be seen under the water. Another man in a blue coat be next to him. They ain't catchin' nothin'.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Ice fishing",
+      "semantic_score": 0.92747563123703,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "smile back at each other and dive under the water to fish.",
+          "pull out a large fish and pose with it.",
+          "go back under and are seen fishing for a while.",
+          "are trying very hard not to get caught."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_620",
+      "original": "A man jumps onto two bars. He does a gymnastic bar routine. He does a back flip off and lands on the mat. two men",
+      "transformed": "He done jump onto two bars. He do a gymnastic bar routine. He do a back flip off and land on the mat. Two men",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Using parallel bars",
+      "semantic_score": 0.9442703723907471,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "speak to the camera.",
+          "drop into a pile on the mat.",
+          "are watching him in suits.",
+          "shake hands and walks away."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_637",
+      "original": "The guy is sharpening a knife. The guy places the knife and the elongated sharpener on the counter top. a person",
+      "transformed": "He be sharpenin' a knife. He place it and that long sharpener on the counter top.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Sharpening knives",
+      "semantic_score": 0.867336630821228,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "starts an ironing machine.",
+          "brings out a wooden chopping board.",
+          "walks by from behind and gets a quick peek then keeps walking.",
+          "dorks an ice cream cone."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_645",
+      "original": "Up on top of the roof there is some construction being done. the camera",
+      "transformed": "Some construction goin' on up on top of the roof. They done fixin' the camera.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Roof shingle removal",
+      "semantic_score": 0.9046952128410339,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "moves around so you can see all the different angles, it looks like the worker is on break he even has a drink like maybe he just had lunch.",
+          "keeps following a man painting tiles and nail them down.",
+          "is zoomed in on the roof of a building.",
+          "man is moving features in the ground that he uses to place the shingles and wood board on top of the roof top."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_647",
+      "original": "The camera moves around so you can see all the different angles, it looks like the worker is on break he even has a drink like maybe he just had lunch. Some new shingles are being put in to replace whatever was there before. it",
+      "transformed": "He be movin' the camera 'round so you can see all them angles, it look like the worker is on break, he even got a drink like maybe he just had lunch. Some new shingles is gettin' put in to replace whatever was there before.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Roof shingle removal",
+      "semantic_score": 0.927761435508728,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "shows a little distance being taken for a redo and now it shows a young lady putting screws into an old base and putting glue.",
+          "looks like the job is half way complete and there is only a small portion that needs to be finished.",
+          "'s quite amazing actually they have done it without being damaged beyond repair.",
+          "appears same exact as the first shingle, it looks different this time but it appears to be a different shape."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_649",
+      "original": "A woman is seen speaking to the camera and holding a contact lens. she",
+      "transformed": "She be holdin' a contact lens while talkin' to da camera.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Putting in contact lenses",
+      "semantic_score": 0.8813413977622986,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "moves her hands around while holding onto the lens and leads into her demonstrating how to put one in your eye.",
+          "then starts putting a contact into her eye.",
+          "then puts the lens on her finger and places two more ends around her eyes.",
+          "put a contact into her eye and puts a gel into her eye."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_669",
+      "original": "A man is seen wandering around a field cutting grass that pans into other people chopping up the grass as well. the camera",
+      "transformed": "He be seen wanderin' 'round a field cuttin' grass, and it pans into other folks chop up the grass too. The camera",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Cutting the grass",
+      "semantic_score": 0.9229090213775635,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "pans around the area to see people cutting and ends with a close up of a person smiling and continuing to cut.",
+          "shows more shots of the people cutting the grass and walk back to the camera.",
+          "pans all around a row of trees and leads into him cutting up more dead grass and a man opposing him in a shoulder to shoulder hug.",
+          "pans around to more people cutting up the field as well as still shots of people moving around."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_675",
+      "original": "A guitarist wearing jeans and a white t-shirt demonstrates how to play a guitar. he",
+      "transformed": "He be showin' us how to play the guitar, wearin' them jeans and a white tee.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing guitarra",
+      "semantic_score": 0.8526017069816589,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "begins by playing his guitar nicely and then pauses to show a single strand of hair off in the distance.",
+          "then demonstrates the use of the small amounts of metal to play a song.",
+          "speeds up playing the guitar, relaxing all the way to the end.",
+          "describes the chords of a song and the proper finger placement to form the chords with a fingering chord diagram on the screen."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_677",
+      "original": "This man is skiing in the snow while holding a selfie stick recording himself. first he",
+      "transformed": "He be skiin' in da snow holdin' a selfie stick recordin' hisself, fust he.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Skiing",
+      "semantic_score": 0.8757140040397644,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "starts at the start line where racers are who participate in skiing competitions.",
+          "uses the selfie stick to paint himself and a couple of other people around him.",
+          "pulls several flags one at a time and then es rolls them through the tube.",
+          "takes his glasses off, then he puts his contacts in to solve the puzzle."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_679",
+      "original": "An athletic young man is standing on a field and runs and jumps over a horizontal pole that is 5'6 high and lands onto the padded landing area below it and a slow replay of it plays. the man",
+      "transformed": "He be standin' on a field, runnin', jumpin' over a pole that's 5'6 high, and landin' on the padded area. A slow replay of it play out.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "High jump",
+      "semantic_score": 0.9014179110527039,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is sitting in a tube on a flip board and holding onto something and doing flips and handstands on it behind him.",
+          "is shown kneeling down on the mat after completing the jump on his shoulders where he finally rolls to the mat and lands face down.",
+          "also slides backwards, performing balanced flips, and then lands with his feet located on the padded floor, and goes over the horizontal pole on any and all and lands after being done.",
+          "jumps again but this time at 5'10 high, he clears it, and once again it replays."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_683",
+      "original": "A customized truck backs into a parking spot. A man hoses of the hood of his car. the person",
+      "transformed": "A customized truck back up in a parkin' spot. A man hosed off the hood of his car, then he done wash it too.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Hand car wash",
+      "semantic_score": 0.8648266792297363,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "kneels next to his car and shows cleaning products.",
+          "then flips off of the bike, and lays in a crumpled heap on the ground.",
+          "uses a squeegee on the hood of his truck to clean off excess hubcap fluid.",
+          "then takes the hose and showcases it."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_692",
+      "original": "A man spin a girl who is blindfold and holds a bat to hit a pinata. then",
+      "transformed": "He done spin a girl who is blindfolded and holdin' a bat to hit a pi\u00f1ata, den.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Hitting a pinata",
+      "semantic_score": 0.8940393328666687,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          ", the girl swing the bat in the air, and in the second try she hits the pinata and break it.",
+          ", the person throws a bat on the ground and hits the pinata, then it flies through the air and land on the ground.",
+          ", the young man throws the the girl the bat and kicks her three times, and then he continues spinning, then throw the pinata.",
+          ", it is girls hit a pinata."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_693",
+      "original": "A woman is bent over holding a weight bar. She picks the weight up and holds it at her shoulders. she",
+      "transformed": "She be holdin' a weight bar, bendin' down low. She pick up that weight and hold it on her shoulder.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Clean and jerk",
+      "semantic_score": 0.8815688490867615,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "then pushes off the bar.",
+          "bends down and begins exercising using the weight bar.",
+          "then lifts the weight over her head.",
+          "lifts it to her chest and works out."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_696",
+      "original": "A black screen appears and the white words the mikan drill are displayed and the man continues to talk and then demonstrates exactly how to do various mikan drills. the man",
+      "transformed": "He be showin' how to do them mikan drills, and he got a black screen with them white words \"mikan drill\" on it, and he keep talkin', then he demonstrate exactly how you do 'em.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Layup drill in basketball",
+      "semantic_score": 0.8904900550842285,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "then dumps out their clean clothing and they are then seen washing their clothes in a dryer and then placing the dirty clothes on stage.",
+          "then grabs a second ball and continues to demonstrate advanced mikan drills with both balls.",
+          "continues talking, exercises, and demonstrating how to properly properly do his all distance but 11 hour stay wakeboarding on a playground that is attached to a mobile tree.",
+          "continues to talk and then walks back and fourth and demonstrates more mikan drills that involve using an electric drill to drill through a coconut in a board with a handle."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_705",
+      "original": "The boy shows a container of wet wipes then opens it to pull one out. The boy wipes down the sole of the tennis shoe using the wet wipe towel. the boy",
+      "transformed": "The boy show a container a' wet wipes, den he open it up and pull one out. He use dat wet wipe to wipe down de bottom a' his tennis shoe. Den he done with it.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Cleaning shoes",
+      "semantic_score": 0.8611606955528259,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "dries off the shoe using a towel.",
+          "shows a bottle of powder then places it in his shoe.",
+          "shows another container of wet wipes.",
+          "puts the wet wipe on top of the shoe then uses a rope to secure the shoe and then uses a brush to wet it."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_712",
+      "original": "We see an opening title screen. We see a foosball table and see people playing on the table. we",
+      "transformed": "We see an opening title screen. We see a foosball table, they be playin' on it.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Table soccer",
+      "semantic_score": 0.9521616101264954,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "see the ending screen on a black background.",
+          "then see people on paddling boats.",
+          "see people playing tennis on the table.",
+          "see a person add a point by moving a silver bobble."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_713",
+      "original": "We see a foosball table and see people playing on the table. We see a person add a point by moving a silver bobble. we",
+      "transformed": "We see a foosball table and see people playin' on it. We see a person add a point by movin' a silver bobble, they done get it in de goal.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Table soccer",
+      "semantic_score": 0.9387238025665283,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "see a person score a point we then see the ending screen.",
+          "see a man break-dance in the middle of the table and people laugh afterwards.",
+          "see a man lift a bowling ball.",
+          "see a man raise the ball to his mouth and bite."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_714",
+      "original": "A man is running down the street wearing stilts. he",
+      "transformed": "He be runnin' down dat street wearin' stilts.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Powerbocking",
+      "semantic_score": 0.8695322871208191,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "turns around and runs the other direction.",
+          "stops in front of a house and picks up a large piece of wood.",
+          "takes off on a skateboard in a fast manner.",
+          "takes a huge leap through the air."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_721",
+      "original": "A man wearing a green outfit is leading a camel. two people",
+      "transformed": "He be wearin' a green outfit, leadin' a camel, with two peoples.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Camel ride",
+      "semantic_score": 0.9386596083641052,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "are sitting on top of the camel.",
+          "on the camel are leading it while a man holding a microphone, also a man talks in the microphone and then runs behind the camels to continue leading the camels.",
+          "wearing hats are helping the camel walk.",
+          "on horses wait, then the man attached a camel to a grain cart."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_725",
+      "original": "She dries and cuts some cucumbers to put in a bowl of salad. She tosses the salad with her hands. she",
+      "transformed": "She done dry and cut some cucumbers to put in a bowl of salad. She done toss it with her hands.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Preparing salad",
+      "semantic_score": 0.8665763735771179,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "grabs a bottle of vinegar and pours it on top of the salad.",
+          "comes into the kitchen and pours some water on to a milk jug from a small window.",
+          "stops to shrug of her coat.",
+          "jaw to speak to the camera."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_729",
+      "original": "A lady in the background is pulling saran wrap out. She continues tossing the salad and mixing the dressing into it. a woman behind her",
+      "transformed": "She be pullin' saran wrap out. She done tossin' the salad, mixin' the dressing in it. A woman be standin' behind her.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Preparing salad",
+      "semantic_score": 0.9080695509910583,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is reading a script.",
+          "is in lat salad dressing and speaking to the camera.",
+          "is mixing salad into a sparkly glasses, and talking about the whole haircut business.",
+          "pours seasoning onto the salad."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_734",
+      "original": "She then takes a shaker and pours and vodka and the jagermeister. Then adds some ice in it and shakes it. she",
+      "transformed": "She done take a shaker and pour vodka and J\u00e4germeister. Den she add some ice to it and shake it.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Mixing drinks",
+      "semantic_score": 0.9549465775489807,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "then adds a few drops of sugar.",
+          "pours it into glass and adds down a third.",
+          "pours the drink into the shaker and mixes it from the shaker.",
+          "uses a strainer to strain the drink into a cocktail glass and places the glass on the table."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_741",
+      "original": "A man wearing black is in a gym. He picks up some heavy barbells. He lifts the barbells over his head. he",
+      "transformed": "He be wearin' black in da gym, pick up some heavy barbells, lift dem over his head.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Clean and jerk",
+      "semantic_score": 0.8735553026199341,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "drops them onto the barbell and walks away.",
+          "lifts them up over his head.",
+          "then drops the barbells onto the ground.",
+          "falls onto the mat."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_752",
+      "original": "An old woman talks before run in a marathon where there is a lot of people participate. Then, the woman cross the finish line and people help her. a cameraman",
+      "transformed": "Old woman talk 'fore she run in a marathon where a whole lotta people participate. Den, she done cross de finish line, and dem people help she out. A cameraman come up to she.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Running a marathon",
+      "semantic_score": 0.9306806921958923,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "talks standing in a car.",
+          "shows her how to reach the finish line.",
+          "reach the winner, the people laugh and compliment the woman who is unconscious on the floor.",
+          "films on front the finish line while people is arriving."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_762",
+      "original": "One of the men comes out of his camping tent with a fish in his hand. The two men are sitting in their make shift tent, fishing through a hole in the frozen lake. they",
+      "transformed": "They be sittin' in they make-shift tent, fishin' through a hole in the frozen lake. One of them done come out with a fish in his hand.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Ice fishing",
+      "semantic_score": 0.9164547324180603,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "are patiently sitting with their fishing rods till they fish out mid size fish from the holes.",
+          "come out to fish from the ice, looking back as they go down the mountain.",
+          "then try and catch a seal, but it is too fish ridden for them to finally get one in their mouths.",
+          "fish up a large red hole while wearing protective tape over their mouths."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_768",
+      "original": "A person is seen walking along the snow and pulling a sled behind him. The person cuts a hole in the ice as well as bait and finally catches a fish. the man",
+      "transformed": "He be walkin' down the snow, pullin' a sled behind him, cuttin' a hole in the ice, gettin' his bait right, and he done catch himself a fish.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Ice fishing",
+      "semantic_score": 0.9169103503227234,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "can be seen swimming around and smiling to the camera.",
+          "releases the fish swimming free in the large body of water.",
+          "then ties a rope around the fish and then around the sled and sending it into the water.",
+          "cuts the fish, cooks it, and is then seen eating it and walking away."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_783",
+      "original": "We see a man walking on the ice. he",
+      "transformed": "He be walkin' on da ice.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Ice fishing",
+      "semantic_score": 0.8933749198913574,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "goes into a puck fight.",
+          "spins and throws a ball.",
+          "jumps into the water.",
+          "moves a stick and pulls a fishing line out of a hole."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_784",
+      "original": "We see a man walking on the ice. He moves a stick and pulls a fishing line out of a hole. the man",
+      "transformed": "He be walkin' on da ice. He move a stick 'n pull a fishin' line outta a hole.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Ice fishing",
+      "semantic_score": 0.8615957498550415,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "pulls a fish out of the hole.",
+          "puts on his mouth piece and hooks a fish.",
+          "line lines a fish up before going while the fish is reeling.",
+          "stands in the water, reels in the line, and lines up."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_802",
+      "original": "The man examines the instrument in his hand. The person holds up the violin to his chin and gets ready. the person",
+      "transformed": "He be examinin' that instrument in he hand. He hold up dat violin to he chin, gettin' ready.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing violin",
+      "semantic_score": 0.8683139681816101,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "opens the violin case.",
+          "makes the bow on his violin.",
+          "finishes warming up and a hood is displayed.",
+          "plays a song on the violin."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_812",
+      "original": "The girl then firmly drops her hands to her side, brings her feet together and does a bow and continues to do a routine of various karate moves. the girl",
+      "transformed": "She done drop her hands to she side, bring her feet together and do a bow, and she keep on doin' them karate moves.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Doing karate",
+      "semantic_score": 0.8953692317008972,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "then gives a triumphant wave as she casts a right hand in the air and continues her routine.",
+          "dips into a mat high in the air and a man comes over and supports her as she dismounts.",
+          "finally dismounts and gets her instrument back into its holder, without a bow, her serious stance changes to one of full concentration as she throws her hands in the air and raises her arms.",
+          "ends her routing a little further from the point she started and firmly drops her hands to her side and does a little bow, then opens her legs shoulder length apart and goes back into the same position as she was in when she started."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_821",
+      "original": "A man is outside with two dogs on leashes. he",
+      "transformed": "He be out there wit' two dogs on leashes.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Disc dog",
+      "semantic_score": 0.885114312171936,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "seems to be talking to the camera when suddenly the dogs start fighting and punching each other.",
+          "puts on a show with the trained dogs.",
+          "is brushing the dogs legs with the leashes.",
+          "is using frisbees from an assortment for the dogs."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_822",
+      "original": "A man is outside with two dogs on leashes. He puts on a show with the trained dogs. he",
+      "transformed": "He be out there with them two dogs on leashes, puttin' on a show with 'em.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Disc dog",
+      "semantic_score": 0.8775901794433594,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "throws frisbees, and the small crowd claps for the performing dogs.",
+          "is spraying water from a hose into the air in front of him.",
+          "holds up a bag at his side and dogs inside.",
+          "is performing with the dogs, catching frisbees and catching frisbees."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_825",
+      "original": "A man is talking from behind a bar. He shows off several kinds of bottles and taps. he",
+      "transformed": "He be showin' off them bottles and taps from behind the bar.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Mixing drinks",
+      "semantic_score": 0.8746887445449829,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "finally signs an order and raises his glass.",
+          "uses a sprayer on the bottle to wipe it clean.",
+          "shows off them on a cocktail napkin.",
+          "shows how to mix a drink which he serves to a woman."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_829",
+      "original": "We see a man run and do a high jump 6'11 and see the replay. We then see the man jump at 6'9 and see the replay. the man",
+      "transformed": "We see a man run and do a high jump, 6'11\", and we see the replay. Then we see the man jump at 6'9\" and see the replay. He done jump that high before.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "High jump",
+      "semantic_score": 0.9433881044387817,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "jumps at 6'11 again and we see the replay.",
+          "runs back and upwards at 6'6'9 but then lands and returns to his feet.",
+          "walks out of the helmet and we see his face again.",
+          "does his stroke over 6'4 \" and fades and we see the side screen again."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_834",
+      "original": "A group wave to the camera while more people in the background walk through the water. The group go rafting on the water. They wave again to the camera. the group",
+      "transformed": "They done wave to the camera, and them folks in the back be walkin' through the water. They goin' rafting, yeah. They wave again to the camera. Them's the group.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "River tubing",
+      "semantic_score": 0.9032076001167297,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "are shown in their raft as they sail along the river.",
+          "sail along in the water moving side to side.",
+          "goes to another part of the body of water together.",
+          "al saddles is through a ramp and waves to the camera."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_835",
+      "original": "They wave again to the camera. The group are shown in their raft as they sail along the river. they",
+      "transformed": "They done waved again to the camera. The group be shown in they raft as they sail along the river.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "River tubing",
+      "semantic_score": 0.9580897092819214,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "cut through deep ramps into rapids.",
+          "are shown taking a break in the river.",
+          "ride their boards slowly through the rough waters.",
+          "are able to get out the water and sit on the raft."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_848",
+      "original": "A man in a black shirt is talking on a basketball court. a boy",
+      "transformed": "He be talkin' on the basketball court in a black shirt, and a young'n.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Layup drill in basketball",
+      "semantic_score": 0.8751359581947327,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is walking down the court and starts doing several martial arts moves.",
+          "in the stands shuffle to the front of the court and stands over him.",
+          "in a red shirt is practicing dribbling and hitting the ball with a stick.",
+          "is playing basketball on the court."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_852",
+      "original": "Man is jumping wearing stilts on a sidewalk. a calm green grassy field",
+      "transformed": "He be jumpin' wearin' stilts on the sidewalk, standin' in front of that calm green grassy field.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Powerbocking",
+      "semantic_score": 0.9208611845970154,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "with a green forest is in front of fruit tree and a man is standing in a fence.",
+          "dintron is shown and a man jumps on stilts on the grass.",
+          "and ackle man take turn to jump in the stilts.",
+          "is behind the man wearinf stilts."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_857",
+      "original": "The woman on the machine continues to show the viewers the correct way to exercising on the elliptical. the host",
+      "transformed": "She done show the people how to exercise on them ellipticals. The host be talkin'.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Elliptical trainer",
+      "semantic_score": 0.8757314682006836,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "appears again and the video is shown again.",
+          "once again instructs viewers to follow instructions and get a free licensal so you can exercise more.",
+          "is sitting in a chair watching the woman exercising on the elliptical machine.",
+          "then concludes the tutorial."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_863",
+      "original": "A man lays out a scarf and puts some accessories in the middle of it. He ties the end and folds it into double knots. he",
+      "transformed": "He done lay out a scarf and put some accessories in the middle of it. He tie the end and fold it into double knots.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Wrapping presents",
+      "semantic_score": 0.8842493295669556,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "opens it again and puts something else into the middle of it.",
+          "then shows a picture of the scarf.",
+          "presents a mirror to the camera.",
+          "stands up in front of a window and puts ribbon on it."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_865",
+      "original": "It is then mention with text on the screen that it can lead to high blood pressure it is then mentioned that it can hurt your hair growth and that it doesn't have any vital nutrients in it. it",
+      "transformed": "It be mention with text on the screen that it can lead to high blood pressure, it be mention that it can hurt your hair growth and that it don't have no vital nutrients in it.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Drinking coffee",
+      "semantic_score": 0.893086850643158,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "gets finished quickly, then a video of a woman in a sweater is shown and then individual cut hair is displayed on the screen as she continues talking.",
+          "is then shown that there are benefits and that one should moderate their intake to keep a balance.",
+          "now is 3 pm and while the men are still brushing, one of them is getting interviews and what the man is wearing is funny and is even more funny.",
+          "shows large red bumps over the kale, which is some lettuce and lettuce, it has several plastic cleansers in it, and there is gum over there on the counter, and then it goes back to the video for another animation."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_879",
+      "original": "Man is standing holding an harmonica while is playing the guitar and its reading the music sheet. man",
+      "transformed": "He be standin' holdin' that harmonica while he playin' the guitar, and he readin' the music sheet.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing harmonica",
+      "semantic_score": 0.8809917569160461,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is perusing the notes on his wrist sound proof nib.",
+          "is talking to the camera making mouthpiece and taking the elliptical.",
+          "is teaching how to play the harmonica in the key of a and its talking and playing the guitar.",
+          "is holding a person playing an acoustic guitar."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_883",
+      "original": "Three girls are seen standing behind a counter speaking to the camera with one spreading butter around a pan. Another mixes ingredients into a bowl with another girl's help and the girls lick the spoon used afterwards. they",
+      "transformed": "They be standin' behind that counter, talkin' to the camera, while one of 'em spreadin' butter in a pan. Another got in there mixin' stuff up in a bowl with some other girl's help, and then they lickin' the spoon after.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Making a cake",
+      "semantic_score": 0.8544144630432129,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "change sides of the pan and make practice with each other in the sink.",
+          "then pass the clam to each other while holding the bowl.",
+          "continue mixing with one another while using their hands in the end.",
+          "pour the mixture into a pan, put it in the oven, then shortly take it out some time after."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_890",
+      "original": "They take another drink out of a cup. They put their mouth on a towel. They take another drink and dump it out in the sink. they",
+      "transformed": "They done took another drink outta that cup. They put they mouth on a towel, then they done took another drink and dumped it out in the sink.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Gargling mouthwash",
+      "semantic_score": 0.9107242226600647,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "pick up the towel and wipe their face.",
+          "finish their drink before they finish chugging it.",
+          "spit out the drink and point at the camera.",
+          "are playing a game of water polo."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_899",
+      "original": "A white bmw 3 series is in a garage being cleaned by two men wearing safety jackets. once the front",
+      "transformed": "A white BMW 3 series be sittin' in a garage gettin' clean by two men wearin' them safety jackets. Once they done finish with the front, dey gonna move on to de back.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Hand car wash",
+      "semantic_score": 0.9101418256759644,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "of the car is cleaned the men put the back of the car in the back of the van could be seen in the garage.",
+          "is cleaned, the men move towards the back spraying the vehicle and come back to spray the rim and go back to the trunk to get all of the spots.",
+          "cover is lifted, the rear plate of the car is covered in white mud and a red bucket is shining away.",
+          "tires are taken off, the tires get stuck on parts of the car and starts to move."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_930",
+      "original": "A man is seen standing in front of a window speaking to the camera while wearing a headpiece. the man",
+      "transformed": "He be standin' in front of a window talkin' to da camera wit' a headpiece on him.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Cleaning windows",
+      "semantic_score": 0.8551816940307617,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "sits down near a table while speaking into the camera.",
+          "continues speaking failing into a microphone while holding a pose.",
+          "then brushes along the sides of the window and points back and fourth to the window while speaking to the camera.",
+          "then stands on his hands and begins rubing his body into various positions."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_937",
+      "original": "A man steps up to a set of uneven bars while a man does flips behind him and begins performing a gymnastics routine. the man",
+      "transformed": "He be doin' some kinda gymnastics moves on them uneven bars, with another dude doin' flips right behind him.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Using parallel bars",
+      "semantic_score": 0.8596599698066711,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "flips and spins himself around on the bars and ends by jumping down and waving his hands up.",
+          "releases the bars and then the gymnast catches both of them on his hands.",
+          "does his routine while shaking the bar and jumping, it goes into a routine until break time.",
+          "jumps over and around four bars in the air while jumping far back over the remaining bars and landing on his butt."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_944",
+      "original": "A man is standing in a gym. he",
+      "transformed": "He be standin' in the gym.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Clean and jerk",
+      "semantic_score": 0.8769046664237976,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "holds a training staff in his hand.",
+          "holds up a rubik's cube.",
+          "uses a racket to hit a ball off a wall.",
+          "bends down and picks up a large weight."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_954",
+      "original": "We see a lady in a chefs coat in a kitchen talking. A lady sharpens a knife on a rod. The lady puts water on a black sharpener block. the lady",
+      "transformed": "We see a lady in a chef's coat in the kitchen talkin'. A lady be sharpenin' a knife on a rod. The lady put some water on that black sharpener block. She done got her knife sharp now.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Sharpening knives",
+      "semantic_score": 0.9388188719749451,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "then sharpens the knife.",
+          "puts butter on the sharpener and add meat to it.",
+          "holds the rod with a towel on the sharpener.",
+          "sharpens the knife on a minnie mouse and puts it back in the sharpener and keeps sharpening and speaking to the camera."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_958",
+      "original": "A woman is standing in a room talking. She shows a bottle in her hand. she",
+      "transformed": "She be standin' in dat room talkin', showin' a bottle in her hand.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Washing face",
+      "semantic_score": 0.8701217770576477,
+      "feature_count": 1,
+      "authenticity_score": 0.6,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "sprays something onto her face.",
+          "holds a bottle of mouthwash and shakes it in her hand.",
+          "pours some of the lotion onto her hands and rubs it on her face.",
+          "then explains the correct way to wash your hands."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_959",
+      "original": "The boy sit on a bench outside with a bag of croquet mallets and balls and talk to each other. the boys",
+      "transformed": "De boy sittin' on a bench outside wit' a bag of croquet mallets and balls, talkin' to each other. De boys done finish playin', dey ain't wanna go home yet.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Croquet",
+      "semantic_score": 0.8750424385070801,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "have an animated conversation where only the boy and the walkie talkies are in his use.",
+          "then enter the field and hurt themselves trying to untangle the croquet tools.",
+          "went outside and played with the kids, talking about what sport they have joined.",
+          "split logs of wood into a triangle on the table."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "hellaswag_validation_961",
+      "original": "A man is bent down on a mat. he",
+      "transformed": "He be bent down on that mat.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Clean and jerk",
+      "semantic_score": 0.9196010828018188,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "grabs a lacrosse ball and throws it onto the mat.",
+          "lifts a ball up into the air.",
+          "holds an orange ball with several other pins in it.",
+          "picks up a large weight and lifts it over his head."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_964",
+      "original": "A man is working out on an elliptical machine. it",
+      "transformed": "He be workin' out on that elliptical machine.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Elliptical trainer",
+      "semantic_score": 0.9077579379081726,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is shown in two pieces, each one attached by a person.",
+          "seems to be a popular one as he works out.",
+          "grabs and guides the device.",
+          "shows the screen on the machine."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_965",
+      "original": "A man is seen sitting in front of a camera holding a harmonica in his hands. the man",
+      "transformed": "He be sittin' in front of a camera holdin' a harmonica in his hand.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Playing harmonica",
+      "semantic_score": 0.9135510921478271,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "then begins playing the instrument while moving his hands up and down over the strings, looking up at the camera and continuing playing.",
+          "then begins playing the harmonica throughout the entire song and ends by adding a bow.",
+          "then begins playing several songs while pausing in between.",
+          "begins playing the harmonica back and fourth."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_972",
+      "original": "Woman is walking wearing a bikini and eating a chocolate is snowy day. people",
+      "transformed": "She be walkin' wearin' a bikini and eatin' some chocolate on a snowy day, ain't nobody outside but people.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Having an ice cream",
+      "semantic_score": 0.8891263604164124,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "are doing canoeing in the clear lake and are closing the distance.",
+          "arrive in a stadium to a sunblue basketball court.",
+          "are in sidewalk watching the girl walks.",
+          "are in a brown river and the woman is sitting in a kayak steamer."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_973",
+      "original": "Woman is walking wearing a bikini and eating a chocolate is snowy day. People are in sidewalk watching the girl walks. woman",
+      "transformed": "She be walkin' wearin' a bikini and eatin' some chocolate on that snowy day. Folks be sittin' on the sidewalk watchin' her walk by.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Having an ice cream",
+      "semantic_score": 0.9086267352104187,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "is in a restaurant wearing a bikini and two aiter are watching her.",
+          "is high fiving sesame street.",
+          "is falling river and is waving to the camera.",
+          "do wakediving ieds on a pool and a team and stands in front of the far side of the pool."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "hellaswag_validation_974",
+      "original": "A man is seen bending over a large set of weights with another walking behind him. the man",
+      "transformed": "He be bendin' over them big ol' weights, and another dude walkin' behind him.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Clean and jerk",
+      "semantic_score": 0.8635736703872681,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "lifts himself backwards and the camera zooms in on his back while the other follows him.",
+          "repeats this actions backwards with a height difference.",
+          "lifts the bar up over his head and throws it back down.",
+          "hits the weights up and down on the bar while the camera captures him from several angles."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_984",
+      "original": ". a man dressed in a black sweatshirt and black shorts, along with another person dressed in white athletic wear",
+      "transformed": "A man dressed in a black sweatshirt and black shorts, he be goin' with another person dressed in white athletic wear.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Tennis serve with ball bouncing",
+      "semantic_score": 0.9365148544311523,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          ", wearing blue shorts, brown leotard and no shirt will come on stage and begin kicking the ball.",
+          "raises a blue barrel, sits down, grabs the barrel and begins to squeeze the stiff barrel hard and then lifts his hand casually up and down to flip the barrel, then lowers it like a discus and puts a lid on to keep the beer from getting out.",
+          ", appears on the screen and then the legend appears again, speaking to a woman in a bedroom and the world begins to ends.",
+          "are standing in a tennis court near the net."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "hellaswag_validation_988",
+      "original": "Then the person in white begins taking about more about the tennis serve and how to play effectively. the player",
+      "transformed": "Den de person in white start talkin' 'bout de tennis serve, 'specially how to play it right.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Tennis serve with ball bouncing",
+      "semantic_score": 0.8879161477088928,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "in gray tries more of the serve and fails every time.",
+          "in white returns his serve and keeps it.",
+          "continues to demonstrate the serves.",
+          "goes back and forth between the two balls as the crowd claps and the man in black takes his bell and lets fly until he hits the ball."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_991",
+      "original": "A man stands indoors, on a platform, in front of three onlookers, and lifts a heavily weighted bar bell. A man approaches a barbell on the floor and stands before it preparing to lift it. the man",
+      "transformed": "He be standin' indoors, on a platform, in front of three onlookers, and he done lifted a heavily weighted bar bell. Another man approach a barbell on the floor and he stand before it preparin' to lift it.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Clean and jerk",
+      "semantic_score": 0.9172837734222412,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "lifts the weight bar suspended in the air on the platform and turns towards the onlookers.",
+          "lifts the bar and is seen demonstrating how he performs, pausing on each bar to measure the weight.",
+          "then bends at the knees and puts his hands on the bar portion of the weight.",
+          "then lifts the bell on his shoulders, leans lean back, puts his arms behind his head and lifts it slightly."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "hellaswag_validation_997",
+      "original": "We see a box on fabric. A person wraps the box in the fabric and ties it up. we",
+      "transformed": "We see a box on fabric. A person wrap de box in de fabric and tie it up. We done finish dat.",
+      "dialect": "aave",
+      "benchmark": "hellaswag",
+      "subject": "Wrapping presents",
+      "semantic_score": 0.8710554838180542,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "see a man laying carpet in a bedroom.",
+          "see the person wrap to bottles in the fabric together.",
+          "see a person making small holes in floor.",
+          "see the box in person from a distance."
+        ],
+        "correct_choice": 1
+      }
+    }
+  ],
+  "generation_time": "2026-01-25T18:21:10.025721"
+}
