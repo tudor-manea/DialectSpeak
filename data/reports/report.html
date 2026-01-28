@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llama 3.1 8B Dialectal Fairness Audit</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .summary-box {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+        }
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .negative {
+            color: #e74c3c;
+        }
+        .positive {
+            color: #27ae60;
+        }
+        .chart-container {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .chart-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .findings {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Llama 3.1 8B Dialectal Fairness Audit</h1>
+
+    <div class="summary-box">
+        <h2>Executive Summary</h2>
+        <p>This report analyzes the fairness of <strong>llama3.1:8b</strong> across
+        <strong>3</strong> dialects and
+        <strong>5</strong> benchmarks,
+        covering <strong>3,439</strong> total evaluation pairs.</p>
+    </div>
+
+    <div class="stat-grid">
+        <div class="stat-card">
+            <div class="stat-value">14.6%</div>
+            <div class="stat-label">Original (SAE) Accuracy</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">11.6%</div>
+            <div class="stat-label">Transformed (Dialect) Accuracy</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value negative">-3.0%</div>
+            <div class="stat-label">Average Accuracy Gap</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">3,439</div>
+            <div class="stat-label">Total Evaluation Pairs</div>
+        </div>
+    </div>
+
+    <div class="findings">
+        <h3>Key Findings</h3>
+        <ul>
+            <li>The model shows a <strong>3.0%</strong> accuracy degradation when processing dialect-transformed text.</li>
+            <li>This represents potential bias against non-standard English speakers.</li>
+            <li>Largest gaps observed in: gsm8k, gsm8k, gsm8k</li>
+        </ul>
+    </div>
+
+    <div class="chart-container">
+        <h2>Accuracy Heatmaps</h2>
+        <p>Side-by-side comparison of accuracy on original (SAE) vs dialect-transformed prompts.</p>
+        <img src="accuracy_heatmap.png" alt="Accuracy Heatmap">
+    </div>
+
+    <div class="chart-container">
+        <h2>Accuracy Gap</h2>
+        <p>Difference between dialect and SAE accuracy. Negative values (red) indicate the model performs worse on dialect text.</p>
+        <img src="accuracy_gap.png" alt="Accuracy Gap Chart">
+    </div>
+
+    <div class="chart-container">
+        <h2>Dialect Comparison</h2>
+        <p>Average accuracy across all benchmarks, grouped by dialect.</p>
+        <img src="dialect_comparison.png" alt="Dialect Comparison">
+    </div>
+
+    <div class="chart-container">
+        <h2>Benchmark Comparison</h2>
+        <p>Average accuracy across all dialects, grouped by benchmark.</p>
+        <img src="benchmark_comparison.png" alt="Benchmark Comparison">
+    </div>
+
+    <h2>Detailed Results</h2>
+
+    <h3>Largest Accuracy Gaps</h3>
+    <table>
+        <tr>
+            <th>Benchmark</th>
+            <th>Dialect</th>
+            <th>Original Acc.</th>
+            <th>Dialect Acc.</th>
+            <th>Gap</th>
+            <th>Pairs</th>
+        </tr>
+        <tr>
+            <td>GSM8K</td>
+            <td>Indian English</td>
+            <td>75.4%</td>
+            <td>58.0%</td>
+            <td class="negative">-17.4%</td>
+            <td>448</td>
+        </tr>
+        <tr>
+            <td>GSM8K</td>
+            <td>Hiberno English</td>
+            <td>73.2%</td>
+            <td>56.9%</td>
+            <td class="negative">-16.4%</td>
+            <td>452</td>
+        </tr>
+        <tr>
+            <td>GSM8K</td>
+            <td>Aave</td>
+            <td>70.2%</td>
+            <td>59.6%</td>
+            <td class="negative">-10.6%</td>
+            <td>161</td>
+        </tr>
+        <tr>
+            <td>ARC Challenge</td>
+            <td>Aave</td>
+            <td>0.0%</td>
+            <td>0.0%</td>
+            <td class="negative">+0.0%</td>
+            <td>53</td>
+        </tr>
+        <tr>
+            <td>ARC Challenge</td>
+            <td>Hiberno English</td>
+            <td>0.0%</td>
+            <td>0.0%</td>
+            <td class="negative">+0.0%</td>
+            <td>183</td>
+        </tr>
+    </table>
+
+    <h3>All Results</h3>
+    <table>
+        <tr>
+            <th>Benchmark</th>
+            <th>Dialect</th>
+            <th>Original Acc.</th>
+            <th>Dialect Acc.</th>
+            <th>Gap</th>
+            <th>Pairs</th>
+        </tr>
+        <tr>
+            <td>ARC Challenge</td>
+            <td>Aave</td>
+            <td>0.0%</td>
+            <td>0.0%</td>
+            <td class="positive">+0.0%</td>
+            <td>53</td>
+        </tr>
+        <tr>
+            <td>ARC Challenge</td>
+            <td>Hiberno English</td>
+            <td>0.0%</td>
+            <td>0.0%</td>
+            <td class="positive">+0.0%</td>
+            <td>183</td>
+        </tr>
+        <tr>
+            <td>ARC Challenge</td>
+            <td>Indian English</td>
+            <td>0.0%</td>
+            <td>0.0%</td>
+            <td class="positive">+0.0%</td>
+            <td>257</td>
+        </tr>
+        <tr>
+            <td>GSM8K</td>
+            <td>Aave</td>
+            <td>70.2%</td>
+            <td>59.6%</td>
+            <td class="negative">-10.6%</td>
+            <td>161</td>
+        </tr>
+        <tr>
+            <td>GSM8K</td>
+            <td>Hiberno English</td>
+            <td>73.2%</td>
+            <td>56.9%</td>
+            <td class="negative">-16.4%</td>
+            <td>452</td>
+        </tr>
+        <tr>
+            <td>GSM8K</td>
+            <td>Indian English</td>
+            <td>75.4%</td>
+            <td>58.0%</td>
+            <td class="negative">-17.4%</td>
+            <td>448</td>
+        </tr>
+        <tr>
+            <td>HellaSwag</td>
+            <td>Aave</td>
+            <td>0.0%</td>
+            <td>0.0%</td>
+            <td class="positive">+0.0%</td>
+            <td>143</td>
+        </tr>
+        <tr>
+            <td>HellaSwag</td>
+            <td>Hiberno English</td>
+            <td>0.0%</td>
+            <td>0.0%</td>
+            <td class="positive">+0.0%</td>
+            <td>330</td>
+        </tr>
+        <tr>
+            <td>HellaSwag</td>
+            <td>Indian English</td>
+            <td>0.0%</td>
+            <td>0.0%</td>
+            <td class="positive">+0.0%</td>
+            <td>306</td>
+        </tr>
+        <tr>
+            <td>MMLU</td>
+            <td>Aave</td>
+            <td>0.0%</td>
+            <td>0.0%</td>
+            <td class="positive">+0.0%</td>
+            <td>78</td>
+        </tr>
+        <tr>
+            <td>MMLU</td>
+            <td>Hiberno English</td>
+            <td>0.0%</td>
+            <td>0.0%</td>
+            <td class="positive">+0.0%</td>
+            <td>204</td>
+        </tr>
+        <tr>
+            <td>MMLU</td>
+            <td>Indian English</td>
+            <td>0.0%</td>
+            <td>0.0%</td>
+            <td class="positive">+0.0%</td>
+            <td>231</td>
+        </tr>
+        <tr>
+            <td>RealToxicity</td>
+            <td>Aave</td>
+            <td>0.0%</td>
+            <td>0.0%</td>
+            <td class="positive">+0.0%</td>
+            <td>86</td>
+        </tr>
+        <tr>
+            <td>RealToxicity</td>
+            <td>Hiberno English</td>
+            <td>0.0%</td>
+            <td>0.0%</td>
+            <td class="positive">+0.0%</td>
+            <td>327</td>
+        </tr>
+        <tr>
+            <td>RealToxicity</td>
+            <td>Indian English</td>
+            <td>0.0%</td>
+            <td>0.0%</td>
+            <td class="positive">+0.0%</td>
+            <td>180</td>
+        </tr>
+    </table>
+
+    <div class="summary-box">
+        <h3>Methodology</h3>
+        <p>Each benchmark question was transformed into dialect variants using LLM-based
+        transformation with post-processing validation. The same model was then evaluated
+        on both the original Standard American English (SAE) prompts and their dialect-transformed
+        versions. Accuracy gaps represent the difference in model performance between dialect
+        and SAE text.</p>
+    </div>
+
+    <footer style="text-align: center; color: #7f8c8d; margin-top: 40px; padding: 20px;">
+        <p>Generated by Dialectal Fairness Auditing Pipeline</p>
+    </footer>
+</body>
+</html>
