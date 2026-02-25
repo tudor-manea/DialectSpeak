@@ -1,6 +1,7 @@
 #!/bin/bash
 # Run fairness audits on all 15 dialect pair datasets
-# Requires: venv activated, Ollama running with llama3.1:8b
+# Requires: venv activated, Ollama running with the target model
+# Default model: qwen2.5:14b (override with MODEL env var)
 
 set -e
 
@@ -10,6 +11,9 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 cd "$PROJECT_DIR"
 source venv/bin/activate
 export PYTHONPATH="$PROJECT_DIR:$PYTHONPATH"
+
+MODEL="${MODEL:-qwen2.5:14b}"
+echo "Using model: $MODEL"
 
 DATASETS=(
     "data/benchmarks/arc_hiberno_english_20260125_145323.json"
@@ -48,7 +52,7 @@ for dataset in "${DATASETS[@]}"; do
         continue
     fi
 
-    python scripts/run_audit.py --pairs "$dataset" --backend ollama --model llama3.1:8b
+    python scripts/run_audit.py --pairs "$dataset" --backend ollama --model "$MODEL"
 
     CURRENT_TIME=$(date +%s)
     ELAPSED=$((CURRENT_TIME - START_TIME))

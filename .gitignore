@@ -71,3 +71,4 @@ Thumbs.db
 # Generated data (optional - uncomment to exclude)
 # data/benchmarks/
 # data/audits/
+.planning/
