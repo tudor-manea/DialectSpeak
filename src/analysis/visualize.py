@@ -30,6 +30,7 @@ class AuditData:
     both_wrong: int
     original_only_correct: int
     transformed_only_correct: int
+    benchmark_type: str = "numerical"
 
     @classmethod
     def from_json(cls, data: dict) -> "AuditData":
@@ -46,6 +47,7 @@ class AuditData:
             both_wrong=data["both_wrong"],
             original_only_correct=data["original_only_correct"],
             transformed_only_correct=data["transformed_only_correct"],
+            benchmark_type=data.get("benchmark_type", "numerical"),
         )
 
 

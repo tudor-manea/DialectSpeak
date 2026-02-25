@@ -11,6 +11,9 @@ from .evaluator import (
     PairResult,
     run_audit,
     load_generated_pairs,
+    get_benchmark_type,
+    BENCHMARK_TYPES,
+    CHOICE_LABELS,
 )
 
 __all__ = [
@@ -20,4 +23,7 @@ __all__ = [
     "PairResult",
     "run_audit",
     "load_generated_pairs",
+    "get_benchmark_type",
+    "BENCHMARK_TYPES",
+    "CHOICE_LABELS",
 ]
