@@ -14,12 +14,7 @@ echo "Mac Mini: $MODEL, $MAX samples per combo"
 run() {
     local bench=$1 dialect=$2 split=$3
     echo "=== $bench x $dialect ==="
-    EXISTING=$(ls data/benchmarks/${bench}_${dialect}_*.json 2>/dev/null | head -1 || true)
-    if [[ -n "$EXISTING" ]]; then
-        echo "SKIP: $EXISTING"
-        return
-    fi
-    python scripts/run_generation.py \
+    python3 scripts/run_generation.py \
         --benchmark "$bench" --dialect "$dialect" \
         --backend ollama --model "$MODEL" \
         --split "$split" --end "$MAX"

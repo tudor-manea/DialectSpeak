@@ -63,7 +63,7 @@ for bench_config in "${BENCHMARKS[@]}"; do
             continue
         fi
 
-        python scripts/run_generation.py \
+        python3 scripts/run_generation.py \
             --benchmark "$BENCHMARK" \
             --dialect "$DIALECT" \
             --backend ollama \

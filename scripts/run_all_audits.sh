@@ -52,7 +52,7 @@ for dataset in "${DATASETS[@]}"; do
         continue
     fi
 
-    python scripts/run_audit.py --pairs "$dataset" --backend ollama --model "$MODEL"
+    python3 scripts/run_audit.py --pairs "$dataset" --backend ollama --model "$MODEL"
 
     CURRENT_TIME=$(date +%s)
     ELAPSED=$((CURRENT_TIME - START_TIME))
