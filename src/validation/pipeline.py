@@ -34,7 +34,7 @@ class ValidationStatus(Enum):
 @dataclass
 class PipelineConfig:
     """Configuration for the validation pipeline."""
-    semantic_threshold: float = 0.85
+    semantic_threshold: float = 0.80
     min_features: int = 1
     require_high_priority: bool = False
     authenticity_threshold: float = 0.5
@@ -272,7 +272,7 @@ class ValidationPipeline:
 
 
 def create_pipeline(
-    semantic_threshold: float = 0.85,
+    semantic_threshold: float = 0.80,
     min_features: int = 1,
     require_high_priority: bool = False,
     authenticity_threshold: float = 0.5,

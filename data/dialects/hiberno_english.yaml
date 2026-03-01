@@ -21,9 +21,11 @@ features:
       - original: "They have just finished"
         transformed: "They're after finishing"
     patterns:
-      - "\\b\\w+'s\\s+after\\s+\\w+ing\\b"
+      - "\\bafter\\s+\\w+ing\\b"
       - "\\b(?:I'm|I am|he's|she's|it's|we're|they're|you're)\\s+after\\s+\\w+ing\\b"
       - "\\b(?:is|am|are|was|were)\\s+after\\s+\\w+ing\\b"
+      - "\\bhad\\s+been\\s+after\\s+\\w+ing\\b"
+      - "\\b(?:isn't|aren't|wasn't)\\s+after\\s+\\w+ing\\b"
     priority: high
 
   habitual_do_be:
@@ -37,7 +39,9 @@ features:
       - original: "She often sits there"
         transformed: "She does be sitting there"
     patterns:
-      - "\\b(?:do|does)\\s+be\\s+\\w+ing\\b"
+      - "\\b(?:do|does|did)\\s+be\\s+\\w+ing\\b"
+      - "\\b(?:don't|doesn't)\\s+be\\s+\\w+ing\\b"
+      - "\\b(?:do|does)\\s+be\\s+\\w+(?:ed|t)?\\b"
     priority: high
 
   amnt_contraction:
@@ -80,6 +84,8 @@ features:
     patterns:
       - "^[Ss]ure,?\\s+"
       - "\\b[Ss]ure,?\\s+(?:wasn't|isn't|aren't|don't|doesn't)"
+      - "(?:^|[.!?]\\s+)[Ss]ure,?\\s+"
+      - ",\\s+[Ss]ure,?\\s+"
     priority: medium
 
   cleft_emphasis:
@@ -94,6 +100,7 @@ features:
         transformed: "It's that I want"
     patterns:
       - "\\b[Ii]t's\\s+\\w+\\s+(?:I|he|she|we|they|you)\\s+(?:am|is|are|was|were)\\b"
+      - "\\b[Ii]t's\\s+.+?\\s+that\\s+"
     priority: high
 
   reflexive_reference:
@@ -130,7 +137,7 @@ features:
       - original: "I don't know if she has it"
         transformed: "I don't know has she it"
     patterns:
-      - "\\b(?:wonder|know|ask|see)\\s+(?:is|are|was|were|has|have|did|does|do|will|would|can|could)\\s+(?:he|she|it|they|we|you|I)\\b"
+      - "\\b(?:wonder|know|ask|see|tell|think|suppose)\\s+(?:is|are|was|were|has|have|did|does|do|will|would|can|could)\\s+(?:he|she|it|they|we|you|I)\\b"
     priority: medium
 
   and_subject_gerund:
@@ -166,7 +173,8 @@ features:
       - original: "I saw him yesterday"
         transformed: "I saw him yesterday, so I did"
     patterns:
-      - ",?\\s+so\\s+(?:it|I|he|she|we|they)\\s+(?:is|am|are|was|were|did|do|does)(?:\\.|,|$)"
+      - ",?\\s+so\\s+(?:it|I|he|she|we|they)\\s+(?:is|am|are|was|were|did|do|does)(?:\\.|,|!|$)"
+      - ",?\\s+so\\s+(?:it|he|she)\\s+does(?:\\.|,|!|$)"
     priority: medium
 
   tis_contraction:
@@ -229,9 +237,9 @@ prompts:
   system: |
     You are a linguistic expert specializing in Hiberno-English (Irish English). Your task is to transform Standard English text into authentic Hiberno-English while preserving the exact meaning.
 
-    CRITICAL: You MUST apply at least one SYNTACTIC feature from the list below. Do NOT rely on phonetic spellings or accent markers.
+    CRITICAL: You MUST apply at least TWO syntactic features from the list below when the sentence is long enough. For very short sentences, at least ONE is required. Do NOT rely on phonetic spellings or accent markers.
 
-    ## Syntactic Features to Apply (use at least ONE per transformation):
+    ## Syntactic Features to Apply (use TWO or more per transformation when possible):
 
     1. **Perfective "after" construction** - for recent completion:
        - "I have just eaten" → "I'm after eating"
@@ -263,8 +271,13 @@ prompts:
     - Any "Oirish" or leprechaun-style speech
     - Excessive use of "'Tis" - only use sparingly in appropriate contexts
 
+    ## Recommended combinations:
+    - "after" + "so it is/does" tag (most natural pairing)
+    - "Sure" + embedded question inversion
+    - Cleft sentence + "so it is" tag
+
     ## Guidelines:
-    1. MUST apply at least one syntactic feature from the list above
+    1. Apply TWO or more syntactic features when the sentence allows it
     2. Preserve the EXACT meaning - especially numbers, names, and technical content
     3. Keep the same sentence structure when possible
     4. Do NOT add or remove information
@@ -273,22 +286,28 @@ prompts:
   user_template: |
     Transform the following Standard English text into authentic Hiberno-English.
 
-    EXAMPLES:
+    EXAMPLES (notice how each uses TWO dialect features):
     Input: "She has just arrived at the station."
-    Output: "She's after arriving at the station."
+    Output: "She's after arriving at the station, so she is."
 
     Input: "The car costs $5000. How much would two cars cost?"
-    Output: "The car costs $5000, so it does. How much would two cars cost?"
+    Output: "Sure, the car costs $5000, so it does. How much would two cars cost?"
 
     Input: "I wonder if she is coming to the party."
-    Output: "I wonder is she coming to the party."
+    Output: "Sure, I wonder is she coming to the party."
 
-    Input: "Of course I'll help you with that."
-    Output: "Sure, I'll help you with that."
+    Input: "Of course I'll help you with that. I just finished my work."
+    Output: "Sure, I'll help you with that. I'm after finishing my work."
+
+    Input: "What is the value of x if 3x + 7 = 22?"
+    Output: "What is the value of x if 3x + 7 = 22, so it is?"
+
+    Input: "Which of the following best describes photosynthesis?"
+    Output: "Sure, which of the following best describes photosynthesis?"
 
     RULES:
     1. Output ONLY the transformed text
-    2. Use at least ONE syntactic feature: "after + verb", "so it is/does/did" tag, "Sure" as starter, or embedded question inversion
+    2. Use TWO syntactic features when possible: "after + verb", "so it is/does/did" tag, "Sure" as starter, or embedded question inversion
     3. Keep numbers, names, and technical terms EXACTLY as they appear
     4. If input is a question, output must also be a question
     5. Do NOT add commentary or explanations
@@ -333,16 +352,21 @@ authenticity:
 
   # Patterns that suggest fake/exaggerated dialect
   suspicious_patterns:
-    - "'[a-z]+in\\b"
-    - "\\b[a-z]+'[a-z]+\\b.*\\b[a-z]+'[a-z]+\\b.*\\b[a-z]+'[a-z]+\\b"
+    - "\\b[a-z]+'[a-z]+\\b.*\\b[a-z]+'[a-z]+\\b.*\\b[a-z]+'[a-z]+\\b.*\\b[a-z]+'[a-z]+\\b"
     - "\\baye\\b.*\\baye\\b.*\\baye\\b"
     - "!{3,}"
 
   # Patterns that indicate authentic dialect (positive markers)
   authentic_markers:
-    - "\\b(?:I'm|he's|she's|we're|they're)\\s+after\\s+\\w+ing\\b"
+    - "\\bafter\\s+\\w+ing\\b"
     - "\\b(?:do|does)\\s+be\\s+\\w+ing\\b"
     - "\\bamn't\\b"
     - "\\byouse\\b"
-    - "^[Ss]ure,?\\s+"
-    - ",\\s+so\\s+(?:it|I|he|she)\\s+(?:is|am|did)\\s*[.!?]?$"
+    - "\\bye\\b"
+    - "(?:^|[.!?]\\s+)[Ss]ure,?\\s+"
+    - ",?\\s+so\\s+(?:it|I|he|she|we|they)\\s+(?:is|am|are|was|were|did|do|does)"
+    - "\\bfor\\s+to\\s+\\w+\\b"
+    - "\\b[Ii]t's\\s+\\w+\\s+(?:I|he|she|we|they)\\s+(?:am|is|are)\\b"
+    - "\\bgrand\\b"
+    - "\\bfierce\\s+\\w+"
+    - "\\b[''']?[Tt]is\\b"

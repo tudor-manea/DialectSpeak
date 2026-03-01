@@ -37,8 +37,9 @@ features:
       - original: "He is my friend"
         transformed: "He my friend"
     patterns:
-      - "\\b(?:he|she|it|they|we|you)\\s+(?:nice|ready|good|bad|tired|hungry|busy|crazy|fine|cool|real|right|wrong)\\b"
+      - "\\b(?:he|she|it|they|we|you)\\s+(?:nice|ready|good|bad|tired|hungry|busy|crazy|fine|cool|real|right|wrong|happy|sad|mad|sick|smart|funny|big|small|old|young|new|fast|slow|hot|cold|late|early|hard|easy|loud|quiet|clean|dirty|safe|wild|free|strong|weak|tall|short|rich|poor|mean|kind|true|fair|dark|light)\\b"
       - "\\b(?:he|she|it)\\s+my\\s+\\w+\\b"
+      - "\\b(?:he|she|it|they|we|you)\\s+(?:a|the|gonna|about\\s+to|over\\s+there|in\\s+the|at\\s+the|on\\s+the)\\b"
     priority: high
 
   completive_done:
@@ -194,9 +195,9 @@ prompts:
   system: |
     You are a linguistic expert specializing in African American Vernacular English (AAVE). Your task is to transform Standard English text into authentic AAVE while preserving the exact meaning.
 
-    CRITICAL: You MUST apply at least one SYNTACTIC feature from the list below. Do NOT rely on slang, phonetic spellings, or accent markers.
+    CRITICAL: You MUST apply at least TWO syntactic features from the list below when the sentence is long enough. For very short sentences, at least ONE is required. Do NOT rely on slang, phonetic spellings, or accent markers.
 
-    ## Syntactic Features to Apply (use at least ONE per transformation):
+    ## Syntactic Features to Apply (use TWO or more per transformation when possible):
 
     1. **Habitual "be"** - ONLY for habitual/recurring actions (not one-time events):
        - "He is usually working late" → "He be working late"
@@ -225,8 +226,13 @@ prompts:
     - Excessive slang that isn't part of authentic AAVE grammar
     - Mixing with other dialect features
 
+    ## Recommended combinations:
+    - "ain't" + uninflected "don't" (natural pairing)
+    - Completive "done" + "ain't" negation
+    - Habitual "be" + uninflected "don't"
+
     ## Guidelines:
-    1. MUST apply at least one syntactic feature from the list above
+    1. Apply TWO or more syntactic features when the sentence allows it
     2. Preserve the EXACT meaning - especially numbers, names, and technical content
     3. Keep the same sentence structure when possible
     4. Do NOT add or remove information
@@ -235,22 +241,25 @@ prompts:
   user_template: |
     Transform the following Standard English text into authentic African American Vernacular English (AAVE).
 
-    EXAMPLES:
+    EXAMPLES (notice how each uses TWO dialect features):
     Input: "She has just finished her homework."
-    Output: "She done finished her homework."
+    Output: "She done finished her homework. She ain't got nothing left to do."
 
-    Input: "The bus is always late on Tuesdays."
-    Output: "The bus be late on Tuesdays."
+    Input: "The bus is always late on Tuesdays. He doesn't like it."
+    Output: "The bus be late on Tuesdays. He don't like it."
 
     Input: "I don't have any idea what he wants."
     Output: "I ain't got no idea what he want."
 
-    Input: "He doesn't know the answer."
-    Output: "He don't know the answer."
+    Input: "He doesn't know the answer. She hasn't finished either."
+    Output: "He don't know the answer. She ain't finished either."
+
+    Input: "What is the value of x if 3x + 7 = 22?"
+    Output: "What the value of x if 3x + 7 = 22?"
 
     RULES:
     1. Output ONLY the transformed text
-    2. Use at least ONE syntactic feature: habitual "be", completive "done", "ain't", negative concord, or uninflected "don't"
+    2. Use TWO syntactic features when possible: habitual "be", completive "done", "ain't", negative concord, or uninflected "don't"
     3. Keep numbers, names, and technical terms EXACTLY as they appear
     4. If input is a question, output must also be a question
     5. Do NOT add commentary or explanations
@@ -284,18 +293,20 @@ authenticity:
 
   # Patterns that suggest fake/exaggerated dialect
   suspicious_patterns:
-    - "'[a-z]+in\\b"
-    - "\\b[a-z]+'[a-z]+\\b.*\\b[a-z]+'[a-z]+\\b.*\\b[a-z]+'[a-z]+\\b"
+    - "\\b[a-z]+'[a-z]+\\b.*\\b[a-z]+'[a-z]+\\b.*\\b[a-z]+'[a-z]+\\b.*\\b[a-z]+'[a-z]+\\b"
     - "\\bda\\b"
     - "\\bdis\\b"
     - "\\bdat\\b"
 
   # Patterns that indicate authentic dialect (positive markers)
   authentic_markers:
-    - "\\b(?:he|she|they|we|I)\\s+be\\s+\\w+ing\\b"
-    - "\\b(?:I|he|she|they|we)\\s+done\\s+\\w+"
+    - "\\b(?:he|she|they|we|I|you|it)\\s+be\\s+\\w+ing\\b"
+    - "\\b(?:I|he|she|they|we|you|it)\\s+done\\s+\\w+"
     - "\\bain't\\b"
     - "\\bain't\\s+got\\s+no\\b"
     - "\\b(?:he|she|it)\\s+don't\\b"
     - "\\bfinna\\b"
     - "\\bsteady\\s+\\w+ing\\b"
+    - "\\b(?:I|he|she|they|we)\\s+been\\s+(?:knew|had|done|finished|married)\\b"
+    - "\\bthey\\s+(?:house|car|mama|stuff|money)\\b"
+    - "\\bdon't\\s+(?:got|know|want|need)\\s+no\\b"

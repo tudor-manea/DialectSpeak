@@ -451,6 +451,255 @@ def load_realtoxicityprompts(
     )
 
 
+def load_boolq(
+    split: str = "validation",
+    max_samples: Optional[int] = None,
+) -> BenchmarkDataset:
+    """
+    Load BoolQ (Boolean Questions) reading comprehension benchmark.
+
+    BoolQ contains yes/no questions with context passages, testing reading
+    comprehension and FAQ-style question answering.
+
+    Args:
+        split: Dataset split ('train' or 'validation')
+        max_samples: Maximum number of samples to load (None for all)
+
+    Returns:
+        BenchmarkDataset with BoolQ samples (formatted as MC with Yes/No choices)
+    """
+    dataset = load_dataset("google/boolq", split=split)
+
+    samples = []
+    for idx, item in enumerate(dataset):
+        if max_samples is not None and idx >= max_samples:
+            break
+
+        # Format as MC with Yes/No choices for compatibility with MC evaluator
+        answer_bool = item["answer"]
+        correct_choice = 0 if answer_bool else 1  # 0=Yes, 1=No
+
+        # Combine passage and question
+        passage = item["passage"]
+        question = item["question"]
+        prompt = f"{passage}\n\nQuestion: {question}"
+
+        samples.append(BenchmarkSample(
+            id=f"boolq_{split}_{idx}",
+            question=prompt,
+            choices=["Yes", "No"],
+            correct_choice=correct_choice,
+            metadata={
+                "split": split,
+                "passage": passage,
+                "raw_question": question,
+            },
+        ))
+
+    return BenchmarkDataset(
+        name="boolq",
+        benchmark_type=BenchmarkType.REASONING,
+        samples=samples,
+        description="BoolQ - yes/no reading comprehension questions",
+    )
+
+
+def load_donotanswer(
+    split: str = "train",
+    max_samples: Optional[int] = None,
+    risk_area: Optional[str] = None,
+) -> BenchmarkDataset:
+    """
+    Load DoNotAnswer safety benchmark.
+
+    DoNotAnswer contains 939 prompts that responsible LLMs should refuse to answer,
+    organized by risk area and harm type. Useful for measuring whether dialect
+    transformation affects safety refusal rates.
+
+    Args:
+        split: Dataset split ('train' only)
+        max_samples: Maximum number of samples to load (None for all)
+        risk_area: Filter by risk area (None for all)
+
+    Returns:
+        BenchmarkDataset with DoNotAnswer samples
+    """
+    dataset = load_dataset("LibrAI/do-not-answer", split=split)
+
+    samples = []
+    for idx, item in enumerate(dataset):
+        if max_samples is not None and len(samples) >= max_samples:
+            break
+
+        item_risk = item.get("risk_area", "unknown")
+
+        # Filter by risk area if specified
+        if risk_area is not None and item_risk != risk_area:
+            continue
+
+        question = item.get("question", "")
+        if not question or not question.strip():
+            continue
+
+        samples.append(BenchmarkSample(
+            id=f"donotanswer_{idx}",
+            question=question,
+            subject=item_risk,
+            metadata={
+                "risk_area": item_risk,
+                "types_of_harm": item.get("types_of_harm", ""),
+                "specific_harms": item.get("specific_harms", ""),
+                "split": split,
+            },
+        ))
+
+    return BenchmarkDataset(
+        name="donotanswer",
+        benchmark_type=BenchmarkType.SAFETY,
+        samples=samples,
+        description="DoNotAnswer - 939 prompts that responsible LLMs should refuse",
+    )
+
+
+def load_toxigen(
+    split: str = "train",
+    max_samples: Optional[int] = None,
+    min_toxicity: Optional[float] = None,
+) -> BenchmarkDataset:
+    """
+    Load ToxiGen toxicity benchmark.
+
+    ToxiGen contains machine-generated statements about minority groups,
+    annotated for toxicity. Tests whether LLMs handle toxic content differently
+    when prompted in dialect.
+
+    Args:
+        split: Dataset split ('train' or 'test')
+        max_samples: Maximum number of samples to load (None for all)
+        min_toxicity: Minimum toxicity score to include (0-1, None for no filter)
+
+    Returns:
+        BenchmarkDataset with ToxiGen samples
+    """
+    dataset = load_dataset("skg/toxigen-data", "annotated", split=split)
+
+    samples = []
+    for idx, item in enumerate(dataset):
+        if max_samples is not None and len(samples) >= max_samples:
+            break
+
+        text = item.get("text", "")
+        if not text or not text.strip():
+            continue
+
+        # toxicity_ai is a float score
+        toxicity = item.get("toxicity_ai", None)
+        if min_toxicity is not None and toxicity is not None and toxicity < min_toxicity:
+            continue
+
+        target_group = item.get("target_group", "unknown")
+
+        samples.append(BenchmarkSample(
+            id=f"toxigen_{idx}",
+            question=text,
+            subject=target_group,
+            metadata={
+                "target_group": target_group,
+                "toxicity_ai": toxicity,
+                "toxicity_human": item.get("toxicity_human", None),
+                "intent": item.get("intent", None),
+                "split": split,
+            },
+        ))
+
+    return BenchmarkDataset(
+        name="toxigen",
+        benchmark_type=BenchmarkType.TOXICITY,
+        samples=samples,
+        description="ToxiGen - machine-generated toxic/benign statements about minority groups",
+    )
+
+
+def load_truthfulqa(
+    split: str = "validation",
+    max_samples: Optional[int] = None,
+) -> BenchmarkDataset:
+    """
+    Load TruthfulQA benchmark (multiple choice format).
+
+    TruthfulQA tests whether LLMs give truthful answers vs common misconceptions.
+    Uses MC1 format (single correct answer from multiple choices).
+
+    Args:
+        split: Dataset split ('validation' only)
+        max_samples: Maximum number of samples to load (None for all)
+
+    Returns:
+        BenchmarkDataset with TruthfulQA samples (MC format)
+    """
+    dataset = load_dataset("truthfulqa/truthful_qa", "multiple_choice", split=split)
+
+    samples = []
+    for idx, item in enumerate(dataset):
+        if max_samples is not None and idx >= max_samples:
+            break
+
+        question = item["question"]
+
+        # mc1_targets has exactly one correct answer
+        mc1 = item["mc1_targets"]
+        choices = mc1["choices"]
+        labels = mc1["labels"]
+
+        # Find the correct choice (label == 1)
+        correct_idx = None
+        for i, label in enumerate(labels):
+            if label == 1:
+                correct_idx = i
+                break
+
+        if correct_idx is None:
+            continue
+
+        # Limit to 4 choices (A-D) for compatibility with evaluator
+        if len(choices) > 4:
+            # Keep the correct answer and pick 3 wrong ones
+            other_indices = [i for i in range(len(choices)) if i != correct_idx][:3]
+            selected_indices = sorted(other_indices + [correct_idx])
+            choices = [choices[i] for i in selected_indices]
+            correct_idx = selected_indices.index(correct_idx)
+
+        samples.append(BenchmarkSample(
+            id=f"truthfulqa_{split}_{idx}",
+            question=question,
+            choices=choices[:4],
+            correct_choice=correct_idx,
+            subject="truthfulness",
+            metadata={
+                "split": split,
+                "category": item.get("category", ""),
+            },
+        ))
+
+    return BenchmarkDataset(
+        name="truthfulqa",
+        benchmark_type=BenchmarkType.REASONING,
+        samples=samples,
+        description="TruthfulQA - tests truthfulness vs common misconceptions",
+    )
+
+
+def get_donotanswer_risk_areas() -> List[str]:
+    """Get list of DoNotAnswer risk areas."""
+    return [
+        "Information Hazards",
+        "Malicious Uses",
+        "Discrimination, Exclusion, Toxicity, Hateful, Offensive",
+        "Misinformation Harms",
+        "Human-Chatbot Interaction Harms",
+    ]
+
+
 def get_sorry_bench_categories() -> List[str]:
     """Get list of SORRY-Bench safety categories."""
     return [
@@ -480,6 +729,10 @@ BENCHMARK_LOADERS = {
     "arc": load_arc,
     "hellaswag": load_hellaswag,
     "realtoxicityprompts": load_realtoxicityprompts,
+    "boolq": load_boolq,
+    "donotanswer": load_donotanswer,
+    "toxigen": load_toxigen,
+    "truthfulqa": load_truthfulqa,
 }
 
 

@@ -10,10 +10,15 @@ from .loader import (
     load_arc,
     load_hellaswag,
     load_realtoxicityprompts,
+    load_boolq,
+    load_donotanswer,
+    load_toxigen,
+    load_truthfulqa,
     load_benchmark,
     get_available_benchmarks,
     get_mmlu_subjects,
     get_sorry_bench_categories,
+    get_donotanswer_risk_areas,
 )
 
 __all__ = [
@@ -26,8 +31,13 @@ __all__ = [
     "load_arc",
     "load_hellaswag",
     "load_realtoxicityprompts",
+    "load_boolq",
+    "load_donotanswer",
+    "load_toxigen",
+    "load_truthfulqa",
     "load_benchmark",
     "get_available_benchmarks",
     "get_mmlu_subjects",
     "get_sorry_bench_categories",
+    "get_donotanswer_risk_areas",
 ]

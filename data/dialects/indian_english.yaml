@@ -23,7 +23,7 @@ features:
       - original: "He thinks it's correct"
         transformed: "He is thinking it's correct"
     patterns:
-      - "\\b(?:am|is|are|was|were)\\s+(?:knowing|understanding|having|thinking|believing|wanting|needing|liking|loving|belonging|owning|possessing)\\b"
+      - "\\b(?:am|is|are|was|were)\\s+(?:knowing|understanding|having|thinking|believing|wanting|needing|liking|loving|belonging|owning|possessing|meaning|hoping|seeing|hearing|remembering|forgetting|realizing|supposing)\\b"
     priority: high
 
   invariant_tag:
@@ -206,9 +206,9 @@ prompts:
   system: |
     You are a linguistic expert specializing in Indian English. Your task is to transform Standard American/British English text into authentic Indian English while preserving the exact meaning.
 
-    CRITICAL: You MUST apply at least one SYNTACTIC feature from the list below. Do NOT rely on accent markers, phonetic spellings, or cultural stereotypes.
+    CRITICAL: You MUST apply at least TWO syntactic features from the list below when the sentence is long enough. For very short sentences, at least ONE is required. Do NOT rely on accent markers, phonetic spellings, or cultural stereotypes.
 
-    ## Syntactic Features to Apply (use at least ONE per transformation):
+    ## Syntactic Features to Apply (use TWO or more per transformation when possible):
 
     1. **Progressive with stative verbs** - for states and mental processes:
        - "I know the answer" → "I am knowing the answer"
@@ -241,8 +241,13 @@ prompts:
     - Randomly inserting Hindi words
     - Colonial-era overly formal phrasing
 
+    ## Recommended combinations:
+    - Progressive stative + invariant tag "isn't it?" (most natural pairing)
+    - "Only" emphasis + "itself" emphasis
+    - Progressive stative + "discuss about" prepositional variation
+
     ## Guidelines:
-    1. MUST apply at least one syntactic feature from the list above
+    1. Apply TWO or more syntactic features when the sentence allows it
     2. Preserve the EXACT meaning - especially numbers, names, and technical content
     3. Keep the same sentence structure when possible
     4. Do NOT add or remove information
@@ -251,25 +256,28 @@ prompts:
   user_template: |
     Transform the following Standard English text into authentic Indian English.
 
-    EXAMPLES:
+    EXAMPLES (notice how each uses TWO dialect features):
     Input: "She knows the answer to that question."
-    Output: "She is knowing the answer to that question."
+    Output: "She is knowing the answer to that question, isn't it?"
 
-    Input: "You will help me with this, won't you?"
-    Output: "You will help me with this, isn't it?"
+    Input: "You will help me with this, won't you? I need it immediately."
+    Output: "You will help me with this, isn't it? I am needing it now itself."
 
     Input: "I told him myself about the meeting."
-    Output: "I only told him about the meeting."
+    Output: "I only told him about the meeting, no?"
 
-    Input: "Please finish this task immediately."
-    Output: "Please finish this task now itself."
+    Input: "Please finish this task immediately. I think it's urgent."
+    Output: "Please finish this task now itself. I am thinking it's urgent."
 
     Input: "The coffee is very hot."
-    Output: "The coffee is hot hot."
+    Output: "The coffee is hot hot, isn't it?"
+
+    Input: "What is the value of x if 3x + 7 = 22?"
+    Output: "What is the value of x if 3x + 7 = 22, no?"
 
     RULES:
     1. Output ONLY the transformed text
-    2. Use at least ONE syntactic feature: progressive stative, invariant tag, "only" emphasis, "itself" emphasis, or reduplication
+    2. Use TWO syntactic features when possible: progressive stative, invariant tag, "only" emphasis, "itself" emphasis, or reduplication
     3. Keep numbers, names, and technical terms EXACTLY as they appear
     4. If input is a question, output must also be a question
     5. Do NOT add commentary or explanations
@@ -312,10 +320,14 @@ authenticity:
 
   # Patterns that indicate authentic dialect (positive markers)
   authentic_markers:
-    - "\\b(?:am|is|are)\\s+(?:knowing|understanding|having|thinking|believing)\\b"
+    - "\\b(?:am|is|are|was|were)\\s+(?:knowing|understanding|having|thinking|believing|wanting|needing|liking|loving)\\b"
     - ",\\s*isn't\\s+it\\s*[?]?$"
     - ",\\s*no\\s*[?]?$"
-    - "\\b(?:I|he|she|they|this|that|now|today)\\s+only\\b"
-    - "\\b(?:now|today|here|there)\\s+itself\\b"
-    - "\\b(hot|cold|fast|slow|same|good)\\s+\\1\\b"
-    - "\\b(?:discuss|explain)\\s+about\\b"
+    - ",\\s*na\\s*[?]?$"
+    - "\\b(?:I|he|she|they|this|that|now|today|yesterday|here|there)\\s+only\\b"
+    - "\\b(?:now|today|tomorrow|yesterday|here|there|this|that)\\s+itself\\b"
+    - "\\b(hot|cold|fast|slow|same|good|big|small|quick)\\s+\\1\\b"
+    - "\\b(?:discuss|explain|describe)\\s+about\\b"
+    - "\\b(?:order|request)\\s+for\\b"
+    - "\\b(?:have|has)\\s+(?:taken|finished|completed|done|reached)\\s+(?:just|already|now)\\b"
+    - "\\bwould\\s+(?:like|request|suggest)\\s+to\\b"

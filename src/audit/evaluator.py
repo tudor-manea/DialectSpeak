@@ -22,7 +22,11 @@ BENCHMARK_TYPES = {
     "arc_challenge": "multiple_choice",
     "hellaswag": "multiple_choice",
     "mmlu": "multiple_choice",
+    "boolq": "multiple_choice",
+    "truthfulqa": "multiple_choice",
     "realtoxicityprompts": "toxicity",
+    "donotanswer": "toxicity",
+    "toxigen": "toxicity",
 }
 
 CHOICE_LABELS = ["A", "B", "C", "D"]

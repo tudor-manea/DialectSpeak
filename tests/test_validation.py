@@ -245,6 +245,60 @@ class TestFeatureValidation:
         assert result.is_valid
         assert "habitual_do_be" in result.features_found
 
+    def test_detect_broad_after_pattern(self, feature_validator):
+        """Test broader 'after' pattern catches variations."""
+        matches = feature_validator.detect_features(
+            "He was after finishing the work.",
+            dialect="hiberno_english",
+        )
+        feature_ids = [m.feature_id for m in matches]
+        assert "perfective_after" in feature_ids
+
+    def test_detect_habitual_dont_be(self, feature_validator):
+        """Test detection of 'don't be' negation form."""
+        matches = feature_validator.detect_features(
+            "Don't be worrying about that.",
+            dialect="hiberno_english",
+        )
+        feature_ids = [m.feature_id for m in matches]
+        assert "habitual_do_be" in feature_ids
+
+    def test_detect_so_it_does(self, feature_validator):
+        """Test 'so it does' tag variant is detected."""
+        matches = feature_validator.detect_features(
+            "It costs a lot, so it does.",
+            dialect="hiberno_english",
+        )
+        feature_ids = [m.feature_id for m in matches]
+        assert "so_it_is" in feature_ids
+
+    def test_detect_cleft_that(self, feature_validator):
+        """Test 'It's ... that' cleft variant."""
+        matches = feature_validator.detect_features(
+            "It's the money that matters.",
+            dialect="hiberno_english",
+        )
+        feature_ids = [m.feature_id for m in matches]
+        assert "cleft_emphasis" in feature_ids
+
+    def test_detect_embedded_inversion_think(self, feature_validator):
+        """Test embedded inversion with 'think' verb."""
+        matches = feature_validator.detect_features(
+            "I think is he coming tomorrow.",
+            dialect="hiberno_english",
+        )
+        feature_ids = [m.feature_id for m in matches]
+        assert "embedded_inversion" in feature_ids
+
+    def test_detect_sure_mid_sentence(self, feature_validator):
+        """Test 'Sure' detected after comma."""
+        matches = feature_validator.detect_features(
+            "Well, sure, that's grand.",
+            dialect="hiberno_english",
+        )
+        feature_ids = [m.feature_id for m in matches]
+        assert "sure_discourse" in feature_ids
+
     def test_missing_dialect_raises(self, feature_validator):
         """Test that missing dialect file raises error."""
         with pytest.raises(FileNotFoundError):
@@ -284,6 +338,14 @@ class TestAuthenticityValidation:
             dialect="hiberno_english"
         )
         assert len(suspicious) > 0
+
+    def test_normal_contractions_not_suspicious(self, authenticity_validator):
+        """Test that normal contractions don't trigger suspicious patterns."""
+        suspicious = authenticity_validator.detect_suspicious_patterns(
+            "I'm after eating, and it's grand, so it is.",
+            dialect="hiberno_english"
+        )
+        assert len(suspicious) == 0
 
     def test_count_authentic_markers(self, authenticity_validator):
         """Test counting authentic dialect markers."""
@@ -342,6 +404,11 @@ class TestAuthenticityValidation:
 
 class TestValidationPipeline:
     """Tests for integrated validation pipeline."""
+
+    def test_create_pipeline_default_threshold(self):
+        """Test pipeline creation uses 0.80 semantic threshold by default."""
+        pipeline = create_pipeline(dialect_specs_dir=DIALECTS_DIR)
+        assert pipeline.config.semantic_threshold == 0.80
 
     def test_create_pipeline(self):
         """Test pipeline creation with factory function."""
