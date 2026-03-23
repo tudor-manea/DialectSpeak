@@ -1,5 +1,5 @@
 #!/bin/bash
-# Mac Mini audit script: Hiberno-English (9) + AAVE (9) = 18 audits
+# Mac Mini audit script: Hiberno-English (9) + AAVE (9) + Indian English (9) = 27 audits
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -8,7 +8,8 @@ cd "$PROJECT_DIR"
 source venv/bin/activate
 export PYTHONPATH="$PROJECT_DIR:$PYTHONPATH"
 
-MODEL="${MODEL:-qwen2.5:14b}"
+MODEL="${MODEL:-gemma2:9b}"
+MODEL_SAFE=$(echo "$MODEL" | tr ':/' '__')
 echo "Using model: $MODEL"
 
 DATASETS=(
@@ -30,13 +31,22 @@ DATASETS=(
     data/benchmarks/realtoxicityprompts_aave_0-300_20260302_095246.json
     data/benchmarks/donotanswer_aave_0-300_20260302_150916.json
     data/benchmarks/toxigen_aave_0-300_20260302_160758.json
+    data/benchmarks/gsm8k_indian_english_0-300_20260303_091722.json
+    data/benchmarks/mmlu_indian_english_0-300_20260303_094652.json
+    data/benchmarks/arc_indian_english_0-300_20260303_102245.json
+    data/benchmarks/hellaswag_indian_english_0-300_20260303_110000.json
+    data/benchmarks/boolq_indian_english_0-300_20260304_010831.json
+    data/benchmarks/truthfulqa_indian_english_0-300_20260304_012840.json
+    data/benchmarks/realtoxicityprompts_indian_english_0-300_20260304_020748.json
+    data/benchmarks/donotanswer_indian_english_0-300_20260304_023449.json
+    data/benchmarks/toxigen_indian_english_0-300_20260304_032719.json
 )
 
 TOTAL=${#DATASETS[@]}
 COMPLETED=0
 START_TIME=$(date +%s)
 
-mkdir -p data/audits
+mkdir -p data/audits/$MODEL_SAFE
 
 echo "=============================================="
 echo "Mac Mini: $TOTAL audits to run"
@@ -51,7 +61,7 @@ for dataset in "${DATASETS[@]}"; do
     echo "[$COMPLETED/$TOTAL] $NAME"
     echo "=============================================="
 
-    EXISTING=$(ls data/audits/audit_${NAME}_*.json 2>/dev/null | head -1 || true)
+    EXISTING=$(ls data/audits/${MODEL_SAFE}/audit_*_${MODEL_SAFE}_*.json 2>/dev/null | grep "$(echo "$NAME" | cut -d_ -f1-2)" | head -1 || true)
     if [[ -n "$EXISTING" ]]; then
         echo "SKIP: Audit already exists: $EXISTING"
         echo ""
