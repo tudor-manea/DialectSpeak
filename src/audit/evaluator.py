@@ -31,6 +31,11 @@ BENCHMARK_TYPES = {
 
 CHOICE_LABELS = ["A", "B", "C", "D"]
 
+BACKEND_DEFAULTS = {
+    "ollama": "http://localhost:11434",
+    "openai": "http://localhost:1234/v1",
+}
+
 
 def get_benchmark_type(benchmark: str) -> str:
     """Classify benchmark into evaluation type."""
@@ -42,7 +47,7 @@ class AuditConfig:
     """Configuration for fairness audit."""
     backend: str = "ollama"
     model: str = "llama3.1:8b"
-    base_url: str = "http://localhost:11434"
+    base_url: str = ""  # Auto-set from BACKEND_DEFAULTS if empty
     timeout: float = 120.0
     temperature: float = 0.0  # Deterministic for fair comparison
 
@@ -149,6 +154,10 @@ class FairnessAuditor:
 
     def __init__(self, config: Optional[AuditConfig] = None):
         self.config = config or AuditConfig()
+        if not self.config.base_url:
+            self.config.base_url = BACKEND_DEFAULTS.get(
+                self.config.backend, BACKEND_DEFAULTS["ollama"]
+            )
         self.client = httpx.Client(timeout=self.config.timeout)
 
     def _query_ollama(self, prompt: str) -> str:
@@ -165,10 +174,25 @@ class FairnessAuditor:
         response.raise_for_status()
         return response.json()["response"]
 
+    def _query_openai(self, prompt: str) -> str:
+        """Query OpenAI-compatible API (e.g. LM Studio) for a response."""
+        response = self.client.post(
+            f"{self.config.base_url}/chat/completions",
+            json={
+                "model": self.config.model,
+                "messages": [{"role": "user", "content": prompt}],
+                "temperature": self.config.temperature,
+            },
+        )
+        response.raise_for_status()
+        return response.json()["choices"][0]["message"]["content"]
+
     def _query_llm(self, prompt: str) -> str:
         """Query the configured LLM backend."""
         if self.config.backend == "ollama":
             return self._query_ollama(prompt)
+        elif self.config.backend == "openai":
+            return self._query_openai(prompt)
         else:
             raise ValueError(f"Unsupported backend: {self.config.backend}")
 
@@ -505,6 +529,7 @@ def run_audit(
     pairs_path: Path,
     backend: str = "ollama",
     model: str = "llama3.1:8b",
+    base_url: str = "",
     output_dir: Optional[Path] = None,
     show_progress: bool = True,
     save: bool = True,
@@ -514,8 +539,9 @@ def run_audit(
 
     Args:
         pairs_path: Path to generated pairs JSON file
-        backend: LLM backend
+        backend: LLM backend ('ollama' or 'openai')
         model: Model name
+        base_url: Base URL for backend (auto-detected if empty)
         output_dir: Directory to save results
         show_progress: Whether to show progress
         save: Whether to save results
@@ -525,15 +551,17 @@ def run_audit(
     """
     pairs, benchmark, dialect = load_generated_pairs(pairs_path)
 
-    config = AuditConfig(backend=backend, model=model)
+    config = AuditConfig(backend=backend, model=model, base_url=base_url)
     auditor = FairnessAuditor(config)
 
     result = auditor.audit(pairs, benchmark, dialect, show_progress)
 
     if save:
-        output_dir = output_dir or Path("data/audits")
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"audit_{benchmark}_{dialect}_{model.replace(':', '_')}_{timestamp}.json"
+        model_safe = model.replace(":", "_").replace("/", "_")
+        output_dir = output_dir or Path("data/audits") / model_safe
+        output_dir.mkdir(parents=True, exist_ok=True)
+        filename = f"audit_{benchmark}_{dialect}_{model_safe}_{timestamp}.json"
         output_path = output_dir / filename
         auditor.save_result(result, output_path)
         print(f"Saved to: {output_path}")
