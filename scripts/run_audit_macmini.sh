@@ -61,7 +61,8 @@ for dataset in "${DATASETS[@]}"; do
     echo "[$COMPLETED/$TOTAL] $NAME"
     echo "=============================================="
 
-    EXISTING=$(ls data/audits/${MODEL_SAFE}/audit_*_${MODEL_SAFE}_*.json 2>/dev/null | grep "$(echo "$NAME" | cut -d_ -f1-2)" | head -1 || true)
+    PATTERN="$(echo "$NAME" | cut -d_ -f1-2)"
+    EXISTING=$(ls data/audits/${MODEL_SAFE}/audit_*_${MODEL_SAFE}_*.json data/audits/audit_*_${MODEL_SAFE}_*.json 2>/dev/null | grep "$PATTERN" | head -1 || true)
     if [[ -n "$EXISTING" ]]; then
         echo "SKIP: Audit already exists: $EXISTING"
         echo ""

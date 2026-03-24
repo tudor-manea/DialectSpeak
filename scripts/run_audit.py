@@ -64,6 +64,12 @@ def parse_args():
         help="Model name",
     )
     parser.add_argument(
+        "--base-url",
+        type=str,
+        default="",
+        help="Base URL for LLM backend (auto-detected if not set)",
+    )
+    parser.add_argument(
         "--output", "-o",
         type=Path,
         default=None,
@@ -103,7 +109,7 @@ def main():
     print(f"Processing pairs [{start}:{end}] ({len(pairs)} pairs)")
 
     # Run audit
-    config = AuditConfig(backend=args.backend, model=args.model)
+    config = AuditConfig(backend=args.backend, model=args.model, base_url=args.base_url)
     auditor = FairnessAuditor(config)
 
     result = auditor.audit(pairs, benchmark, dialect, show_progress=not args.quiet)
@@ -128,13 +134,13 @@ def main():
         if args.output:
             output_path = args.output
         else:
-            args.output_dir.mkdir(parents=True, exist_ok=True)
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             model_safe = args.model.replace(":", "_").replace("/", "_")
-            # Include index range in filename for easy identification
+            model_dir = args.output_dir / model_safe
+            model_dir.mkdir(parents=True, exist_ok=True)
             index_suffix = f"_{start}-{end}" if args.start is not None or args.end is not None else ""
             filename = f"audit_{benchmark}_{dialect}_{model_safe}{index_suffix}_{timestamp}.json"
-            output_path = args.output_dir / filename
+            output_path = model_dir / filename
 
         auditor.save_result(result, output_path)
         print(f"\nSaved to: {output_path}")
