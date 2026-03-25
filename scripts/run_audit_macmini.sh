@@ -8,7 +8,7 @@ cd "$PROJECT_DIR"
 source venv/bin/activate
 export PYTHONPATH="$PROJECT_DIR:$PYTHONPATH"
 
-MODEL="${MODEL:-gemma2:9b}"
+MODEL="${MODEL:-phi4-mini}"
 MODEL_SAFE=$(echo "$MODEL" | tr ':/' '__')
 echo "Using model: $MODEL"
 
