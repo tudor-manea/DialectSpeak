@@ -1,5 +1,5 @@
 #!/bin/bash
-# Laptop audit script: Indian English (9) = 9 audits
+# Laptop audit script: Indian English (9) via LM Studio = 9 audits
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -8,8 +8,9 @@ cd "$PROJECT_DIR"
 source venv/bin/activate
 export PYTHONPATH="$PROJECT_DIR:$PYTHONPATH"
 
-MODEL="${MODEL:-qwen2.5:14b}"
-echo "Using model: $MODEL"
+MODEL="${MODEL:-llama3.1:8b}"
+BACKEND="${BACKEND:-ollama}"
+echo "Using model: $MODEL (backend: $BACKEND)"
 
 DATASETS=(
     data/benchmarks/gsm8k_indian_english_0-300_20260303_091722.json
@@ -27,7 +28,9 @@ TOTAL=${#DATASETS[@]}
 COMPLETED=0
 START_TIME=$(date +%s)
 
-mkdir -p data/audits
+MODEL_SAFE=$(echo "$MODEL" | tr ':/' '__')
+
+mkdir -p data/audits/$MODEL_SAFE
 
 echo "=============================================="
 echo "Laptop: $TOTAL audits to run"
@@ -42,14 +45,14 @@ for dataset in "${DATASETS[@]}"; do
     echo "[$COMPLETED/$TOTAL] $NAME"
     echo "=============================================="
 
-    EXISTING=$(ls data/audits/audit_${NAME}_*.json 2>/dev/null | head -1 || true)
+    EXISTING=$(ls data/audits/${MODEL_SAFE}/audit_*_${MODEL_SAFE}_*.json 2>/dev/null | grep "$(echo "$NAME" | cut -d_ -f1-2)" | head -1 || true)
     if [[ -n "$EXISTING" ]]; then
         echo "SKIP: Audit already exists: $EXISTING"
         echo ""
         continue
     fi
 
-    python3 scripts/run_audit.py --pairs "$dataset" --backend ollama --model "$MODEL"
+    python3 scripts/run_audit.py --pairs "$dataset" --backend "$BACKEND" --model "$MODEL"
 
     CURRENT_TIME=$(date +%s)
     ELAPSED=$((CURRENT_TIME - START_TIME))

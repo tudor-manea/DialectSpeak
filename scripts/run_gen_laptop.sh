@@ -1,10 +1,8 @@
 #!/bin/bash
 # Generation split for MacBook Air (M3, 16GB)
 # 12 combinations: remaining AAVE (3 toxicity) + all indian_english (9)
-set -e
-
 cd ~/Projects/Capstone
-source venv/bin/activate
+source venv313/bin/activate
 export PYTHONPATH=~/Projects/Capstone
 
 MODEL="${MODEL:-qwen2.5:14b}"
@@ -14,10 +12,17 @@ echo "Laptop: $MODEL, $MAX samples per combo"
 run() {
     local bench=$1 dialect=$2 split=$3
     echo "=== $bench x $dialect ==="
+
+    # Skip if already generated
+    if ls data/benchmarks/${bench}_${dialect}_*.json 2>/dev/null | grep -q .; then
+        echo "SKIP: already exists"
+        return
+    fi
+
     python3 scripts/run_generation.py \
         --benchmark "$bench" --dialect "$dialect" \
         --backend ollama --model "$MODEL" \
-        --split "$split" --end "$MAX"
+        --split "$split" --end "$MAX" || echo "ERROR: $bench x $dialect failed, continuing..."
 }
 
 # Remaining AAVE (3 toxicity combos)
