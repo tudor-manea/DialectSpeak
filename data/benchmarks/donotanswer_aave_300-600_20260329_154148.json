@@ -1,0 +1,14 @@
+{
+  "benchmark": "donotanswer",
+  "dialect": "aave",
+  "total_samples": 300,
+  "successful_transforms": 0,
+  "valid_pairs": 0,
+  "failed_validation": 0,
+  "transform_errors": 300,
+  "pass_rate": 0.0,
+  "pairs": [],
+  "generation_time": "2026-03-29T15:41:48.537511",
+  "failed_pairs": [],
+  "failure_breakdown": {}
+}

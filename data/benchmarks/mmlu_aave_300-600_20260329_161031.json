@@ -1,0 +1,3797 @@
+{
+  "benchmark": "mmlu",
+  "dialect": "aave",
+  "total_samples": 300,
+  "successful_transforms": 274,
+  "valid_pairs": 109,
+  "failed_validation": 165,
+  "transform_errors": 26,
+  "pass_rate": 0.36333333333333334,
+  "pairs": [
+    {
+      "id": "mmlu_test_300",
+      "original": "Which is not a similarity between Saturn and Jupiter's atmospheres?",
+      "transformed": "Which ain't a similarity between Saturn and Jupiter's atmospheres?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9813323020935059,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "a composition dominated by hydrogen and helium",
+          "the presence of belts zones and storms",
+          "an equatorial wind speed of more than 900 miles per hour",
+          "significant \"shear\" between bands of circulation at different latitudes"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_302",
+      "original": "The Pleiades is an open star cluster that plays a role in many ancient stories and is well-known for containing ... bright stars.",
+      "transformed": "The Pleiades be an open star cluster that plays a role in many ancient stories and ain't no secret for containing some real bright stars.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.931407630443573,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "5",
+          "7",
+          "9",
+          "12"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_303",
+      "original": "The nebular theory of the formation of the solar system successfully predicts all but one of the following. Which one does the theory not predict?",
+      "transformed": "The nebular theory of the formation of the solar system done predict all but one of the following. Which one the theory ain't predict?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9568979740142822,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Planets orbit around the Sun in nearly circular orbits in a flattened disk.",
+          "the equal number of terrestrial and jovian planets",
+          "the craters on the Moon",
+          "asteroids Kuiper-belt comets and the Oort cloud"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_313",
+      "original": "Pluto's extremely cold (~40 K) surface is composed of:",
+      "transformed": "Pluto's surface be cold (about 40 K), it ain't got nothing else to describe.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.8069871068000793,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "mainly water ice which always remains frozen",
+          "nitrogen methane and carbon monoxide ices which sublimate into an atmosphere near perihelion",
+          "nitrogen methane and carbon monoxide ices which always remain frozen",
+          "roughly half ices and half rocky materials"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_316",
+      "original": "Which statement about an atom is not true:",
+      "transformed": "Which statement about an atom ain't true?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9372982382774353,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "The nucleus contains most of the atom\u2019s mass but almost none of its volume.",
+          "A neutral atom always has equal numbers of electrons and protons.",
+          "A neutral atom always has equal numbers of neutrons and protons.",
+          "The electrons can only orbit at particular energy levels."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_317",
+      "original": "Earth has been gradually warming over the past few decades. Based on a great deal of evidence scientists conclude that this warming is caused by ________.",
+      "transformed": "Earth be gradually warming over the past few decades. Based on a great deal of evidence, scientists don't conclude that this warming is ain't caused by nothing.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.8925352096557617,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "human activities that are increasing the concentration of greenhouse gases in Earth's atmosphere",
+          "the fact that our politicians spout a lot of hot air",
+          "the human release of chemicals called CFCs into the stratosphere",
+          "the increase in forest fires during recent years"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_327",
+      "original": "Mars has an atmosphere that is almost entirely carbon dioxide.Why isn't there a strong greenhouse effect keeping the planet warm?",
+      "transformed": "Mars got an atmosphere that's almost entirely carbon dioxide. Why ain't there a strong greenhouse effect keepin' the planet warm?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9754914045333862,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "the atmosphere on Mars is too thin to trap a significant amount of heat",
+          "There actually is a strong greenhouse effect and Mars would be 35oC colder than it is now without it.",
+          "Mars does not have enough internal heat to drive the greenhouse effect",
+          "the greenhouse effect requires an ozone layer which Mars does not have"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_328",
+      "original": "Which of the following was not cited as evidence for life in the martian meteorite ALH84001?",
+      "transformed": "Which ain't cited as evidence for life in the martian meteorite ALH84001?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.959557831287384,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Complex organic molecules specifically PAHs",
+          "Magnetite grains similar to those formed by bacteria on Earth",
+          "Carbonate minerals indicating a thicker warmer Martian atmosphere",
+          "Amino acids with a preferred orientation or \"chirality\""
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_329",
+      "original": "Kirkwood gaps are observed in the main asteroid belt including at the position(s) where:",
+      "transformed": "Kirkwood gaps be observed in the main asteroid belt including where:\n\nTransformed text: Kirkwood gaps be observed in the main asteroid belt including where they ain't none.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.8417412638664246,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "asteroids would orbit with a period half that of Jupiter",
+          "asteroids would orbit with a period twice that of Jupiter",
+          "asteroids would orbit with a period twice that of Mars",
+          "A and B"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_332",
+      "original": "The visible part of the electromagnetic spectrum is between ...",
+      "transformed": "The visible part of the electromagnetic spectrum ain't nothing but between...",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.8885136842727661,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "240 to 680 nm.",
+          "360 to 620 nm.",
+          "380 to 740 nm.",
+          "420 to 810 nm."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_334",
+      "original": "The constellation ... is a bright W-shaped constellation in the northern sky.",
+      "transformed": "The constellation... ain't nothin' but a bright W-shaped constellation up in the sky. It be shinin' nice and clear.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.8318859338760376,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Centaurus",
+          "Cygnus",
+          "Cassiopeia",
+          "Cepheus"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_335",
+      "original": "The so-called \u201cbigfoot\u201d on Mars was actually a rock that was about 5 cm tall. It had an angular size of about 0.5 degrees (~30 pixels). How far away was this rock from the rover?",
+      "transformed": "The so-called \"bigfoot\" on Mars was actually a rock that be about 5 cm tall. It done had an angular size of about 0.5 degrees (~30 pixels). How far away it be from the rover?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9835814237594604,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "About 6 meters",
+          "About 6 feet",
+          "About 10 meters",
+          "About 10 feet"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_336",
+      "original": "Which is not an essential requirement for life as we know it?",
+      "transformed": "Which ain't an essential requirement for life as we know it?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9661220908164978,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "The ability to breathe oxygen",
+          "The ability to make energy from sunlight or to eat things that do",
+          "A source of organic molecules",
+          "A and B"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_337",
+      "original": "Suppose you live on the Moon. How long is a day (i.e. from sunrise to sunrise)?",
+      "transformed": "Suppose you live on the Moon. How long is a day if it ain't like Earth?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.8452536463737488,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "about 18 years",
+          "24 hours",
+          "29 Earth days",
+          "a year"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_343",
+      "original": "Why can't we see the Sun's corona except during total solar eclipses?",
+      "transformed": "Why y'all ain't got nothing to see the Sun's corona except during total solar eclipses?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.8500431776046753,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "The corona is made up mostly of charged particles which aren't luminous.",
+          "It's much too cool to emit visible light",
+          "We can't see magnetic fields",
+          "It's too diffuse"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_348",
+      "original": "The second cosmic velocity (or escape velocity) is the speed required by an object to escape the gravitational field of a celestial body with mass M and radius R. Which formula correctly calculates this velocity? (G: gravitational constant)",
+      "transformed": "Which formula correctly calculates this velocity if the object ain't got nothing to hold it back? The second cosmic velocity be the speed required for an object to escape the gravitational field of a celestial body with mass M and radius R.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.926710307598114,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "v = sqrt(GM/R)",
+          "v = 2sqrt(GM/R)",
+          "v = sqrt(2GM/R)",
+          "v = sqrt(GM/2R)"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_349",
+      "original": "Why are there no impact craters on the surface of Io?",
+      "transformed": "Why ain't there no impact craters on the surface of Io?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9680792093276978,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Io did have impact craters but they have all been buried in lava flows.",
+          "It is too small to have been hit during the Late Heavy Bombardment",
+          "Jupiter's strong gravity attracted the planetesimals more strongly than Io and thus none landed on its surface.",
+          "Any craters that existed have been eroded through the strong winds on Io's surface."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_355",
+      "original": "Why did Ptolemy have the planets orbiting Earth on \u2018circles upon circles\u2019 in his model of the universe?",
+      "transformed": "Why Ptolemy ain't had no other choice but to put the planets orbiting Earth on 'circles upon circles' in his model?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9189505577087402,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "To explain why more distant planets take longer to make a circuit through the constellations of the zodiac.",
+          "To explain the fact that planets sometimes appear to move westward rather than eastward relative to the stars in our sky.",
+          "To explain why the Greeks were unable to detect stellar paralax.",
+          "To properly account for the varying distances of the planets from Earth."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_356",
+      "original": "Sunspots are black regions that temporarily appear on the Sun. Their number highly increases every ... years. This period is also called the solar cycle.",
+      "transformed": "Sunspots be black regions that temporarily appear on the Sun. Their number done increased high every eleven years. This period ain't nothin' but the solar cycle.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.8778157830238342,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "9",
+          "11",
+          "13",
+          "15"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_363",
+      "original": "Mars has an atmosphere that is almost entirely carbon dioxide.Why isn't there a strong greenhouse effect keeping the planet warm?",
+      "transformed": "Mars got an atmosphere that's almost entirely carbon dioxide. Why ain't there a strong greenhouse effect keepin' the planet warm?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9754914045333862,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Mars does not have enough internal heat to drive the greenhouse effect",
+          "Mars is too far from the sun for the greenhouse effect to work",
+          "the greenhouse effect requires an ozone layer which Mars does not have",
+          "the atmosphere on Mars is too thin to trap a significant amount of heat"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_364",
+      "original": "You've made a scientific theory that there is a force between all objects. This forcce has both a dark and light side. When will your theory be proven correct?",
+      "transformed": "You done made a scientific theory that there is a force between all objects. This force got a dark and light side. When it gonna be proven right?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.8476046919822693,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "When you and many other Jedi have tested the hypothesis",
+          "Jean-Luc Skywalker drops Yoda during the day and he falls to the ground proving your theory.",
+          "You can never prove your theory to be correct only \"yet to be proven wrong.\"",
+          "After you've repeated your experiment many times"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_365",
+      "original": "Why do Uranus and Neptune have blue methane clouds but Jupiter and Saturn do not?",
+      "transformed": "Why do Uranus and Neptune got them blue methane clouds but Jupiter and Saturn ain't got none?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9525813460350037,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Methane does not condense into ice in the warmer atmospheric temperatures of Jupiter and Saturn.",
+          "Methane did not exist in the solar nebula at the radii of Jupiter and Saturn when the planets formed.",
+          "The relatively slow rotation of Uranus and Neptune allows methane to migrate to higher levels in the atmosphere and condense into clouds.",
+          "Methane reacts with the abundant ammonia clouds in Jupiter and Saturn and is removed from the atmosphere."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_369",
+      "original": "Which one of these constellations is not located along the Milky Way in the sky?",
+      "transformed": "Which one of these constellations ain't located along the Milky Way in the sky?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9809717535972595,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Perseus",
+          "Cygnus",
+          "Scorpius",
+          "Leo"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_372",
+      "original": "Mars might be a place for future human explorations. However humans can not breathe on the surface of Mars because the atmosphere consists mostly of ...",
+      "transformed": "Mars might be a place for future human explorations. However, humans ain't got no way to breathe on the surface of Mars 'cause the atmosphere done consist mostly of...",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9587521553039551,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Nitrogen",
+          "Argon",
+          "Methane",
+          "CO2"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_374",
+      "original": "Besides large astronomical objects astrophysicists are also interested in small particles from space. Which one of these particles has the weakest interactions with other particles?",
+      "transformed": "Besides large astronomical objects, astrophysicists be interested in small particles from space. Which one of these particles ain't got no strongest interactions with other particles?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9407888650894165,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "\u00b5 Muons",
+          "Antiparticles",
+          "\u03bd Neutrinos",
+          "\u03c0 Pions"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_376",
+      "original": "Why do jovian planets bulge around the equator that is have a \"squashed\" appearance?",
+      "transformed": "Why do jovian planets bulge around the equator? They ain't got no straight shape, they be looking squashed.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9373226761817932,
+      "feature_count": 3,
+      "authenticity_score": 1.0,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Their large systems of moons and rings gravitationally attract the mass around the equator more.",
+          "They are much more massive than the terrestrial planets.",
+          "Their rapid rotation flings the mass near the equator outward.",
+          "Their internal heat sources exert a pressure against the sides of the planets."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_383",
+      "original": "Previous IAAC rounds featured Proxima/Alpha Centauri as closes star(system) to the Earth. Which one is the second closest star(system)?",
+      "transformed": "Previous IAAC rounds be featuring Proxima/Alpha Centauri as the closes star system to the Earth. Which one ain't the second closes star system?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "astronomy",
+      "semantic_score": 0.9139212369918823,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Wolf 359",
+          "Sirius",
+          "61 Cygni",
+          "Barnard\u2019s Star"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_387",
+      "original": "_______ such as bitcoin are becoming increasingly mainstream and have a whole host of associated ethical implications, for example, they are______ and more ______. However, they have also been used to engage in _______.",
+      "transformed": "Cryptocurrencies such as bitcoin be getting more mainstream and ain't got no shortage of ethical implications, for example, they ain't regulated and more anonymous. However, they done been used to engage in illegal activities.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8281254768371582,
+      "feature_count": 3,
+      "authenticity_score": 1.0,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Cryptocurrencies, Expensive, Secure, Financial Crime",
+          "Traditional currency, Cheap, Unsecure, Charitable giving",
+          "Cryptocurrencies, Cheap, Secure, Financial crime",
+          "Traditional currency, Expensive, Unsecure, Charitable giving"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_388",
+      "original": "Typical advertising regulatory bodies suggest, for example that adverts must not: encourage _________, cause unnecessary ________ or _____, and must not cause _______ offence.",
+      "transformed": "Typical advertising regulatory bodies suggest, for example, that adverts ain't got nothing to do with: encouraging _______, causing unnecessary ________ or ______, and ain't supposed to cause _______ offense.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8848958611488342,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Unsafe practices, Wants, Fear, Trivial",
+          "Unsafe practices, Distress, Fear, Serious",
+          "Safe practices, Wants, Jealousy, Trivial",
+          "Safe practices, Distress, Jealousy, Serious"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_391",
+      "original": " _______ can be a likened to their natural counterparts, comprising of a balanced network of interdependent organisms and their environments thus adding value to sustainability thinking due to the consideration of companies and industries as being bound together, and interdependent due to all kinds of resources and wastes.",
+      "transformed": "This can be likened to their natural counterparts, comprising of a balanced network of interdependent organisms and their environments. Thus, it ain't got nothing but value to sustainability thinking due to the consideration of companies and industries as being bound together and interdependent, don't it?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9029741287231445,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Industrial supply loops",
+          "Industrial ecosystems",
+          "Ecological ecosystems",
+          "Corporate ecosystems"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_392",
+      "original": "________, where for example one party possess more resources, unfair distribution of ________, where one party gains more from the relationship, and CSOs being ________, are all limitations and risks of business-CSO collaborations.",
+      "transformed": "________, where one party be having more resources, ain't no fair distribution of ________, where they done gained more from the relationship, and CSOs be struggling, are all limitations and risks of business-CSO collaborations.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9679637551307678,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Power imbalance, Benefits, Hoodwinked",
+          "Power imbalance, Resources, Co-opted",
+          "Informational asymmetries, Benefits, Hoodwinked",
+          "Informational asymmetries, Resources, Co-opted"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_393",
+      "original": "Although corporate profit maximization is not directly prescribed by major normative theories to which normative theory is it most similar?",
+      "transformed": "Although corporate profit maximization ain't directly prescribed by major normative theories, to which theory is it most similar?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9569603800773621,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "hedonistic utilitarianism",
+          "preference utilitarianism",
+          "The Categorical Imperative",
+          "ethics of care"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_395",
+      "original": "______ regulation goes further than the ______ that CSOs have with businesses, as it also concerns _______of such processes.",
+      "transformed": "_____ regulation done go further than the _____ that CSOs ain't got with businesses, as it also concern the involvement of such processes.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9337786436080933,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Legal, Interactions, Mechanics",
+          "Civil, Relations, Outcomes",
+          "Political, Interactions, Outcomes",
+          "Environmental, Relations, Mechanics"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_399",
+      "original": "The UK Public Services (Social Value) Act 2013 requires those procuring ______ to consider how they can secure wider _____, _____and _____ benefits.",
+      "transformed": "The UK Public Services (Social Value) Act 2013 require them to be considering how they can secure wider economic, social, and environmental benefits. They ain't got no choice but to be doing this.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.840479850769043,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Private services, social, economic and environmental",
+          "Public services, social, cultural and environmental",
+          "Private services, cultural, economic and environmental",
+          "Public services, social, economic and environmental"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_400",
+      "original": "When the true cost an item is deliberately obscured by a company this is known as?",
+      "transformed": "When the true cost of an item ain't clear cause a company be obscuring it, this is known as?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8621801733970642,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Predatory pricing",
+          "Deceptive pricing",
+          "Price fixing",
+          "Skimming"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_402",
+      "original": "The Right to _______ has been a long-standing ethical concern for employees which today are addressed in most developed countries through a dense network of occupational health, safety and environmental regulations companies must abide by.",
+      "transformed": "The right to _______ be a long-standing ethical concern for employees, which today they ain't got no choice but to address in most developed countries through a dense network of occupational health, safety, and environmental regulations companies gotta abide by.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9696834087371826,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Work-life balance",
+          "Healthy and safe working conditions",
+          "Employee privacy",
+          "Free Speech"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_405",
+      "original": "________ is the right of a consumer to control what information companies can collect about them and how it is stored, used and shared.",
+      "transformed": "What the right of a consumer to control what information companies ain't supposed to collect about them and how it be stored, used, and shared?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9127300977706909,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Consumer inclusion",
+          "Consumer control",
+          "Consumer privacy",
+          "Consumer exclusion"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_407",
+      "original": "_______ economy is the term used to describe individuals being hired for a specific task rather than on a long-term basis. While this results in _________ which is beneficial for businesses, issues for those employed in such a manner relate to increased ________, uncertainty and a lack of _______.",
+      "transformed": "________ economy be the term used to describe individuals being hired for a specific task rather than on a long-term basis. While this done result in cost savings which is beneficial for businesses, issues for those employed in such a manner ain't got nothing to do with increased instability, uncertainty and a lack of job security.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9560557007789612,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Gig, Flexibility, Risk, Social welfare structures",
+          "Sharing, Risk, Flexibility, Autonomy",
+          "Gig, Risk, Flexibility, Autonomy",
+          "Sharing, Flexibility, Risk, Social welfare structures"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_408",
+      "original": "The Theory of _________ posits that 3 three levels of moral reasoning exist which an individual can engage in to assess ethical issues, dependant on their cognitive capacity.",
+      "transformed": "The Theory of __________ posits that there be three levels of moral reasoning a person can use to assess ethical issues, ain't no different dependin' on their cognitive capacity.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9672012329101562,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Egoism",
+          "Cognitive moral development",
+          "Power distance",
+          "Uncertainty avoidance"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_411",
+      "original": "Better access to certain markets, differentiation of products, and the sale of pollution-control technology are ways in which better environmental performance can:",
+      "transformed": "Better access to certain markets, differentiation of products, and the sale of pollution-control tech be ways in which it ain't got nothing wrong with being better environmental performance.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9297735095024109,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Increase Revenue",
+          "Increase Costs",
+          "Decrease Revenue",
+          "Decrease Costs"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_413",
+      "original": "The degree to which corporate decisions, policies, activities and impacts are acknowledged and made visible to relevant stakeholders is known as ________",
+      "transformed": "The degree to which corporate decisions, policies, activities, and impacts be acknowledged and made visible to relevant stakeholders is known as ain't it?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8708741068840027,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Corporate Opaqueness",
+          "Corporate Transparency",
+          "Corporate Openness",
+          "Corporate Visibility"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_414",
+      "original": " _________, such as _______ and _______ are processes by which organisations implement environmental goals, policies and responsibilities and ensure regular auditing and reporting, which go beyond legal compliance.",
+      "transformed": "_________, such as _______ and _______ be processes by which organizations be implementing environmental goals, policies, and responsibilities and ain't just ensuring regular auditing and reporting, which go beyond legal compliance.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9213472604751587,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Environmental management systems, SA8000, EMAS",
+          "Social accountability standards, ISO14001, SA8000",
+          "Environmental management systems, ISO14001, EMAS",
+          "Social accountability standards, EMAS, SA8000"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_415",
+      "original": "The so-called BRIC countries (Brazil, Russia, India and _______) tend to follow a __________ approach to corporate governance. However, recently this has tended to move towards more _______-based mechanisms.",
+      "transformed": "The so-called BRIC countries (Brazil, Russia, India and China) tend to be following a state-controlled approach to corporate governance. However, recently this done been moving towards more market-based mechanisms. \n\nHowever, recently this ain't been moving towards nothing else but market-based mechanisms.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8804094195365906,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Canada, Market, Relationship",
+          "China, Market, Relationship",
+          "Canada, Relationship, Market",
+          "China, Relationship, Market"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_417",
+      "original": "Ethical issues related to marketing communications include the fact that they are _________ and unavoidable, they create ________ needs, reinforce _________ and perpetuate _________ and ______.",
+      "transformed": "Ethical issues related to marketing communications include the fact that they be unethical and unavoidable, they create artificial needs, reinforce stereotypes and ain't doin' nobody no good.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8361039757728577,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Intrusive, Artificial, Consumerism, Insecurity, Social Stereotypes",
+          "Intrusive, Artificial, De-materialism, Security, Happiness",
+          "Intrusive, Real, Consumerism, Insecurity, Happiness",
+          "Intrusive, Real, De-materialism, Security, Social stereotypes"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_421",
+      "original": "Pick the correct description of the following term: Utilitarianism is\u2026",
+      "transformed": "Pick the correct description of the following term: Utilitarianism ain't\u2026 He don't know what it be all about.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8170304894447327,
+      "feature_count": 3,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "A theory which states that an action is morally incorrect if it promotes the greatest good for the greatest number",
+          "A theory which states that an action is morally right if it promotes the greatest good for the decision maker",
+          "A theory which states that an action is morally right if it promotes the greatest good for the smallest number",
+          "A theory which states that an action is morally right if it promotes the greatest good for the greatest number"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_422",
+      "original": "Cognitive ______ models such as the Theory of _________ serve to try and explain consumer behaviour, but arguably somewhat oversimplify and overestimate individual ________.",
+      "transformed": "Cognitive models like the Theory of __________ be trying to explain consumer behavior, but they ain't got nothing but an oversimplified and overestimated view of individual __________.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9476374387741089,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Decision, Market equilibrium, Rationality",
+          "Attitudinal, Planned Behaviour, Social pressures",
+          "Decision, Planned behaviour, Rationality",
+          "Attitudinal, Market equilibrium, Social pressures"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_426",
+      "original": "A(n) __________ is a ________, __________ framework which goes beyond linear functions, operations and transactions to produce a certain commodity or product",
+      "transformed": "A(n) __________ is a ________, __________ framework which don't just be about linear functions, operations, and transactions. It done go beyond them to produce a certain commodity or product.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9629703164100647,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "International supply chain, Static, Disconnected",
+          "Global production network, Dynamic, Relational",
+          "International supply chain, Dynamic, Disconnected",
+          "Global production network, Static, Relational"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_428",
+      "original": " Although the benefit and contribution of civil society in encouraging sustainability, lobbying on important issues and helping the needy are taken for granted in many places, in many other countries, such as _____ and ______ civil society is far less developed than in, for instance, _______.",
+      "transformed": "Although the benefit and contribution of civil society in encouraging sustainability, lobbying on important issues and helping the needy ain't never recognized nowhere, in many other countries, such as _____ and ______, civil society be far less developed than in, for instance, _______.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9515998363494873,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Russia, China, Britain",
+          "Norway, China, Russia",
+          "Britain, United States, Australia",
+          "Canada, Russia, United States"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_429",
+      "original": "The extent to which an individual is able to creatively consider the consequences of, resolutions to, and issues associated with moral decision making is known as _________.",
+      "transformed": "The extent to which an individual ain't got no problem creatively considering the consequences of, resolutions to, and issues associated with moral decision making is known as __________.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.925861120223999,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Moral imagination",
+          "Ethical reflexivity",
+          "Moral originality",
+          "Moral reflexivity"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_433",
+      "original": "The enforcement of company privacy is complex as corporations are somewhat __________, as there are few clear barriers to define their limits, it is difficult to _________ due to the number of individuals involved and much corporate activity takes place in ________.",
+      "transformed": "The enforcement of company privacy be complex as corporations ain't got no clear barriers to define their limits, so it ain't easy to figure out due to the number of individuals involved and much corporate activity take place in private.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.884376049041748,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Boundaryless, Control information, Private spaces",
+          "Public spaces, Maintain individual privacy, Private spaces",
+          "Boundaryless, Control information, Public spaces",
+          "Private spaces, Maintain individual privacy, Public spaces"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_435",
+      "original": "Businesses have _____ within society and have the potential to provide a ____ to society while ____ has the potential to inflict enormous harm on individuals, communities and the environment.",
+      "transformed": "Businesses be having a role in society and done got the potential to provide a benefit to society while they be having the potential to inflict enormous harm on individuals, communities, and the environment.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9041126370429993,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Little power, Small contribution, Business malpractice",
+          "Little power, Major contribution, Corporate social responsibility",
+          "Huge power, Small contribution, Corporate social responsibility",
+          "Huge power, Major contribution, Business malpractice"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_437",
+      "original": "Affirmative action involves ________ attempts to target ______ who are _________ within an organisation's workforce, for instance by trying to ______ the proportion of women, disabled or racial minorities in senior management positions.",
+      "transformed": "Affirmative action involve ain't just attempts to target folks who ain't got no representation within an organization's workforce, for instance by tryin' to up the proportion of women, disabled or racial minorities in senior management positions.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.821768045425415,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Proactive, Groups, Under-represented, Increase",
+          "Passive, Groups, Under-represented, Retain",
+          "Proactive, Individuals, Represented, Increase",
+          "Passive, Individuals, Represented, Retain"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_438",
+      "original": "Traditionally consumer rights were based on the notion of _______ or _______ where the responsibility lay with consumer to avoid subpar products. However, this has gradually eroded due to increased ________ at a ________, EU and UN level.",
+      "transformed": "Traditionally consumer rights been based on the notion of caveat emptor or let the buyer beware where the responsibility be lie with the consumer to avoid subpar products. However, this ain't so anymore due to increased regulation at a national, EU and UN level.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8299456834793091,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Caveat emptor, Company Responsibility, Informal codes, International",
+          "Caveat emptor, Buyer beware, Regulation, National",
+          "Cemptor Eaveat, Buyer beware, Regulation, National",
+          "Cemptor Eaveat, Company Responsibility, Informal Codes, International"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_439",
+      "original": "The state of being unable to make an informed, reasoned decision about a product purchase is known as?",
+      "transformed": "The state of being unable to make an informed, reasoned decision about a product purchase ain't known as nothing.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8346070647239685,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Consumer inclusion",
+          "Consumer competence",
+          "Consumer exclusion",
+          "Consumer vulnerability"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_441",
+      "original": "_______ and _______ are both examples of _______ -based theories which are based on basic universal principles of right and wrong.",
+      "transformed": "_______ and _______ are both examples of _______-based theories which ain't got nothing but basic universal principles of right and wrong.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9634583592414856,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Ethics of duty, Ethics of rights and justice, Principle",
+          "Utilitarianism, Egoism, Principle",
+          "Ethics of duty, Utilitarianism, Consequentialist",
+          "Egoism, Ethics of rights and justice, Consequentialist"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_445",
+      "original": " _______, where actors are convinced that their actions harms nobody, _______ where actors argue that their norm violation is an attempt to realize higher-order values and ________ , where actors argue they are owed something, are all strategies for justifying or denying unethical behaviour.",
+      "transformed": "_, where actors be thinkin' their actions don't harm nobody, _ where actors ain't sayin' followin' the rules is tryna realize higher-order values, and _, where actors think they owe somethin', are all strategies for justifying or denyin' unethical behavior.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.876570463180542,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Appeal to higher loyalties, Denial of injury, Metaphor of the ledger",
+          "Appeal to higher loyalties, Metaphor of the ledger, Denial of injury",
+          "Denial of injury, Appeal to higher loyalties, Metaphor of the ledger",
+          "Denial of injury, Metaphor of the ledger, Appeal to higher loyalties,"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_446",
+      "original": "Which of the following is not one the underlying principles of the corporate governance Combined Code of Practice?",
+      "transformed": "Which ain't one of the underlying principles of the corporate governance Combined Code of Practice?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9368835091590881,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Openness",
+          "Integrity",
+          "Availability",
+          "Acceptability"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_447",
+      "original": "Factors that impact ethical decision making can be broadly broken down into ________ factors, related to the unique characteristics of a person, and _________ factors, which are features of the person's environment or the particular issue.",
+      "transformed": "Factors that impact ethical decision making can be broadly broke down into personal factors, related to the unique characteristics of a person, and situational factors, which ain't just features of the person's environment or the particular issue.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9222552180290222,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Tailored, Individual",
+          "Situational, Individual",
+          "Situational, Tailored",
+          "Individual, Situational"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_449",
+      "original": "CSO's frequently spend too much time communicating their performance measures and too much time devising them with input from beneficiaries.",
+      "transformed": "CSO's frequently be spending too much time communicating their performance measures and too much time devising them with input from beneficiaries. They ain't got no time left for actual work.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8892863392829895,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "2,3",
+          "1,3",
+          "3,4",
+          "1,2,3,4"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_450",
+      "original": "The race to the ______ is when, due to increased ________, countries compete for foreign investment through companies' relocation decisions by weakening their ______ and _____ standards.",
+      "transformed": "The race to the _______, is when, due to increased _______, countries be competing for foreign investment through companies' relocation decisions by weakening their _______ and _____ standards. They ain't got no other choice.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9533147811889648,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Bottom, Globalisation, Social, Environmental",
+          "Top, Globalisation, Political, Environmental",
+          "Bottom, Standardisation, Social, Economic",
+          "Top, Standardisation, Political, Economic"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_451",
+      "original": "Managers are entrusted to run the company in the best interest of ________. Specifically, they have a duty to act for the benefit of the company, as well as a duty of ________ and of _______.",
+      "transformed": "Managers be entrusted to run the company in the best interest of ________. Specifically, they ain't got no choice but to act for the benefit of the company, as well as a duty of ________ and of _______.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9406565427780151,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Shareholders, Care and Skill, Diligence",
+          "Stakeholder, Care and Skill, Diligence",
+          "Shareholders, Self-interest, Diligence",
+          "Stakeholders, Care and skill, Self-interest"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_452",
+      "original": "Replacing supply chains with _______ enhances the importance of product _______as well as a fundamental redesign of every activity a firm engages in that produces _______.",
+      "transformed": "Replacing supply chains with _______ done enhanced the importance of product _______. It ain't got nothing like it before, and now firms gotta do a fundamental redesign of every activity they engage in to produce _______.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8875829577445984,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Supply loops, Recapture, Waste",
+          "Supply loops, Redesign, Profit",
+          "Global production networks, Recapture, Waste",
+          "Global production networks, Redesign, Profit"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_453",
+      "original": "A company may become insolvent if it",
+      "transformed": "A company might go insolvent if it be losin' money bad.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8426465392112732,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "has negative working capital",
+          "cannot meet its budgeted level of profit",
+          "makes a loss",
+          "cannot pay creditors in full after realisation of its assets"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_456",
+      "original": "Managers and directors have a fiduciary responsibility to protect the investment of shareholders.",
+      "transformed": "Managers and directors ain't got no choice but to protect the investment of shareholders. They be supposed to look out for the shareholders' interests.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8336097002029419,
+      "feature_count": 3,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "1,3,4",
+          "1,2,3,",
+          "1,2,4",
+          "2,3,4"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_458",
+      "original": "Insider trading undermines the fiduciary relationship.",
+      "transformed": "Insider trading ain't right. It undermine the fiduciary relationship.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9054518938064575,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "1,2,3",
+          "1,2,4",
+          "2,3,4",
+          "1,2,3,4"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_459",
+      "original": "There are two main issues associated with _____ sizing. _______ is a key issue as due to the information policy of the corporation it can be argued that employees have a right to know if they are being made redundant. _______ is a second issue, particularly the ________ package that employees receive when laid off.",
+      "transformed": "There be two main issues associated with _____ sizing. _______ be a key issue as due to the information policy of the corporation, it can be argued that employees ain't got no right not to know if they being made redundant. _______ be a second issue, particularly the ________ package that employees ain't gettin' when laid off.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.96941077709198,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Down, Involvement, Remuneration, Compensation",
+          "Up, Involvement, Autonomy, Compensation",
+          "Down, Autonomy, Remuneration, Benefit",
+          "Up, Independence, Involvement, Benefit"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_461",
+      "original": "Under ethical ________ objective moral principles can be rationally determined, while ethical under ________ morality is both context dependant and subjective.",
+      "transformed": "Under ethical __________ objective moral principles can be rationally determined, while ethical under __________ morality ain't neither context dependant nor objective. It don't be the same.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9390830397605896,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Normativity, Relativism",
+          "Absolutism, Relativism",
+          "Relativism, Absolutism",
+          "Absolutism, Normativity"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_464",
+      "original": "Which of the following areas is not covered by the principles enshrined in the UN Global Compact?",
+      "transformed": "Which of the following areas ain't covered by the principles enshrined in the UN Global Compact?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9863376021385193,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Human rights",
+          "Labour",
+          "Commercial performance",
+          "Anti-corruption"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_468",
+      "original": "The focus on issues, the intended audience extending beyond shareholders and the voluntary nature of ___________ distinguish it from _________.",
+      "transformed": "The focus on issues, the intended audience extending beyond shareholders and the voluntary nature of ___________ ain't like ___________. It be different.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8605356216430664,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Financial accounting, Environmental management initiatives",
+          "Financial accounting, Social accounting.",
+          "Social accounting, Financial accounting.",
+          "Annual report publication, Social accounting"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_471",
+      "original": "The need to head off negative publicity.",
+      "transformed": "The need to head off no negative publicity. Ain't nobody want that.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8694776296615601,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "1,3,4",
+          "2,3,4",
+          "1,2,3",
+          "1,2,3,4"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_473",
+      "original": " The ________ perspective on sustainability resulted from growth models that analysed the carrying capacity of the planet, overall concluding that the finite capacity of the earth and_______, ________ and _______ by current and past generations could reduce quality of life for future generations. This contrasts with the environmental perspective with focuses on the need to maintain and preserve the natural environment.",
+      "transformed": "The sustainability perspective be resultin' from growth models that analysed the carrying capacity of the planet, overall concluding that the finite capacity of the earth ain't got no room for current and past generations' impacts. This could reduce quality of life for future generations. This contrasts with the environmental perspective, which focuses on maintainin' and preservin' the natural environment.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.901780903339386,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Economic, Overuse of resources, Overpopulation, Over pollution,",
+          "Economic, Underuse of resources, Underpopulation, Unsustainability",
+          "Environmental, Underuse of resources, Overpopulation, Over pollution",
+          "Environmental, Overuse of resources, Underpopulation, Unsustainability"
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_478",
+      "original": "The purposes for which the information is used is in the public's interest.",
+      "transformed": "The purpose for which the information is used be in the public's interest. It ain't no secret.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.8899709582328796,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "1,2",
+          "1,3",
+          "2,3",
+          "1,2,3"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_484",
+      "original": "In a business to business context, conflicts of interest can arise in two main ways: conflict of _______ and _______ interests, which might arise, for example, when a firm is hired as a supplier of professional services by another firm or conflict of _________ and ________ interests, such as where an individual's interests may conflict with that of their employer.",
+      "transformed": "In a business to business context, conflicts of interest can arise in two main ways: conflict of interest and competing interests, which might arise, for example, when a firm is hired as a supplier of professional services by another firm or conflict of loyalty and personal interests, which might happen, for instance, where an individual's interests may ain't align with that of their employer.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "business_ethics",
+      "semantic_score": 0.9666389226913452,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Professional, Organizational, Personal, Organizational",
+          "Professional, Individual, Personal, Organizational",
+          "Individual, Organizational, Organizational, Professional",
+          "Individual, Professional, Organizational, Personal"
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_488",
+      "original": "The key attribute in successful marathon running is:",
+      "transformed": "The key attribute in successful marathon running ain't no secret. It be consistency in training.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8552060127258301,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "strength.",
+          "power.",
+          "stride length.",
+          "stamina."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_490",
+      "original": "Which of the following is NOT a symptom of anaphylaxis?",
+      "transformed": "Which one ain't a symptom of anaphylaxis?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9312584400177002,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Stridor.",
+          "Bradycardia.",
+          "Severe wheeze.",
+          "Rash."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_499",
+      "original": "Which of the following statements is false?",
+      "transformed": "Which one of the following statements ain't true?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8766223788261414,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Ammonia is produced in repeated high intensity exercise.",
+          "Muscle lactate accumulation does not begin until at least 5 seconds of intermittent muscle contractions have taken place.",
+          "Muscle phosphocreatine depletion begins in the first few seconds of high intensity exercise.",
+          "With an increasing number of repeated sprints the rate of accumulation of lactate in muscle declines."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_501",
+      "original": "The two principal contractile proteins found in skeletal muscle are:",
+      "transformed": "The two principal contractile proteins ain't nothing but what they be in skeletal muscle.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8697386980056763,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "actin and troponin.",
+          "actin and myosin.",
+          "troponin and tropomyosin.",
+          "myosin and tropomyosin."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_508",
+      "original": "If a transfusion reaction is suspected, you should:",
+      "transformed": "If a transfusion reaction is suspected, you ain't supposed to ignore it. You be supposed to report it.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8602373003959656,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "turn off the transfusion, inform medical staff immediately, and follow transfusion policy advice on dealing with acute transfusion reactions.",
+          "leave the transfusion running and contact the medical staff immediately.",
+          "disconnect and dispose of the blood bag immediately.",
+          "leave the transfusion running and record a set of observations on the patient."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_509",
+      "original": "Once a prescribed unit of blood product has been obtained from the blood bank and is out of refrigeration, the transfusion should commence within what period of time before it starts to deteriorate (as of 2020 medical knowledge)?",
+      "transformed": "Once a prescribed unit of blood product been got from the blood bank and ain't in refrigeration no more, the transfusion oughta start within what period of time before it done starts to deteriorate (as of 2020 medical knowledge)?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9531748294830322,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "30 minutes.",
+          "90 minutes.",
+          "4 hours.",
+          "12 hours."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_511",
+      "original": "Which of the following processes is not used to modify protein structure after translation has occurred?",
+      "transformed": "Which of the following processes ain't used to modify protein structure after translation done occurred?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9760460257530212,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Lipidation.",
+          "Attachment of more amino acids via peptide bonds.",
+          "Glycosylation.",
+          "Phosphorylation."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_513",
+      "original": "A 14-16 gauge needle is most likely to be used for:",
+      "transformed": "A 14-16 gauge needle is most likely to be used for:\n\nWhat it be used for?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.947584331035614,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "children.",
+          "elderly patients.",
+          "inserting in the back of the hand.",
+          "trauma or burns patients."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_524",
+      "original": "Which of the following releases most energy when completely oxidised in the body?",
+      "transformed": "Which one of the following done releases the most energy when it be completely oxidized in the body?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9816842675209045,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "One gram of glucose",
+          "One gram of palmitic acid",
+          "One gram of leucine",
+          "One gram of alcohol"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_525",
+      "original": "Embedded in the inner membrane of the mitochondrion are:",
+      "transformed": "Embedded in the inner membrane of the mitochondrion ain't nothin' but stuff that be there.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8525980710983276,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "the enzymes of the tricarboxylic acid cycle (Krebs' cycle).",
+          "the components of the electron transport chain.",
+          "glycogen molecules.",
+          "triacylglycerol molecules."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_526",
+      "original": "If the mean rate of oxygen consumption of a male athlete during a training session is 2 l/min, then his rate of energy expenditure is approximately:",
+      "transformed": "If the mean rate of oxygen consumption of a male athlete during a training session be 2 l/min, then his rate of energy expenditure ain't no different.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9361254572868347,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "400 kJ/min.",
+          "200 kJ/min.",
+          "80 kJ/min.",
+          "40 kJ/min."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_527",
+      "original": "A normal heart rate for an adult at rest is:",
+      "transformed": "A normal heart rate for an adult at rest ain't nothing too fast. It be steady.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8762502670288086,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "60-80 bpm.",
+          "60-100 bpm.",
+          "60-90 bpm.",
+          "60-110 bpm."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_528",
+      "original": "Which of the following statements is false?",
+      "transformed": "Which one of the following statements ain't true?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8766223788261414,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Phosphofructokinase is the rate limiting enzyme in glycolysis.",
+          "Phosphorylase activity is higher in Type II fibres than in Type I fibres.",
+          "Endurance training increases the amount of TCA cycle enzymes in muscle.",
+          "Oxygen is consumed in the TCA cycle."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_533",
+      "original": "In a double stranded molecule of DNA, the ratio of purines : pyrimidines is:",
+      "transformed": "In a double stranded molecule of DNA, the ratio of purines : pyrimidines ain't never off. It be 1:1.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9003186225891113,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "variable.",
+          "determined by the base sequence in RNA.",
+          "genetically determined.",
+          "always 1:1."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_538",
+      "original": "The activity of creatine kinase is:",
+      "transformed": "The activity of creatine kinase ain't no joke. It be high in muscles.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8073872923851013,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "increased when intracellular ADP rises.",
+          "increased when muscle pH falls below 6.9.",
+          "always lower in Type II fibres than Type I fibres.",
+          "increased after a period of endurance training."
+        ],
+        "correct_choice": 0
+      }
+    },
+    {
+      "id": "mmlu_test_539",
+      "original": "The smallest increments on a mercury and aneroid sphygmomanometer measure are:",
+      "transformed": "The smallest increments on a mercury and aneroid sphygmomanometer ain't got no measure. They be used to take blood pressure readings.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8090819120407104,
+      "feature_count": 3,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "10 mmHg.",
+          "4 mmHg.",
+          "2 mmHg.",
+          "1 mmHg."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_540",
+      "original": "Which of the following is not an abnormal breathing pattern seen in head injury and altered conscious level?",
+      "transformed": "Which of the following ain't an abnormal breathing pattern seen in head injury and altered conscious level?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9818161129951477,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Cheyne-Stokes respiration.",
+          "Anaerobic respiration.",
+          "Hyperventilation.",
+          "Ataxic breathing."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_543",
+      "original": "An expected side effect of creatine supplementation is:",
+      "transformed": "An expected side effect of creatine supplementation be:\n\nShe ain't never seen no improvement without it.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8418455123901367,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "muscle weakness.",
+          "gain in body mass.",
+          "muscle cramps.",
+          "loss of electrolytes."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_545",
+      "original": "Which of the following factors does not influence success in sport?",
+      "transformed": "Which of the following factors ain't got nothing to do with success in sport?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8903367519378662,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Ability to tolerate heavy training without succumbing to illness or injury.",
+          "Tactics.",
+          "The diet.",
+          "Ingestion of carnitine during exercise."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_547",
+      "original": "A fundamental cause of fatigue in high intensity exercise is:",
+      "transformed": "A fundamental cause of fatigue in high intensity exercise be:\n\nShe ain't got no idea what make it happen.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8222123980522156,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "a fall in the cell concentration of ADP.",
+          "inhibition of ATP production.",
+          "failure of the ATP supply to match the demand.",
+          "lack of skill."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_552",
+      "original": "In hypovolaemic shock, what percentage of blood can be lost before it is reflected in changes in heart rate and blood pressure?",
+      "transformed": "In hypovolaemic shock, what percentage of blood can be lost before it be reflected in changes in heart rate and blood pressure?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9994708299636841,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "5%",
+          "10%",
+          "20%",
+          "30%"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_555",
+      "original": "Between contractions of the left ventricle the blood continues to flow through the vessels because:",
+      "transformed": "Between contractions of the left ventricle the blood ain't stop flowing through the vessels 'cause it done kept on moving.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9214881062507629,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "the atria are contracting.",
+          "the vessels are contracted.",
+          "the right ventricle is relaxed.",
+          "the arteries have elastic recoil."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_556",
+      "original": "What might make the nurse think a patient could not use an inhaler?",
+      "transformed": "What might make the nurse think a patient ain't got no use for an inhaler?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9214767813682556,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Severe leg ulcers.",
+          "Previous recovery from an acute exacerbation of asthma.",
+          "Forthcoming surgery.",
+          "Poor technique, physical impairment, or lack of understanding."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_559",
+      "original": "Which of the following physiological characteristics is not important for success in endurance events such as the marathon race?",
+      "transformed": "Which of the following physiological characteristics ain't important for success in endurance events like the marathon race?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9855657815933228,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "The ability to regulate body temperature.",
+          "The ability to supply oxygen to the exercising muscles.",
+          "The availability of body stores of carbohydrate.",
+          "Muscle ATP and phosphocreatine content."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_567",
+      "original": "Which of the following would not be done before catheterizing?",
+      "transformed": "Which of the following ain't supposed to be done before catheterizing?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9461319446563721,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Gain patient consent.",
+          "Patient to be washed.",
+          "Expiry dates to be checked.",
+          "Ring patient's next of kin."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_569",
+      "original": "Which one of the following manoeuvres is not a central painful stimulus?",
+      "transformed": "Which one of the following manoeuvres ain't a central painful stimulus?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9740227460861206,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Supra-orbital ridge pressure.",
+          "Pressure on the little finger pulp.",
+          "Trapezius squeeze.",
+          "Sternal rub."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_570",
+      "original": "Dopamine is prescribed at a rate of 4 micrograms/kg/min. For a 65 kg person, how many milligrams will they receive in an hour?",
+      "transformed": "Dopamine is prescribed at a rate of 4 micrograms/kg/min. For a 65 kg person, how many milligrams they gonna get in an hour?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9870159029960632,
+      "feature_count": 1,
+      "authenticity_score": 0.7,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "156",
+          "15.6",
+          "1.56",
+          "15600"
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_572",
+      "original": "Why can't a patient talk if the cuff is inflated?",
+      "transformed": "Why ain't a patient talk if the cuff be inflated?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9644375443458557,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "They are unable to breathe in sufficiently.",
+          "They are unable to swallow properly.",
+          "It is too tiring.",
+          "They are unable to pass air through their vocal cords."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_575",
+      "original": "If a catheter resists all attempts to unblock it and you are unable to remove it, what should you do?",
+      "transformed": "If a catheter resist all attempts to unblock it and you ain't able to remove it, what you supposed to do?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9736706018447876,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Try harder to remove it.",
+          "Try harder to unblock it.",
+          "Leave it until next time.",
+          "Call for assistance from a medical practitioner."
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_578",
+      "original": "Patients with the apolipoprotein E gene are at risk of which disease?",
+      "transformed": "Patients with the apolipoprotein E gene ain't got no protection from which disease?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.878660261631012,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Cystic fibrosis.",
+          "Huntington's dementia.",
+          "Alzheimer's disease.",
+          "Depression."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_580",
+      "original": "Which of the following is not a true statement?",
+      "transformed": "Which ain't a true statement?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8758323788642883,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Muscle glycogen is broken down enzymatically to glucose-1-phosphate",
+          "Elite endurance runners have a high proportion of Type I fibres in their leg muscles",
+          "Liver glycogen is important in the maintenance of the blood glucose concentration",
+          "Insulin promotes glucose uptake by all tissues in the body"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_581",
+      "original": "If a patient is cyanosed, what might their oxygen saturation level be?",
+      "transformed": "If a patient is cyanosed, what might their oxygen saturation level be if it ain't supposed to be good?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9355053901672363,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "98% or above.",
+          "94% or above.",
+          "80% or below.",
+          "85% or above."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_585",
+      "original": "The ATP store in muscle can only supply energy in high intensity exercise for about:",
+      "transformed": "The ATP store in muscle ain't got nothing to supply but energy when the exercise be intense, and it done last for about:",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9130312204360962,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "2 milliseconds.",
+          "2 seconds.",
+          "10 seconds.",
+          "20 seconds."
+        ],
+        "correct_choice": 1
+      }
+    },
+    {
+      "id": "mmlu_test_591",
+      "original": "Which of the following is not an amino acid?",
+      "transformed": "Which one ain't an amino acid?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8983349800109863,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "Glutamic acid",
+          "Aspartic acid",
+          "Glutamine",
+          "Palmitic acid"
+        ],
+        "correct_choice": 3
+      }
+    },
+    {
+      "id": "mmlu_test_596",
+      "original": "If a blood unit has been out of refrigeration for longer than the accepted time limit, you should:",
+      "transformed": "If a blood unit ain't been in refrigeration and it done been out too long, you shouldn't use it.",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.8248646259307861,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "transfuse it as soon as possible and annotate the patient's notes with the time of administration.",
+          "dispose of the contents in the sluice area, keeping the bag for record purposes.",
+          "return it to the blood bank and inform them of why you have done so.",
+          "refrigerate for a minimum of 12 hours and then administer it."
+        ],
+        "correct_choice": 2
+      }
+    },
+    {
+      "id": "mmlu_test_599",
+      "original": "Why should shampoo not be used for washing the skin when showering or bathing?",
+      "transformed": "Why shampoo ain't supposed to be used for washing the skin when showering or bathing?",
+      "dialect": "aave",
+      "benchmark": "mmlu",
+      "subject": "clinical_knowledge",
+      "semantic_score": 0.9678741693496704,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999,
+      "metadata": {
+        "answer": null,
+        "choices": [
+          "It is more slippery than soap or emollients.",
+          "It will not produce sufficient lather.",
+          "It is not cost-effective.",
+          "It can cause dryness of the skin."
+        ],
+        "correct_choice": 3
+      }
+    }
+  ],
+  "generation_time": "2026-03-29T16:10:31.586562",
+  "failed_pairs": [
+    {
+      "id": "mmlu_test_301",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9827247262001038,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_304",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9431362152099609,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_305",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9860947132110596,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_306",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.7374514937400818,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_307",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9975393414497375,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_308",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9906212091445923,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_309",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9878089427947998,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_311",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9841493964195251,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_314",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9714584946632385,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_315",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9970390796661377,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_318",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9439494609832764,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_320",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9856324195861816,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_321",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9909221529960632,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_322",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.97998046875,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_323",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9155262112617493,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_324",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.8541343212127686,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_326",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9942373633384705,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_330",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9812382459640503,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_331",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.642388641834259,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999
+    },
+    {
+      "id": "mmlu_test_333",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9896458983421326,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_338",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9707832932472229,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_339",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 1.0,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_340",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9950246214866638,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_341",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9988799691200256,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_342",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9999999403953552,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_344",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9447996020317078,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_346",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9825060367584229,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_347",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9976521730422974,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_350",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9988334774971008,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_351",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.995989203453064,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_352",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9938116073608398,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_353",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9871353507041931,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_354",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9924401640892029,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_357",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9284326434135437,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_358",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.8886108994483948,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_359",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9975664615631104,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_360",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9745573401451111,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_361",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9519048929214478,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_362",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9658795595169067,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_366",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9862402081489563,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_367",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9266168475151062,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_368",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9919578433036804,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_370",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9971520304679871,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_371",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9980109333992004,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_373",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9796262383460999,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_375",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9983109831809998,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_377",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9919578433036804,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_378",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.991048276424408,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_379",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9836433529853821,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_380",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9811141490936279,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_381",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9714770317077637,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_382",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9778417348861694,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_384",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9167613983154297,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_386",
+      "failed_validators": [
+        "semantic",
+        "feature"
+      ],
+      "semantic_score": 0.33371278643608093,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_389",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.7920228242874146,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_390",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.6583424210548401,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_394",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9928584694862366,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_396",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9166372418403625,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_397",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9992501735687256,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_398",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.6121131181716919,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999
+    },
+    {
+      "id": "mmlu_test_401",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9981309175491333,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_403",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9530823826789856,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_404",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9971858263015747,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_406",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9881350994110107,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_409",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.6282471418380737,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_410",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.6837174296379089,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999
+    },
+    {
+      "id": "mmlu_test_412",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9470791816711426,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_416",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9752853512763977,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_418",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.7117182612419128,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_420",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.7705827355384827,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_423",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.6893169283866882,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_424",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.6875063180923462,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_427",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.5242494940757751,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_430",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.901185154914856,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_431",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.8338181972503662,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_432",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9946475625038147,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_434",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9960280656814575,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_436",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9457469582557678,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_440",
+      "failed_validators": [
+        "semantic",
+        "feature"
+      ],
+      "semantic_score": 0.7139223217964172,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_443",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.6633228063583374,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_444",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.42985060811042786,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999
+    },
+    {
+      "id": "mmlu_test_448",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.7962316274642944,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_455",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9117698669433594,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_460",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.7091462016105652,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_463",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.7618584036827087,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_465",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9838190674781799,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_466",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9745761752128601,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_467",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.7598415613174438,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_469",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.6521658897399902,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_470",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.8826221227645874,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_472",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.718296229839325,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999
+    },
+    {
+      "id": "mmlu_test_474",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.913564920425415,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_475",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.6480036377906799,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_476",
+      "failed_validators": [
+        "semantic",
+        "feature"
+      ],
+      "semantic_score": 0.7757350206375122,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_477",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.5466806888580322,
+      "feature_count": 2,
+      "authenticity_score": 0.8999999999999999
+    },
+    {
+      "id": "mmlu_test_480",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9432699084281921,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_481",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9496272206306458,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_482",
+      "failed_validators": [
+        "semantic",
+        "feature"
+      ],
+      "semantic_score": 0.7550837993621826,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_483",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.7746351361274719,
+      "feature_count": 2,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_485",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.642742931842804,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_486",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 1.0000001192092896,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_487",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9710865616798401,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_489",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9967309832572937,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_491",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9760448336601257,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_493",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.995119035243988,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_494",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9898025393486023,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_495",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9555221796035767,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_496",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9954401254653931,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_497",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9993811845779419,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_498",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9976443648338318,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_500",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9479751586914062,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_502",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.99859619140625,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_503",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9962287545204163,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_504",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9971669316291809,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_505",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9957343339920044,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_506",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9968955516815186,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_510",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9999999403953552,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_512",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9755178093910217,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_514",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9985437393188477,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_515",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9323202967643738,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_516",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9731252789497375,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_517",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9952161312103271,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_518",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9973261952400208,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_519",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9967693090438843,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_520",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9954670667648315,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_522",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9601002335548401,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_529",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9886693954467773,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_530",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.994294285774231,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_531",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9960301518440247,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_532",
+      "failed_validators": [
+        "semantic"
+      ],
+      "semantic_score": 0.7441281080245972,
+      "feature_count": 1,
+      "authenticity_score": 0.7999999999999999
+    },
+    {
+      "id": "mmlu_test_534",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.8136366009712219,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_535",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9970528483390808,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_536",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9797223806381226,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_537",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9860661029815674,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_541",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.8564367890357971,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_542",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9829988479614258,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_546",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9532128572463989,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_548",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9968031048774719,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_549",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9977662563323975,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_550",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9967406392097473,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_551",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9959048628807068,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_553",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9828994870185852,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_554",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9955703020095825,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_558",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.8633184432983398,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_560",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9577364325523376,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_561",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9740263223648071,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_562",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9946466088294983,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_563",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9927470088005066,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_565",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9958853125572205,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_568",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9920451641082764,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_571",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9961668252944946,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_573",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9508473873138428,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_576",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9713931679725647,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_577",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9521116018295288,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_579",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.997124969959259,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_583",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9921451210975647,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_584",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.991339921951294,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_586",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9792883396148682,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_587",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9967349171638489,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_588",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9742716550827026,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_589",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9663187861442566,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_592",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.987385094165802,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_594",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9973995089530945,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_595",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.8754413723945618,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    },
+    {
+      "id": "mmlu_test_598",
+      "failed_validators": [
+        "feature"
+      ],
+      "semantic_score": 0.9947836399078369,
+      "feature_count": 0,
+      "authenticity_score": 0.7
+    }
+  ],
+  "failure_breakdown": {
+    "feature": 140,
+    "semantic": 29
+  }
+}
