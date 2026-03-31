@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Llama 3.1 8B Dialectal Fairness Audit</title>
+    <title>Dialectal Fairness Audit Report</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -92,31 +92,31 @@
     </style>
 </head>
 <body>
-    <h1>Llama 3.1 8B Dialectal Fairness Audit</h1>
+    <h1>Dialectal Fairness Audit Report</h1>
 
     <div class="summary-box">
         <h2>Executive Summary</h2>
-        <p>This report analyzes the fairness of <strong>llama3.1:8b</strong> across
+        <p>This report analyzes the fairness of <strong>qwen2.5:14b</strong> across
         <strong>3</strong> dialects and
         <strong>5</strong> benchmarks,
-        covering <strong>3,439</strong> total evaluation pairs.</p>
+        covering <strong>3,479</strong> total evaluation pairs.</p>
     </div>
 
     <div class="stat-grid">
         <div class="stat-card">
-            <div class="stat-value">14.6%</div>
+            <div class="stat-value">60.7%</div>
             <div class="stat-label">Original (SAE) Accuracy</div>
         </div>
         <div class="stat-card">
-            <div class="stat-value">11.6%</div>
+            <div class="stat-value">56.7%</div>
             <div class="stat-label">Transformed (Dialect) Accuracy</div>
         </div>
         <div class="stat-card">
-            <div class="stat-value negative">-3.0%</div>
+            <div class="stat-value negative">-4.1%</div>
             <div class="stat-label">Average Accuracy Gap</div>
         </div>
         <div class="stat-card">
-            <div class="stat-value">3,439</div>
+            <div class="stat-value">3,479</div>
             <div class="stat-label">Total Evaluation Pairs</div>
         </div>
     </div>
@@ -124,9 +124,9 @@
     <div class="findings">
         <h3>Key Findings</h3>
         <ul>
-            <li>The model shows a <strong>3.0%</strong> accuracy degradation when processing dialect-transformed text.</li>
+            <li>The model shows a <strong>4.1%</strong> accuracy degradation when processing dialect-transformed text.</li>
             <li>This represents potential bias against non-standard English speakers.</li>
-            <li>Largest gaps observed in: gsm8k, gsm8k, gsm8k</li>
+            <li>Largest gaps observed in: hellaswag, hellaswag, mmlu</li>
         </ul>
     </div>
 
@@ -167,44 +167,44 @@
             <th>Pairs</th>
         </tr>
         <tr>
-            <td>GSM8K</td>
+            <td>HellaSwag</td>
+            <td>Aave</td>
+            <td>72.7%</td>
+            <td>62.9%</td>
+            <td class="negative">-9.8%</td>
+            <td>143</td>
+        </tr>
+        <tr>
+            <td>HellaSwag</td>
             <td>Indian English</td>
-            <td>75.4%</td>
-            <td>58.0%</td>
-            <td class="negative">-17.4%</td>
-            <td>448</td>
+            <td>79.1%</td>
+            <td>70.6%</td>
+            <td class="negative">-8.5%</td>
+            <td>306</td>
         </tr>
         <tr>
-            <td>GSM8K</td>
+            <td>MMLU</td>
             <td>Hiberno English</td>
-            <td>73.2%</td>
-            <td>56.9%</td>
-            <td class="negative">-16.4%</td>
-            <td>452</td>
+            <td>66.0%</td>
+            <td>58.3%</td>
+            <td class="negative">-7.8%</td>
+            <td>206</td>
         </tr>
         <tr>
-            <td>GSM8K</td>
-            <td>Aave</td>
-            <td>70.2%</td>
-            <td>59.6%</td>
-            <td class="negative">-10.6%</td>
-            <td>161</td>
+            <td>MMLU</td>
+            <td>Indian English</td>
+            <td>76.2%</td>
+            <td>70.1%</td>
+            <td class="negative">-6.1%</td>
+            <td>231</td>
         </tr>
         <tr>
             <td>ARC Challenge</td>
             <td>Aave</td>
-            <td>0.0%</td>
-            <td>0.0%</td>
-            <td class="negative">+0.0%</td>
+            <td>94.3%</td>
+            <td>88.7%</td>
+            <td class="negative">-5.7%</td>
             <td>53</td>
-        </tr>
-        <tr>
-            <td>ARC Challenge</td>
-            <td>Hiberno English</td>
-            <td>0.0%</td>
-            <td>0.0%</td>
-            <td class="negative">+0.0%</td>
-            <td>183</td>
         </tr>
     </table>
 
@@ -221,121 +221,121 @@
         <tr>
             <td>ARC Challenge</td>
             <td>Aave</td>
-            <td>0.0%</td>
-            <td>0.0%</td>
-            <td class="positive">+0.0%</td>
+            <td>94.3%</td>
+            <td>88.7%</td>
+            <td class="negative">-5.7%</td>
             <td>53</td>
         </tr>
         <tr>
             <td>ARC Challenge</td>
             <td>Hiberno English</td>
-            <td>0.0%</td>
-            <td>0.0%</td>
-            <td class="positive">+0.0%</td>
-            <td>183</td>
+            <td>94.0%</td>
+            <td>91.8%</td>
+            <td class="negative">-2.2%</td>
+            <td>184</td>
         </tr>
         <tr>
             <td>ARC Challenge</td>
             <td>Indian English</td>
-            <td>0.0%</td>
-            <td>0.0%</td>
-            <td class="positive">+0.0%</td>
-            <td>257</td>
+            <td>90.3%</td>
+            <td>86.4%</td>
+            <td class="negative">-3.9%</td>
+            <td>258</td>
         </tr>
         <tr>
             <td>GSM8K</td>
             <td>Aave</td>
-            <td>70.2%</td>
-            <td>59.6%</td>
-            <td class="negative">-10.6%</td>
-            <td>161</td>
+            <td>60.6%</td>
+            <td>55.3%</td>
+            <td class="negative">-5.3%</td>
+            <td>170</td>
         </tr>
         <tr>
             <td>GSM8K</td>
             <td>Hiberno English</td>
-            <td>73.2%</td>
-            <td>56.9%</td>
-            <td class="negative">-16.4%</td>
-            <td>452</td>
+            <td>57.3%</td>
+            <td>56.0%</td>
+            <td class="negative">-1.3%</td>
+            <td>468</td>
         </tr>
         <tr>
             <td>GSM8K</td>
             <td>Indian English</td>
-            <td>75.4%</td>
-            <td>58.0%</td>
-            <td class="negative">-17.4%</td>
-            <td>448</td>
+            <td>64.4%</td>
+            <td>59.0%</td>
+            <td class="negative">-5.5%</td>
+            <td>458</td>
         </tr>
         <tr>
             <td>HellaSwag</td>
             <td>Aave</td>
-            <td>0.0%</td>
-            <td>0.0%</td>
-            <td class="positive">+0.0%</td>
+            <td>72.7%</td>
+            <td>62.9%</td>
+            <td class="negative">-9.8%</td>
             <td>143</td>
         </tr>
         <tr>
             <td>HellaSwag</td>
             <td>Hiberno English</td>
-            <td>0.0%</td>
-            <td>0.0%</td>
-            <td class="positive">+0.0%</td>
+            <td>76.7%</td>
+            <td>72.7%</td>
+            <td class="negative">-3.9%</td>
             <td>330</td>
         </tr>
         <tr>
             <td>HellaSwag</td>
             <td>Indian English</td>
-            <td>0.0%</td>
-            <td>0.0%</td>
-            <td class="positive">+0.0%</td>
+            <td>79.1%</td>
+            <td>70.6%</td>
+            <td class="negative">-8.5%</td>
             <td>306</td>
         </tr>
         <tr>
             <td>MMLU</td>
             <td>Aave</td>
-            <td>0.0%</td>
-            <td>0.0%</td>
-            <td class="positive">+0.0%</td>
+            <td>70.5%</td>
+            <td>66.7%</td>
+            <td class="negative">-3.8%</td>
             <td>78</td>
         </tr>
         <tr>
             <td>MMLU</td>
             <td>Hiberno English</td>
-            <td>0.0%</td>
-            <td>0.0%</td>
-            <td class="positive">+0.0%</td>
-            <td>204</td>
+            <td>66.0%</td>
+            <td>58.3%</td>
+            <td class="negative">-7.8%</td>
+            <td>206</td>
         </tr>
         <tr>
             <td>MMLU</td>
             <td>Indian English</td>
-            <td>0.0%</td>
-            <td>0.0%</td>
-            <td class="positive">+0.0%</td>
+            <td>76.2%</td>
+            <td>70.1%</td>
+            <td class="negative">-6.1%</td>
             <td>231</td>
         </tr>
         <tr>
             <td>RealToxicity</td>
             <td>Aave</td>
-            <td>0.0%</td>
-            <td>0.0%</td>
+            <td>2.3%</td>
+            <td>2.3%</td>
             <td class="positive">+0.0%</td>
-            <td>86</td>
+            <td>87</td>
         </tr>
         <tr>
             <td>RealToxicity</td>
             <td>Hiberno English</td>
-            <td>0.0%</td>
-            <td>0.0%</td>
-            <td class="positive">+0.0%</td>
+            <td>3.1%</td>
+            <td>2.4%</td>
+            <td class="negative">-0.6%</td>
             <td>327</td>
         </tr>
         <tr>
             <td>RealToxicity</td>
             <td>Indian English</td>
-            <td>0.0%</td>
-            <td>0.0%</td>
-            <td class="positive">+0.0%</td>
+            <td>3.3%</td>
+            <td>6.7%</td>
+            <td class="positive">+3.3%</td>
             <td>180</td>
         </tr>
     </table>
