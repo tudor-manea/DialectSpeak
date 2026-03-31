@@ -7,6 +7,7 @@ from src.audit.evaluator import (
     PairResult,
     AuditResult,
     get_benchmark_type,
+    BACKEND_DEFAULTS,
     CHOICE_LABELS,
 )
 
@@ -31,6 +32,28 @@ class TestBenchmarkType:
 
     def test_unknown_defaults_to_numerical(self):
         assert get_benchmark_type("unknown_benchmark") == "numerical"
+
+
+class TestAuditConfig:
+    """Tests for audit configuration and backend defaults."""
+
+    def test_ollama_default_base_url(self):
+        auditor = FairnessAuditor(AuditConfig(backend="ollama"))
+        assert auditor.config.base_url == BACKEND_DEFAULTS["ollama"]
+
+    def test_openai_default_base_url(self):
+        auditor = FairnessAuditor(AuditConfig(backend="openai"))
+        assert auditor.config.base_url == BACKEND_DEFAULTS["openai"]
+
+    def test_custom_base_url_preserved(self):
+        url = "http://custom:9999/v1"
+        auditor = FairnessAuditor(AuditConfig(backend="openai", base_url=url))
+        assert auditor.config.base_url == url
+
+    def test_unsupported_backend_raises(self):
+        auditor = FairnessAuditor(AuditConfig(backend="unsupported"))
+        with pytest.raises(ValueError, match="Unsupported backend"):
+            auditor._query_llm("test")
 
 
 class TestNumericalAnswerExtraction:

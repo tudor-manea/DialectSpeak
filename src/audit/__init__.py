@@ -12,6 +12,7 @@ from .evaluator import (
     run_audit,
     load_generated_pairs,
     get_benchmark_type,
+    BACKEND_DEFAULTS,
     BENCHMARK_TYPES,
     CHOICE_LABELS,
 )
@@ -19,6 +20,7 @@ from .evaluator import (
 __all__ = [
     "AuditConfig",
     "AuditResult",
+    "BACKEND_DEFAULTS",
     "FairnessAuditor",
     "PairResult",
     "run_audit",

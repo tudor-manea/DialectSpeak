@@ -13,6 +13,7 @@ from .visualize import (
     generate_report,
     AuditData,
 )
+from .presentation import generate_all as generate_presentation
 
 __all__ = [
     "load_audit",
@@ -21,5 +22,6 @@ __all__ = [
     "create_dialect_comparison",
     "create_accuracy_gap_chart",
     "generate_report",
+    "generate_presentation",
     "AuditData",
 ]

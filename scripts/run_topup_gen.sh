@@ -19,7 +19,7 @@ run() {
 }
 
 # AAVE top-ups (6 runs, all <200 pairs)
-run arc_challenge   aave test
+run arc             aave test
 run mmlu            aave test
 run boolq           aave validation
 run realtoxicityprompts aave train
