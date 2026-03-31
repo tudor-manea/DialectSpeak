@@ -10,13 +10,24 @@ from matplotlib.patches import FancyBboxPatch
 
 
 def load_audit_data(audit_dir="data/audits"):
-    """Load all audit results into a list of dicts."""
-    model_dirs = ["gemma2_9b", "llama3.1_8b", "mistral_7b", "qwen2.5_14b"]
+    """Load all audit results into a list of dicts.
+
+    Prefers combined files over timestamped ones for the same
+    benchmark-dialect pair.
+    """
+    model_dirs = ["qwen2.5_14b", "qwen2.5_7b", "gemma2_9b", "llama3.1_8b", "mistral_7b"]
     all_data = []
     for model_dir in model_dirs:
         path = os.path.join(audit_dir, model_dir)
-        for f in glob.glob(os.path.join(path, "audit_*.json")):
+        # Deduplicate: combined files take priority
+        best = {}
+        for f in sorted(glob.glob(os.path.join(path, "audit_*.json"))):
+            fname = os.path.basename(f)
             d = json.load(open(f))
+            key = (d["benchmark"], d["dialect"])
+            if "_combined.json" in fname or key not in best:
+                best[key] = d
+        for d in best.values():
             all_data.append({
                 "benchmark": d["benchmark"],
                 "dialect": d["dialect"],
@@ -45,12 +56,13 @@ SAFETY_BENCHMARKS = ["realtoxicityprompts", "donotanswer", "toxigen"]
 
 MODEL_NAMES = {
     "qwen2.5:14b": "Qwen 2.5 14B",
+    "qwen2.5:7b": "Qwen 2.5 7B",
     "gemma2:9b": "Gemma 2 9B",
     "llama3.1:8b": "Llama 3.1 8B",
     "mistral:7b": "Mistral 7B",
 }
 
-MODEL_ORDER = ["qwen2.5:14b", "gemma2:9b", "llama3.1:8b", "mistral:7b"]
+MODEL_ORDER = ["qwen2.5:14b", "qwen2.5:7b", "gemma2:9b", "llama3.1:8b", "mistral:7b"]
 
 DIALECT_ORDER = ["aave", "hiberno_english", "indian_english"]
 
